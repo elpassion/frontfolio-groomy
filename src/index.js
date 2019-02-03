@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import WebFont from 'webfontloader';
+
 import App from './components/App';
-import { SiteThemeProvider } from './contexts/SiteThemeContext';
+
+WebFont.load({
+  google: {
+    families: ['Khula:n4,n7']
+  }
+});
 
 ReactDOM.render(
-  <SiteThemeProvider>
-    <App />
-  </SiteThemeProvider>,
+  <App />,
   document.getElementById('root')
 );

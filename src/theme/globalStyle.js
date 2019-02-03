@@ -1,16 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'polished';
 import { colors } from '../helpers/colors';
-import { fontSizes, breakpoints } from '../helpers/variables';
-
-export const themes = {
-  default: {
-    colors,
-    fontSizes,
-    breakpoints,
-    primaryFont: 'sans, sans-serif',
-  }
-};
+import { fontWeight } from '../helpers/variables';
 
 export default createGlobalStyle`
   /* Normalize */
@@ -26,19 +17,18 @@ export default createGlobalStyle`
   }
   
   html {
-    background-color: ${colors.black};
-    font-size: 10px;
+    background-color: ${colors.lightBackground};
   }
   
   body {
-    color: ${colors.white};
+    color: ${colors.darkGray};
   }
   
   html,
   body {
     height: 100%;
-    line-height: 1;
-    font-family: ${themes.default.primaryFont};
+    line-height: 1.4;
+    font-family: 'Khula, sans';
   }
   
   p,
@@ -60,7 +50,8 @@ export default createGlobalStyle`
     overflow: hidden;
   }
   
+  b,
   strong {
-    font-weight: 800;
+    font-weight: ${fontWeight.bold};
   }
 `;

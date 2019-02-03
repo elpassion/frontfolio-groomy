@@ -1,17 +1,19 @@
-export const fontSizes = {
-  regular: 16,
-  medium: 18,
-  large: 20,
+export const fontSize = {
+  xxsmall: '12px',
+  xsmall: '13px',
+  small: '14px',
+  regular: '16px',
+  medium: '18px',
+  large: '20px',
+  xlarge: '24px',
 };
 
-export const breakpoints = {
-  mobile: 375,
-  tablet: 768,
-  landscape: 1024,
-  desktop: 1200,
+export const fontWeight = {
+  regular: 400,
+  bold: 700,
 };
 
 export default {
-  fontSizes,
-  breakpoints,
+  fontSize,
+  fontWeight,
 };

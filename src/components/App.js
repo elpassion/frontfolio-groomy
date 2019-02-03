@@ -1,21 +1,22 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+
+import { routes } from '../data/routes';
+import Home from '../components/views/Home';
+import Login from '../components/views/Login';
 import GlobalStyles from '../theme/globalStyle';
-import { SiteThemeContext } from '../contexts/SiteThemeContext';
 
 const App = () => {
   return (
-    <SiteThemeContext.Consumer>
-      {({ theme }) => (
-        <ThemeProvider theme={theme}>
-          <React.Fragment>
-            <GlobalStyles />
+    <BrowserRouter>
+      <React.Fragment>
+        <GlobalStyles />
 
-            Content goes here
-          </React.Fragment>
-        </ThemeProvider>
-      )}
-    </SiteThemeContext.Consumer>
+        <Route exact path={routes.login} component={Login} />
+        <Route path={routes.dashboard} component={Home} />
+      </React.Fragment>
+    </BrowserRouter>
   );
 };
 
