@@ -16,7 +16,7 @@ export default createGlobalStyle`
   }
   
   html {
-    background-color: ${colors.lightBackground};
+    background-color: ${colors.white};
   }
   
   body {

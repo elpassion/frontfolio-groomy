@@ -28,8 +28,14 @@ export const fontWeight = {
   bold: 700,
 };
 
+export const gap = {
+  small: '12px',
+  regular: '24px'
+};
+
 export default {
   colors,
   fontSize,
   fontWeight,
+  gap
 };
