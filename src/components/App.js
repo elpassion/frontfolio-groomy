@@ -1,22 +1,29 @@
 import React from 'react';
-import { Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import PageTransition from 'react-router-page-transition';
 
-import { routes } from '../data/routes';
 import Home from '../components/views/Home';
-import Login from '../components/views/Login';
+import Place from '../components/views/Place';
 import GlobalStyles from '../theme/globalStyle';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <React.Fragment>
         <GlobalStyles />
 
-        <Route exact path={routes.login} component={Login} />
-        <Route path={routes.dashboard} component={Home} />
+        <Route
+          render={({ location }) => (
+            <PageTransition timeout={500}>
+              <Switch location={location}>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/places/:id' component={Place} />
+              </Switch>
+            </PageTransition>
+          )}
+        />
       </React.Fragment>
-    </BrowserRouter>
+    </Router>
   );
 };
 

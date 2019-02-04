@@ -2,14 +2,14 @@ import React from 'react';
 
 import Layout from './Layout';
 
-const Home = () => {
+const Place = () => {
   return (
     <Layout>
-      <div className='transition-item'>
-        Home
+      <div className='transition-item place'>
+        Place
       </div>
     </Layout>
   );
 };
 
-export default Home;
+export default Place;
