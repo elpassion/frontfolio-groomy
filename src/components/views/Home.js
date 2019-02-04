@@ -4,7 +4,7 @@ import Layout from './Layout';
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout pushContent>
       ...
     </Layout>
   );

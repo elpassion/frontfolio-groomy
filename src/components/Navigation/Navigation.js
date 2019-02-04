@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import { Link } from 'react-router-dom';
 
-import { gap } from '../../helpers/vars';
+import { gap, colors, sizes } from '../../helpers/vars';
 import Logotype from '../SvgAssets/Logotype';
 
 const Navigation = (props) => {
@@ -11,9 +11,11 @@ const Navigation = (props) => {
   const isPlaceView = pathname.includes('places');
 
   return (
-    <Wrapper className='sss'>
+    <Wrapper>
       <BurgerMenu>
-        Burg
+        <MenuLine />
+        <MenuLine />
+        <MenuLine />
       </BurgerMenu>
 
       {isPlaceView ? null :
@@ -22,9 +24,7 @@ const Navigation = (props) => {
         </StyledLink>
       }
 
-      <BurgerMenu>
-        S
-      </BurgerMenu>
+      <WhiteSpace />
     </Wrapper>
   );
 };
@@ -36,12 +36,40 @@ const Wrapper = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: ${rem(gap.regular)} ${rem(gap.small)};
+  height: ${rem(sizes.navHeight)};
+  padding: 0 ${rem(gap.xsmall)};
+`;
+
+const MenuLine = styled.span`
+  display: block;
+  width: 85%;
+  height: ${rem('2px')};
+  background: ${colors.primaryViolet};
+  
+  &:nth-child(2) {
+    width: 45%;
+  }
+  
+  &:nth-child(3) {
+    width: 60%;
+  }
+  
+  &:not(:last-child) {
+    margin: 0 0 ${rem(gap.pico)};
+  }
 `;
 
 const BurgerMenu = styled.div`
-  width: 20px;
-  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: ${rem(gap.regular)};
+  height: ${rem(gap.regular)};
+`;
+
+const WhiteSpace = styled(BurgerMenu)`
+  opacity: 0;
+  pointer-events: none;
 `;
 
 const StyledLink = styled(Link)`

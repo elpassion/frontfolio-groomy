@@ -5,7 +5,7 @@ import Layout from './Layout';
 const Place = () => {
   return (
     <Layout>
-      Place
+      ....
     </Layout>
   );
 };

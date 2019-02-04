@@ -29,13 +29,25 @@ export const fontWeight = {
 };
 
 export const gap = {
-  small: '12px',
-  regular: '24px'
+  pico: '3px',
+  tiny: '6px',
+  xsmall: '12px',
+  regular: '18px',
+  medium: '24px',
+  big: '32px',
+  huge: '44px',
+};
+
+export const sizes = {
+  buttonHeight: '44px',
+  navHeight: '54px',
+  navHeightPadding: '62px',
 };
 
 export default {
   colors,
   fontSize,
   fontWeight,
-  gap
+  gap,
+  sizes
 };
