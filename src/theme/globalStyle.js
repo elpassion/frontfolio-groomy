@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'polished';
-import { colors } from '../helpers/colors';
-import { fontWeight } from '../helpers/variables';
+import { colors, fontWeight } from '../helpers/vars';
 
 export default createGlobalStyle`
   /* Normalize */
