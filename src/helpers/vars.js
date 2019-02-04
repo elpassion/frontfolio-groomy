@@ -7,10 +7,18 @@ export const colors = {
   darkGray: '#5a5a5a',
   darkerGray: '#504d5d',
   primaryViolet: '#9963ff',
+  primaryVioletAccent: '#8955ec',
   granite: '#3a3a57',
   darkGranite: '#31314d',
   primaryBlack: '#202020',
   black: '#000',
+};
+
+export const gradients = {
+  violet: {
+    start: colors.primaryVioletAccent,
+    end: colors.primaryViolet,
+  },
 };
 
 export const fontSize = {
@@ -44,10 +52,17 @@ export const sizes = {
   navHeightPadding: '62px',
 };
 
+export const misc = {
+  regularBorderRadius: '10px',
+  mediumBorderRadius: '15px'
+};
+
 export default {
   colors,
+  gradients,
   fontSize,
   fontWeight,
   gap,
-  sizes
+  sizes,
+  misc
 };
