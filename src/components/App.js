@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import PageTransition from 'react-router-page-transition';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Navigation from './Navigation/Navigation';
 import Home from '../components/views/Home';
@@ -14,19 +14,27 @@ const App = () => {
         <GlobalStyles />
 
         <Route
-          render={({ location }) => (
-            <React.Fragment>
-              <Navigation route={location} />
+          render={({ location }) => {
+            return (
+              <React.Fragment>
+                <Navigation route={location} />
 
-              <PageTransition timeout={500}>
-                <Switch location={location}>
-                  <Route exact path='/' component={Home} />
-                  <Route exact path='/places/:id' component={Place} />
-                  <Route component={Home} />
-                </Switch>
-              </PageTransition>
-            </React.Fragment>
-          )}
+                <TransitionGroup component={null}>
+                  <CSSTransition
+                    timeout={400}
+                    classNames='page'
+                    key={location.key}
+                  >
+                    <Switch location={location}>
+                      <Route exact path='/' component={Home} />
+                      <Route exact path='/places/:id' component={Place} />
+                      <Route component={Home} />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+              </React.Fragment>
+            );
+          }}
         />
       </React.Fragment>
     </Router>

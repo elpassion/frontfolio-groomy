@@ -1,11 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Layout = ({ children, className }) => {
   return (
-    <div className={className}>
+    <LayoutWrapper className={className}>
       {children}
-    </div>
+    </LayoutWrapper>
   );
 };
+
+const LayoutWrapper = styled.div``;
 
 export default Layout;
