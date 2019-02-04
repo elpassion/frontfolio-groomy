@@ -4,10 +4,8 @@ import Layout from './Layout';
 
 const Place = () => {
   return (
-    <Layout>
-      <div className='transition-item place'>
-        Place
-      </div>
+    <Layout className='transition-item'>
+      Place
     </Layout>
   );
 };

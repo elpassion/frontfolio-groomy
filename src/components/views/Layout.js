@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
   return (
-    <React.Fragment>
+    <div className={className}>
       {children}
-    </React.Fragment>
+    </div>
   );
 };
 
