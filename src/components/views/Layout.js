@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Layout = ({ children, className }) => {
+const Layout = ({ children }) => {
   return (
-    <LayoutWrapper className={className}>
+    <LayoutWrapper>
       {children}
     </LayoutWrapper>
   );

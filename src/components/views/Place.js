@@ -4,7 +4,7 @@ import Layout from './Layout';
 
 const Place = () => {
   return (
-    <Layout className='transition-item'>
+    <Layout>
       Place
     </Layout>
   );
