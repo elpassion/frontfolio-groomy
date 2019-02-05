@@ -13,7 +13,8 @@ const Layout = ({ children, pushContent }) => {
 };
 
 const LayoutWrapper = styled.div`
-  padding: ${props => props.pushContent ? rem(sizes.navHeightPadding) : 0 } ${rem(gap.regular)} 0;
+  padding: ${props => (props.pushContent ? rem(sizes.navHeightPadding) : 0)}
+    ${rem(gap.regular)} 0;
 `;
 
 export default Layout;

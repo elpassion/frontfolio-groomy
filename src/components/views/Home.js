@@ -1,19 +1,15 @@
 import React from 'react';
 
 import Layout from './Layout';
-import Button from '../Button/Button';
 import PrimaryHeading from '../Typography/PrimaryHeading';
+import PlaceCover from '../PlaceCover';
 
 const Home = () => {
   return (
     <Layout pushContent>
-      <PrimaryHeading>
-        Featured salons
-      </PrimaryHeading>
+      <PrimaryHeading>Featured salons</PrimaryHeading>
 
-      <Button href='/places/4'>
-        Some Button
-      </Button>
+      <PlaceCover displayId={4} />
     </Layout>
   );
 };

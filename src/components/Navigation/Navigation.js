@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 import { gap, colors, sizes } from '../../helpers/vars';
 import Logotype from '../SvgAssets/Logotype';
 
-const Navigation = (props) => {
-  const {route: { pathname }} = props;
+const Navigation = props => {
+  const {
+    route: { pathname },
+  } = props;
   const isPlaceView = pathname.includes('places');
 
   return (
@@ -18,11 +20,11 @@ const Navigation = (props) => {
         <MenuLine />
       </BurgerMenu>
 
-      {isPlaceView ? null :
+      {isPlaceView ? null : (
         <StyledLink to='/'>
           <Logotype isSimple />
         </StyledLink>
-      }
+      )}
 
       <WhiteSpace />
     </Wrapper>
@@ -45,15 +47,15 @@ const MenuLine = styled.span`
   width: 85%;
   height: ${rem('2px')};
   background: ${colors.primaryViolet};
-  
+
   &:nth-child(2) {
     width: 45%;
   }
-  
+
   &:nth-child(3) {
     width: 60%;
   }
-  
+
   &:not(:last-child) {
     margin: 0 0 ${rem(gap.pico)};
   }

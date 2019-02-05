@@ -32,7 +32,7 @@ export const fontSize = {
 };
 
 export const fontWeight = {
-  regular: 400,
+  regular: 500,
   bold: 700,
   extraBold: 800,
 };

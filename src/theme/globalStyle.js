@@ -11,9 +11,9 @@ export default createGlobalStyle`
   ${fontFace({
     fontFamily: 'Gilroy',
     fileFormats: ['woff'],
-    fontWeight: 'normal',
+    fontWeight: 500,
     fontStyle: 'normal',
-    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Regular',
+    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Medium',
     fontDisplay: 'swap',
   })}
   
@@ -55,6 +55,7 @@ export default createGlobalStyle`
   html,
   body {
     height: 100%;
+    font-weight: ${fontWeight.regular};
     font-family: 'Gilroy', sans-serif;
     line-height: 1.2;
   }

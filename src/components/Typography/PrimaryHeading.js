@@ -5,11 +5,7 @@ import { rem } from 'polished';
 import { gap, fontWeight, fontSize, colors } from '../../helpers/vars';
 
 const PrimaryHeading = ({ children }) => {
-  return (
-    <HeadingH1>
-      {children}
-    </HeadingH1>
-  );
+  return <HeadingH1>{children}</HeadingH1>;
 };
 
 const HeadingH1 = styled.h1`

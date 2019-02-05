@@ -29,7 +29,7 @@ export const places = [
   },
   {
     id: 4,
-    name: 'D.O.G. Grooming Studio Ltd',
+    name: 'D.O.G. Grooming Studio',
     address: '99 Bettersea Park Rd',
     distance: '2.4km',
     price: '$100',
