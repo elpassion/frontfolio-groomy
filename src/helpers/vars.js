@@ -34,6 +34,7 @@ export const fontSize = {
 export const fontWeight = {
   regular: 400,
   bold: 700,
+  extraBold: 800,
 };
 
 export const gap = {
@@ -54,7 +55,7 @@ export const sizes = {
 
 export const misc = {
   regularBorderRadius: '10px',
-  mediumBorderRadius: '15px'
+  mediumBorderRadius: '15px',
 };
 
 export default {
@@ -64,5 +65,5 @@ export default {
   fontWeight,
   gap,
   sizes,
-  misc
+  misc,
 };

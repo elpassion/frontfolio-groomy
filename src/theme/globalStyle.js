@@ -28,7 +28,7 @@ export default createGlobalStyle`
   body {
     height: 100%;
     line-height: 1.4;
-    font-family: 'Khula, sans';
+    font-family: 'Khula', sans-serif;
   }
   
   p,

@@ -6,7 +6,7 @@ import App from './components/App';
 
 WebFont.load({
   google: {
-    families: ['Khula:n4,n7']
+    families: ['Khula:400,700,800']
   }
 });
 

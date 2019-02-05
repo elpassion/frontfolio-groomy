@@ -37,7 +37,7 @@ const Wrapper = styled.nav`
   justify-content: space-between;
   width: 100%;
   height: ${rem(sizes.navHeight)};
-  padding: 0 ${rem(gap.xsmall)};
+  padding: 0 ${rem(gap.regular)};
 `;
 
 const MenuLine = styled.span`
