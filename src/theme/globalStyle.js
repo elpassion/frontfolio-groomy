@@ -55,8 +55,8 @@ export default createGlobalStyle`
   html,
   body {
     height: 100%;
-    line-height: 1.4;
     font-family: 'Gilroy', sans-serif;
+    line-height: 1.2;
   }
   
   p,

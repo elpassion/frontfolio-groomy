@@ -16,9 +16,8 @@ const HeadingH1 = styled.h1`
   display: block;
   margin: ${rem(gap.tiny)} 0 ${rem(gap.regular)};
   color: ${colors.primaryBlack};
-  font-size: ${rem(fontSize.xlarge)};
   font-weight: ${fontWeight.extraBold};
-  line-height: 1.2;
+  font-size: ${rem(fontSize.xlarge)};
 `;
 
 export default PrimaryHeading;

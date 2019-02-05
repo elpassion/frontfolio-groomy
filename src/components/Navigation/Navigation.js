@@ -33,8 +33,8 @@ const Wrapper = styled.nav`
   position: absolute;
   left: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: ${rem(sizes.navHeight)};
   padding: 0 ${rem(gap.regular)};
