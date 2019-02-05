@@ -52,9 +52,7 @@ class PlaceCover extends React.Component {
               <PlaceName>{currentPlaceDetails.name}</PlaceName>
               <PlaceAddress>{currentPlaceDetails.address}</PlaceAddress>
             </div>
-            <div>
-              Rating
-            </div>
+            <div>Rating</div>
           </FlexWrapper>
 
           <MetaFlexWrapper>
@@ -63,9 +61,7 @@ class PlaceCover extends React.Component {
                 {currentPlaceDetails.distance} - {currentPlaceDetails.price}
               </p>
             </div>
-            <div>
-              Rating
-            </div>
+            <div>Rating</div>
           </MetaFlexWrapper>
         </PlaceDetails>
       </CoverWrapper>
