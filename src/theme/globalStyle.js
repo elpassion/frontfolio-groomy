@@ -1,11 +1,39 @@
 import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'polished';
+import { normalize, fontFace } from 'polished';
 
 import { colors, fontWeight } from '../helpers/vars';
 
 export default createGlobalStyle`
   /* Normalize */
   ${normalize()}
+  
+  /* Init Fonts */
+  ${fontFace({
+    fontFamily: 'Gilroy',
+    fileFormats: ['woff'],
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Regular',
+    fontDisplay: 'swap',
+  })}
+  
+  ${fontFace({
+    fontFamily: 'Gilroy',
+    fileFormats: ['woff'],
+    fontWeight: 700,
+    fontStyle: 'normal',
+    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Bold',
+    fontDisplay: 'swap',
+  })}
+  
+  ${fontFace({
+    fontFamily: 'Gilroy',
+    fileFormats: ['woff'],
+    fontWeight: 800,
+    fontStyle: 'normal',
+    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-ExtraBold',
+    fontDisplay: 'swap',
+  })}
 
   /* Reset Defaults */
   *,
@@ -28,7 +56,7 @@ export default createGlobalStyle`
   body {
     height: 100%;
     line-height: 1.4;
-    font-family: 'Khula', sans-serif;
+    font-family: 'Gilroy', sans-serif;
   }
   
   p,

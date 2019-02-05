@@ -14,10 +14,11 @@ const PrimaryHeading = ({ children }) => {
 
 const HeadingH1 = styled.h1`
   display: block;
-  margin: 0 0 ${rem(gap.medium)};
+  margin: ${rem(gap.tiny)} 0 ${rem(gap.regular)};
   color: ${colors.primaryBlack};
-  font-size: ${rem(fontSize.xlarge)}};
+  font-size: ${rem(fontSize.xlarge)};
   font-weight: ${fontWeight.extraBold};
+  line-height: 1.2;
 `;
 
 export default PrimaryHeading;
