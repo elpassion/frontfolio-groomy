@@ -1,8 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { rem, transparentize } from 'polished';
-
-import { gap, colors, misc, fontWeight, fontSize } from '../../helpers/vars';
+import {
+  gap,
+  colors,
+  misc,
+  fontWeight,
+  fontSize,
+  sizes,
+} from '../../helpers/vars';
 import { negativeValue } from '../../helpers/functions';
+import LocationIcon from '../SvgAssets/LocationIcon';
+import PriceIcon from '../SvgAssets/PriceIcon';
+import PawIcon from '../SvgAssets/PawIcon';
+
+const IconsSpacing = css`
+  margin: 0 ${rem(gap.pico)} 0 0;
+`;
 
 export const CoverWrapper = styled.div`
   position: relative;
@@ -47,11 +60,71 @@ export const PlaceAddress = styled.p`
 
 export const FlexWrapper = styled.div`
   display: flex;
-  margin: 0 0 ${gap.xsmall};
+  margin: 0 0 ${rem('8px')};
+`;
+
+export const LeftColumn = styled.div`
+  margin: 0 ${rem(gap.xsmall)} 0 0;
+`;
+
+export const RightColumn = styled.div`
+  position: relative;
+  display: flex;
+  margin: 0 0 0 auto;
+  flex: 0 0 ${rem(sizes.ratingBadgeSize)};
+  justify-content: center;
 `;
 
 export const MetaFlexWrapper = styled(FlexWrapper)`
   margin: 0;
   color: ${colors.lightGray};
   font-size: ${fontSize.xxsmall};
+`;
+
+export const MetaLeftColumn = styled(LeftColumn)`
+  display: flex;
+  align-items: center;
+`;
+
+export const MetaItem = styled.p`
+  &:not(:last-child) {
+    margin: 0 ${rem(gap.xsmall)} 0 0;
+  }
+`;
+
+export const StyledLocationIcon = styled(LocationIcon)`
+  ${IconsSpacing};
+  transform: translateY(10%);
+`;
+
+export const StyledPriceIcon = styled(PriceIcon)`
+  ${IconsSpacing};
+`;
+
+export const RatingBadgeWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: ${rem(sizes.ratingBadgeSize)};
+  height: ${rem(sizes.ratingBadgeSize)};
+  line-height: ${rem('80px')};
+  color: ${colors.white};
+  font-size: ${rem(fontSize.xxlarge)};
+  font-weight: ${fontWeight.extraBold};
+  background: ${colors.primaryVioletAccent};
+  border-radius: ${misc.regularBorderRadius};
+  pointer-events: none;
+`;
+
+export const PawIconBackground = styled(PawIcon)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
 `;

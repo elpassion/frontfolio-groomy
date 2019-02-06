@@ -1,9 +1,7 @@
 import React from 'react';
-import { number } from 'prop-types';
+import { number, bool } from 'prop-types';
 import { withRouter } from 'react-router-dom';
-
-import { places } from '../../data/places';
-
+import { getReviews, getPlaceDetails } from '../../helpers/functions';
 import {
   PlaceImage,
   CoverWrapper,
@@ -12,16 +10,22 @@ import {
   PlaceAddress,
   FlexWrapper,
   MetaFlexWrapper,
+  LeftColumn,
+  RightColumn,
+  MetaLeftColumn,
+  StyledLocationIcon,
+  StyledPriceIcon,
+  MetaItem,
 } from './PlaceCoverStyles';
+import RatingBadge from './RatingBadge';
 
 class PlaceCover extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentPlaceDetails: places.find(
-        place => place.id === this.props.displayId
-      ),
+      currentPlaceDetails: getPlaceDetails(this.props.displayId),
+      reviewsCount: getReviews(this.props.displayId).length,
     };
   }
 
@@ -30,11 +34,11 @@ class PlaceCover extends React.Component {
   };
 
   render() {
-    const { currentPlaceDetails } = this.state;
-    const { isHero } = this.props;
+    const { currentPlaceDetails, reviewsCount } = this.state;
+    const { isHero, displayId } = this.props;
 
     return (
-      <CoverWrapper onClick={this.goToPlace}>
+      <CoverWrapper onClick={isHero ? this.goToPlace : null}>
         <PlaceImage
           isHero={isHero}
           src={
@@ -48,29 +52,45 @@ class PlaceCover extends React.Component {
 
         <PlaceDetails>
           <FlexWrapper>
-            <div>
+            <LeftColumn>
               <PlaceName>{currentPlaceDetails.name}</PlaceName>
               <PlaceAddress>{currentPlaceDetails.address}</PlaceAddress>
-            </div>
-            <div>Rating</div>
+            </LeftColumn>
+
+            {reviewsCount < 0 && (
+              <RightColumn>
+                <RatingBadge placeId={displayId} />
+              </RightColumn>
+            )}
           </FlexWrapper>
 
           <MetaFlexWrapper>
-            <div>
-              <p>
-                {currentPlaceDetails.distance} - {currentPlaceDetails.price}
-              </p>
-            </div>
-            <div>Rating</div>
+            <MetaLeftColumn>
+              <MetaItem>
+                <StyledLocationIcon /> {currentPlaceDetails.distance}
+              </MetaItem>
+              <MetaItem>
+                <StyledPriceIcon /> {currentPlaceDetails.price}
+              </MetaItem>
+            </MetaLeftColumn>
+
+            <RightColumn>
+              {reviewsCount} Review{reviewsCount !== 1 && 's'}
+            </RightColumn>
           </MetaFlexWrapper>
         </PlaceDetails>
       </CoverWrapper>
     );
   }
+
+  static defaultProps = {
+    isHero: false,
+  };
 }
 
 PlaceCover.propTypes = {
   displayId: number.isRequired,
+  isHero: bool,
 };
 
 export default withRouter(PlaceCover);

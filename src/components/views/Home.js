@@ -9,7 +9,7 @@ const Home = () => {
     <Layout pushContent>
       <PrimaryHeading>Featured salons</PrimaryHeading>
 
-      <PlaceCover displayId={4} />
+      <PlaceCover displayId={2} />
     </Layout>
   );
 };

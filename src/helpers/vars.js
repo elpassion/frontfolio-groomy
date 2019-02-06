@@ -29,6 +29,7 @@ export const fontSize = {
   medium: '18px',
   large: '20px',
   xlarge: '24px',
+  xxlarge: '36px',
 };
 
 export const fontWeight = {
@@ -51,6 +52,7 @@ export const sizes = {
   buttonHeight: '44px',
   navHeight: '54px',
   navHeightPadding: '62px',
+  ratingBadgeSize: '74px',
 };
 
 export const misc = {
