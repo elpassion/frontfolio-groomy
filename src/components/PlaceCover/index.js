@@ -1,7 +1,7 @@
 import React from 'react';
 import { number, bool } from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { getReviews, getPlaceDetails } from '../../helpers/functions';
+import { getReviewsCount, getPlaceDetails } from '../../helpers/functions';
 import {
   PlaceImage,
   CoverWrapper,
@@ -18,14 +18,18 @@ import {
   MetaItem,
 } from './PlaceCoverStyles';
 import RatingBadge from './RatingBadge';
+import RatingStars from './RatingStars';
 
 class PlaceCover extends React.Component {
   constructor(props) {
     super(props);
 
+    this.contentBox = React.createRef();
+
     this.state = {
       currentPlaceDetails: getPlaceDetails(this.props.displayId),
-      reviewsCount: getReviews(this.props.displayId).length,
+      reviewsCount: getReviewsCount(this.props.displayId),
+      coverPadding: 104,
     };
   }
 
@@ -33,12 +37,26 @@ class PlaceCover extends React.Component {
     this.props.history.push('/places/' + this.props.displayId);
   };
 
-  render() {
-    const { currentPlaceDetails, reviewsCount } = this.state;
-    const { isHero, displayId } = this.props;
-
+  renderLocation = () => {
     return (
-      <CoverWrapper onClick={isHero ? this.goToPlace : null}>
+      <React.Fragment>
+        <StyledLocationIcon /> {this.state.currentPlaceDetails.distance}
+      </React.Fragment>
+    );
+  };
+
+  componentDidMount() {
+    this.setState({
+      coverPadding: this.contentBox.current.offsetHeight,
+    });
+  }
+
+  render() {
+    const { currentPlaceDetails, reviewsCount, coverPadding } = this.state;
+    const { isHero, displayId } = this.props;
+    console.log(coverPadding);
+    return (
+      <CoverWrapper onClick={isHero ? null : this.goToPlace}>
         <PlaceImage
           isHero={isHero}
           src={
@@ -50,14 +68,14 @@ class PlaceCover extends React.Component {
           alt={currentPlaceDetails.name}
         />
 
-        <PlaceDetails>
+        <PlaceDetails ref={this.contentBox}>
           <FlexWrapper>
             <LeftColumn>
               <PlaceName>{currentPlaceDetails.name}</PlaceName>
               <PlaceAddress>{currentPlaceDetails.address}</PlaceAddress>
             </LeftColumn>
 
-            {reviewsCount < 0 && (
+            {reviewsCount > 0 && !isHero && (
               <RightColumn>
                 <RatingBadge placeId={displayId} />
               </RightColumn>
@@ -66,16 +84,27 @@ class PlaceCover extends React.Component {
 
           <MetaFlexWrapper>
             <MetaLeftColumn>
-              <MetaItem>
-                <StyledLocationIcon /> {currentPlaceDetails.distance}
-              </MetaItem>
-              <MetaItem>
-                <StyledPriceIcon /> {currentPlaceDetails.price}
-              </MetaItem>
+              {isHero ? (
+                <React.Fragment>
+                  <RatingStars placeId={displayId} />
+                  <span>
+                    {reviewsCount} Review{reviewsCount !== 1 && 's'}
+                  </span>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <MetaItem>{this.renderLocation()}</MetaItem>
+                  <MetaItem>
+                    <StyledPriceIcon /> {currentPlaceDetails.price}
+                  </MetaItem>
+                </React.Fragment>
+              )}
             </MetaLeftColumn>
 
             <RightColumn>
-              {reviewsCount} Review{reviewsCount !== 1 && 's'}
+              {isHero
+                ? this.renderLocation()
+                : `${reviewsCount} Review${reviewsCount !== 1 && 's'}`}
             </RightColumn>
           </MetaFlexWrapper>
         </PlaceDetails>

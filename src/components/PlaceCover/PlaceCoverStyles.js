@@ -47,9 +47,12 @@ export const PlaceDetails = styled.div`
 
 export const PlaceName = styled.h2`
   margin: 0;
+  overflow: hidden;
   color: ${colors.primaryBlack};
   font-weight: ${fontWeight.extraBold};
   font-size: ${rem(fontSize.large)};
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const PlaceAddress = styled.p`
@@ -64,15 +67,17 @@ export const FlexWrapper = styled.div`
 `;
 
 export const LeftColumn = styled.div`
+  flex: 1 1 auto;
+  min-width: 0;
   margin: 0 ${rem(gap.xsmall)} 0 0;
 `;
 
 export const RightColumn = styled.div`
   position: relative;
   display: flex;
-  margin: 0 0 0 auto;
   flex: 0 0 ${rem(sizes.ratingBadgeSize)};
   justify-content: center;
+  margin: 0 0 0 auto;
 `;
 
 export const MetaFlexWrapper = styled(FlexWrapper)`
@@ -103,17 +108,17 @@ export const StyledPriceIcon = styled(PriceIcon)`
 
 export const RatingBadgeWrapper = styled.div`
   position: absolute;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: ${rem(sizes.ratingBadgeSize)};
   height: ${rem(sizes.ratingBadgeSize)};
-  line-height: ${rem('80px')};
   color: ${colors.white};
-  font-size: ${rem(fontSize.xxlarge)};
   font-weight: ${fontWeight.extraBold};
+  font-size: ${rem(fontSize.xxlarge)};
+  line-height: ${rem('80px')};
   background: ${colors.primaryVioletAccent};
   border-radius: ${misc.regularBorderRadius};
   pointer-events: none;

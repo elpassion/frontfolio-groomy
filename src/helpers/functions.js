@@ -13,6 +13,18 @@ export function getReviews(placeId) {
   return reviews.filter(review => review.place_id === placeId);
 }
 
+export function getReviewsCount(placeId) {
+  return reviews.filter(review => review.place_id === placeId).length;
+}
+
+export function getReviewsRating(placeId, fixedValue = 0) {
+  const reviewsList = getReviews(placeId);
+  const reviewsCount = reviewsList.length;
+  const fixedReviewsSummary = (reviewsList.reduce((prev, next) => +prev + +next.rating, 0) / reviewsCount).toFixed(fixedValue);
+
+  return fixedReviewsSummary;
+}
+
 export function getPlaceDetails(placeId) {
   return places.find(place => place.id === placeId);
 }

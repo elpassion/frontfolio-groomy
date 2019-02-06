@@ -1,6 +1,6 @@
 import React from 'react';
 import { number } from 'prop-types';
-import { getReviews } from '../../helpers/functions';
+import { getReviews, getReviewsRating } from '../../helpers/functions';
 import { RatingBadgeWrapper, PawIconBackground } from './PlaceCoverStyles';
 
 class RatingBadge extends React.Component {
@@ -9,18 +9,8 @@ class RatingBadge extends React.Component {
 
     this.state = {
       reviewsCount: getReviews(this.props.placeId).length,
-      reviewsRating: 0,
+      reviewsRating: getReviewsRating(this.props.placeId, 1),
     };
-  }
-
-  componentWillMount() {
-    this.setState({
-      reviewsRating:
-        (getReviews(this.props.placeId).reduce(
-          (prev, next) => +prev + +next.rating,
-          0
-        ) / this.state.reviewsCount).toFixed(1),
-    });
   }
 
   render() {

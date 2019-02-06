@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const PawIcon = props => (
   <svg viewBox='0 0 56 60' {...props}>
