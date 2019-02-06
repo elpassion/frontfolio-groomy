@@ -33,16 +33,14 @@ export const PlaceImage = styled.img.attrs({
 `;
 
 export const PlaceDetails = styled.div`
-  position: absolute;
-  right: ${rem(gap.regular)};
-  bottom: 0;
-  left: ${rem(gap.regular)};
+  width: calc(100% - ${rem(gap.xbig)});
+  margin: 0 auto;
   padding: ${rem(gap.xsmall)};
   background: ${colors.white};
   border-radius: ${misc.regularBorderRadius};
   box-shadow: 0 ${rem(gap.tiny)} ${rem(gap.medium)} 0
     ${transparentize(0.7, colors.lightGray)};
-  transform: translateY(75%);
+  transform: translateY(-25%);
 `;
 
 export const PlaceName = styled.h2`

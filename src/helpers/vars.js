@@ -45,6 +45,7 @@ export const gap = {
   regular: '18px',
   medium: '24px',
   big: '32px',
+  xbig: '36px',
   huge: '44px',
 };
 

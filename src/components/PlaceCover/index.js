@@ -29,7 +29,6 @@ class PlaceCover extends React.Component {
     this.state = {
       currentPlaceDetails: getPlaceDetails(this.props.displayId),
       reviewsCount: getReviewsCount(this.props.displayId),
-      coverPadding: 104,
     };
   }
 
@@ -45,16 +44,10 @@ class PlaceCover extends React.Component {
     );
   };
 
-  componentDidMount() {
-    this.setState({
-      coverPadding: this.contentBox.current.offsetHeight,
-    });
-  }
-
   render() {
-    const { currentPlaceDetails, reviewsCount, coverPadding } = this.state;
+    const { currentPlaceDetails, reviewsCount } = this.state;
     const { isHero, displayId } = this.props;
-    console.log(coverPadding);
+
     return (
       <CoverWrapper onClick={isHero ? null : this.goToPlace}>
         <PlaceImage
