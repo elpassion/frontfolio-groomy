@@ -50,6 +50,7 @@ export const gap = {
 };
 
 export const sizes = {
+  inputHeight: '30px',
   buttonHeight: '44px',
   navHeight: '54px',
   navHeightPadding: '62px',

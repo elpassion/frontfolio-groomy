@@ -82,7 +82,9 @@ export default createGlobalStyle`
     
     @media (min-width: 376px) {
       margin: ${rem(gap.medium)} auto;
-      box-shadow: 0 ${rem(gap.pico)} ${rem(gap.regular)} ${rem(gap.pico)} ${transparentize(0.7, colors.lightGray)};
+      box-shadow: 0 ${rem(gap.pico)} ${rem(gap.regular)} ${rem(
+  gap.pico
+)} ${transparentize(0.7, colors.lightGray)};
     }
   }
   

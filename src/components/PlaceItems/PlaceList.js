@@ -1,13 +1,34 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import Search from '../Search/Search';
+import SearchResults from './SearchResults';
 
-const PlaceList = () => {
-  return (
-    <div>
-      Search Bar
-      <br />
-      Listing
-    </div>
-  );
-};
+class PlaceList extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default PlaceList;
+    this.state = {
+      searchInputValue: [],
+    };
+  }
+
+  updateSearchTerm = term => {
+    this.setState({
+      searchInputValue: term,
+    });
+  };
+
+  render() {
+    const { searchInputValue } = this.state;
+
+    return (
+      <React.Fragment>
+        <Search onChange={this.updateSearchTerm.bind(this)} />
+
+        <SearchResults term={searchInputValue} />
+      </React.Fragment>
+    );
+  }
+}
+
+export default withRouter(PlaceList);

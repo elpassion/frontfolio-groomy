@@ -116,7 +116,7 @@ export const RatingBadgeWrapper = styled.div`
   color: ${colors.white};
   font-weight: ${fontWeight.extraBold};
   font-size: ${rem(fontSize.xxlarge)};
-  line-height: ${rem('80px')};
+  line-height: ${rem('74px')};
   background: ${colors.primaryVioletAccent};
   border-radius: ${misc.regularBorderRadius};
   pointer-events: none;

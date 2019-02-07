@@ -31,6 +31,16 @@ export function getPlaceDetails(placeId) {
   return places.find(place => place.id === placeId);
 }
 
+export function getPlaces(term) {
+  if (term) {
+    return places.filter(place =>
+      place.name.toLowerCase().includes(term.toLowerCase())
+    );
+  } else {
+    return places;
+  }
+}
+
 export default {
   negativeValue,
 };
