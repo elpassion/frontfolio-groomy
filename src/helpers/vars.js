@@ -54,6 +54,8 @@ export const sizes = {
   navHeight: '54px',
   navHeightPadding: '62px',
   ratingBadgeSize: '74px',
+  deviceWidth: '375px',
+  deviceHeight: '667px',
 };
 
 export const misc = {

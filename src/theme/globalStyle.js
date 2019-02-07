@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { normalize, fontFace } from 'polished';
-
-import { colors, fontWeight } from '../helpers/vars';
+import { normalize, fontFace, rem, transparentize } from 'polished';
+import { colors, fontWeight, sizes, gap } from '../helpers/vars';
 
 export default createGlobalStyle`
   /* Normalize */
@@ -75,8 +74,17 @@ export default createGlobalStyle`
   
   .root {
     width: 100%;
-    max-width: 100vw;
+    max-width: ${sizes.deviceWidth};
+    height: ${sizes.deviceHeight};
+    position: relative;
     overflow: hidden;
+    margin: 0 auto;
+    
+    
+    @media (min-width: 376px) {
+      margin: ${rem(gap.medium)} auto;
+      box-shadow: 0 ${rem(gap.pico)} ${rem(gap.regular)} ${rem(gap.pico)} ${transparentize(0.7, colors.lightGray)};
+    }
   }
   
   b,
