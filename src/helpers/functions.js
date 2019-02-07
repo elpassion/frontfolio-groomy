@@ -1,5 +1,5 @@
-import {reviews} from '../data/reviews';
-import {places} from '../data/places';
+import { reviews } from '../data/reviews';
+import { places } from '../data/places';
 
 export function negativeValue(value) {
   if (value.includes('px')) {
@@ -20,7 +20,9 @@ export function getReviewsCount(placeId) {
 export function getReviewsRating(placeId, fixedValue = 0) {
   const reviewsList = getReviews(placeId);
   const reviewsCount = reviewsList.length;
-  const fixedReviewsSummary = (reviewsList.reduce((prev, next) => +prev + +next.rating, 0) / reviewsCount).toFixed(fixedValue);
+  const fixedReviewsSummary = (
+    reviewsList.reduce((prev, next) => +prev + +next.rating, 0) / reviewsCount
+  ).toFixed(fixedValue);
 
   return fixedReviewsSummary;
 }
