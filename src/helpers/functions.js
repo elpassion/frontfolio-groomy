@@ -44,7 +44,3 @@ export function getPlaces(term) {
     return places;
   }
 }
-
-export default {
-  negativeValue,
-};
