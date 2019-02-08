@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { getPlaces } from '../../helpers/functions';
 import PlaceItem from './PlaceItem';
+import EmptyState from './EmptyState';
 import { ResultsWrapper } from './SearchResultsStyles';
 
 class SearchResults extends React.Component {
@@ -23,12 +24,15 @@ class SearchResults extends React.Component {
 
   render() {
     const { results } = this.state;
+    const { term } = this.props;
 
     return (
       <ResultsWrapper>
-        {results.map(place => (
-          <PlaceItem key={place.id} details={place} />
-        ))}
+        {results.length === 0 ? (
+          <EmptyState term={term} />
+        ) : (
+          results.map(place => <PlaceItem key={place.id} details={place} />)
+        )}
       </ResultsWrapper>
     );
   }
