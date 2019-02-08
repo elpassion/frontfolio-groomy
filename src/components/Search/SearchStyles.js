@@ -7,7 +7,7 @@ export const SearchWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: ${rem(sizes.inputHeight)};
-  margin: 0 0 ${rem(gap.xsmall)};
+  margin: 0 0 ${rem(gap.medium)};
   padding: 0 ${rem(gap.xsmall)};
   color: ${colors.lightGray};
   font-size: ${rem(fontSize.small)};
@@ -21,18 +21,18 @@ export const SearchForm = styled.input.attrs({
   type: 'text',
 })`
   ${placeholder({ color: colors.lightGray })};
-  appearance: none;
   width: 100%;
   margin: 0 0 0 ${rem(gap.xsmall)};
   color: inherit;
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
   font-family: inherit;
-  border: 0;
   background: transparent;
+  border: 0;
+  appearance: none;
 
   &:focus {
-    box-shadow: none;
     outline: 0;
+    box-shadow: none;
   }
 `;

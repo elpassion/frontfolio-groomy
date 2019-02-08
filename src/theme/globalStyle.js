@@ -73,11 +73,10 @@ export default createGlobalStyle`
   }
   
   .root {
+    position: relative;
     width: 100%;
     max-width: ${sizes.deviceWidth};
     height: ${sizes.deviceHeight};
-    position: relative;
-    overflow: hidden;
     margin: 0 auto;
     
     @media (min-width: 376px) {

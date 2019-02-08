@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { rem, transparentize } from 'polished';
 import {
   gap,
@@ -9,13 +9,7 @@ import {
   sizes,
 } from '../../helpers/vars';
 import { negativeValue } from '../../helpers/functions';
-import LocationIcon from '../SvgAssets/LocationIcon';
-import PriceIcon from '../SvgAssets/PriceIcon';
 import PawIcon from '../SvgAssets/PawIcon';
-
-const IconsSpacing = css`
-  margin: 0 ${rem(gap.pico)} 0 0;
-`;
 
 export const CoverWrapper = styled.div`
   position: relative;
@@ -53,12 +47,6 @@ export const PlaceName = styled.h2`
   text-overflow: ellipsis;
 `;
 
-export const PlaceAddress = styled.p`
-  color: ${colors.darkerGray};
-  font-weight: ${fontWeight.regular};
-  font-size: ${rem(fontSize.xsmall)};
-`;
-
 export const FlexWrapper = styled.div`
   display: flex;
   margin: 0 0 ${rem('8px')};
@@ -89,21 +77,6 @@ export const MetaLeftColumn = styled(LeftColumn)`
   align-items: center;
 `;
 
-export const MetaItem = styled.p`
-  &:not(:last-child) {
-    margin: 0 ${rem(gap.xsmall)} 0 0;
-  }
-`;
-
-export const StyledLocationIcon = styled(LocationIcon)`
-  ${IconsSpacing};
-  transform: translateY(10%);
-`;
-
-export const StyledPriceIcon = styled(PriceIcon)`
-  ${IconsSpacing};
-`;
-
 export const RatingBadgeWrapper = styled.div`
   position: absolute;
   right: 0;
@@ -116,7 +89,7 @@ export const RatingBadgeWrapper = styled.div`
   color: ${colors.white};
   font-weight: ${fontWeight.extraBold};
   font-size: ${rem(fontSize.xxlarge)};
-  line-height: ${rem('74px')};
+  line-height: ${rem('78px')};
   background: ${colors.primaryVioletAccent};
   border-radius: ${misc.regularBorderRadius};
   pointer-events: none;

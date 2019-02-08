@@ -6,10 +6,7 @@ import { Link } from 'react-router-dom';
 import { gap, colors, sizes } from '../../helpers/vars';
 import Logotype from '../SvgAssets/Logotype';
 
-const Navigation = props => {
-  const {
-    route: { pathname },
-  } = props;
+const Navigation = ({ route: { pathname } }) => {
   const isPlaceView = pathname.includes('places');
 
   return (
@@ -45,7 +42,7 @@ const Wrapper = styled.nav`
 const MenuLine = styled.span`
   display: block;
   width: 85%;
-  height: ${rem('2px')};
+  height: ${rem('1px')};
   background: ${colors.primaryViolet};
 
   &:nth-child(2) {

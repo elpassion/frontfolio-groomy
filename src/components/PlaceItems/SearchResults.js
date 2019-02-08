@@ -1,5 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { getPlaces } from '../../helpers/functions';
+import PlaceItem from './PlaceItem';
+import { ResultsWrapper } from './SearchResultsStyles';
 
 class SearchResults extends React.Component {
   constructor(props) {
@@ -20,14 +23,15 @@ class SearchResults extends React.Component {
 
   render() {
     const { results } = this.state;
+
     return (
-      <ul>
+      <ResultsWrapper>
         {results.map(place => (
-          <li key={place.id}>{place.name}</li>
+          <PlaceItem key={place.id} details={place} />
         ))}
-      </ul>
+      </ResultsWrapper>
     );
   }
 }
 
-export default SearchResults;
+export default withRouter(SearchResults);

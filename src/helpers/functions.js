@@ -24,7 +24,11 @@ export function getReviewsRating(placeId, fixedValue = 0) {
     reviewsList.reduce((prev, next) => +prev + +next.rating, 0) / reviewsCount
   ).toFixed(fixedValue);
 
-  return fixedReviewsSummary;
+  if (isNaN(fixedReviewsSummary)) {
+    return 'N/A'
+  } else {
+    return fixedReviewsSummary;
+  }
 }
 
 export function getPlaceDetails(placeId) {

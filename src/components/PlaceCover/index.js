@@ -7,16 +7,18 @@ import {
   CoverWrapper,
   PlaceDetails,
   PlaceName,
-  PlaceAddress,
   FlexWrapper,
   MetaFlexWrapper,
   LeftColumn,
   RightColumn,
   MetaLeftColumn,
+} from './PlaceCoverStyles';
+import {
+  PlaceAddress,
   StyledLocationIcon,
   StyledPriceIcon,
   MetaItem,
-} from './PlaceCoverStyles';
+} from '../Common/CommonStyles';
 import RatingBadge from './RatingBadge';
 import RatingStars from './RatingStars';
 

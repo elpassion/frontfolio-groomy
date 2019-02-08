@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import Search from '../Search/Search';
 import SearchResults from './SearchResults';
 
@@ -24,11 +23,10 @@ class PlaceList extends React.Component {
     return (
       <React.Fragment>
         <Search onChange={this.updateSearchTerm.bind(this)} />
-
         <SearchResults term={searchInputValue} />
       </React.Fragment>
     );
   }
 }
 
-export default withRouter(PlaceList);
+export default PlaceList;
