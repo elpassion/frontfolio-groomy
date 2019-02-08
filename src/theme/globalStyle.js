@@ -76,8 +76,8 @@ export default createGlobalStyle`
     position: relative;
     width: 100%;
     max-width: ${sizes.deviceWidth};
-    height: ${sizes.deviceHeight};
     margin: 0 auto;
+    overflow: hidden;
     
     @media (min-width: 376px) {
       margin: ${rem(gap.medium)} auto;

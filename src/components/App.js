@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Navigation from './Navigation/Navigation';
-import Home from '../components/views/Home';
-import Place from '../components/views/Place';
+import Home from '../components/Views/Home';
+import Place from '../components/Views/Place';
 import GlobalStyles from '../theme/globalStyle';
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
 
                 <TransitionGroup component={null}>
                   <CSSTransition
-                    timeout={400}
+                    timeout={1000}
                     classNames='page'
                     key={location.key}
                   >

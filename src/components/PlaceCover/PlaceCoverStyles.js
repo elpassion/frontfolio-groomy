@@ -21,7 +21,8 @@ export const PlaceImage = styled.img.attrs({
 })`
   display: block;
   width: 100%;
-  height: ${props => (props.isHero ? rem('348px') : rem('204px'))};
+  height: ${props =>
+    props.isHero ? rem(sizes.heroHeight) : rem(sizes.coverHeight)};
   object-fit: cover;
   overflow: hidden;
 `;

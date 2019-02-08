@@ -56,8 +56,9 @@ export const sizes = {
   navHeightPadding: '62px',
   ratingBadgeSize: '74px',
   placePhoto: '84px',
+  coverHeight: '204px',
+  heroHeight: '348px',
   deviceWidth: '420px',
-  deviceHeight: '768px',
 };
 
 export const misc = {

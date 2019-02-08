@@ -8,7 +8,7 @@ const PrimaryHeading = ({ children }) => {
   return <HeadingH1>{children}</HeadingH1>;
 };
 
-const HeadingH1 = styled.h1`
+export const HeadingH1 = styled.h1`
   display: block;
   margin: ${rem(gap.tiny)} 0 ${rem(gap.regular)};
   color: ${colors.primaryBlack};

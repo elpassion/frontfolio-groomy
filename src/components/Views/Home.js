@@ -7,7 +7,7 @@ import PlaceList from '../PlaceItems/PlaceList';
 
 const Home = () => {
   return (
-    <Layout pushContent>
+    <Layout className='home' pushContent>
       <PrimaryHeading>Featured salons</PrimaryHeading>
 
       <PlaceCover displayId={4} />

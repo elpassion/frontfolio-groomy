@@ -19,6 +19,8 @@ class PlaceItem extends React.Component {
   constructor(props) {
     super(props);
 
+    this.placePhoto = React.createRef();
+
     this.state = {
       placeRating: [],
     };
@@ -43,6 +45,7 @@ class PlaceItem extends React.Component {
             details.id +
             '.jpg'
           }
+          ref={this.placePhoto}
         />
         <PlaceMeta>
           <PlaceName>{details.name}</PlaceName>
