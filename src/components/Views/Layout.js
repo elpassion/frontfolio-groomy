@@ -50,14 +50,6 @@ const LayoutWrapper = styled.div`
       animation: .3s ${slideIn} ease-in-out;
     }
     
-    &.page-enter-active {
-      transform: translateX(0);
-    }
-    
-    &.page-enter-done {
-      transform: translateX(0);
-    }
-    
     &.page-exit {        
       ${PlaceMeta},
       ${CoverWrapper},
@@ -102,16 +94,6 @@ const LayoutWrapper = styled.div`
       animation: .3s ${slideOut} ease-in-out;
     }
   }
-
-
-
-  &.page-enter-done {
-  }
-
-  &.page-exit {
-  }
-
-  &.page-exit-done {}
 `;
 
 export default Layout;

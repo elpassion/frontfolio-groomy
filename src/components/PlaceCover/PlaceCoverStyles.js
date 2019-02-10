@@ -37,7 +37,7 @@ export const PlaceDetails = styled.div`
   box-shadow: 0 ${rem(gap.tiny)} ${rem(gap.medium)} 0
     ${transparentize(0.7, colors.lightGray)};
   transform: translateY(-25%);
-  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
 `;
 
 export const PlaceName = styled.h2`
