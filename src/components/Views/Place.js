@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Layout from './Layout';
 import PlaceCover from '../PlaceCover';
 
@@ -10,9 +9,8 @@ const Place = ({
   ...props
 }) => {
   return (
-    <Layout classame='place'>
+    <Layout className='place'>
       <PlaceCover isHero displayId={parseInt(id)} />
-      {id}
     </Layout>
   );
 };

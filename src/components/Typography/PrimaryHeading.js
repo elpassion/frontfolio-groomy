@@ -14,6 +14,7 @@ export const HeadingH1 = styled.h1`
   color: ${colors.primaryBlack};
   font-weight: ${fontWeight.extraBold};
   font-size: ${rem(fontSize.xlarge)};
+  transition: opacity 0.2s ease-in;
 `;
 
 export default PrimaryHeading;

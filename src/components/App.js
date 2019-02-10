@@ -21,7 +21,7 @@ const App = () => {
 
                 <TransitionGroup component={null}>
                   <CSSTransition
-                    timeout={1000}
+                    timeout={300}
                     classNames='page'
                     key={location.key}
                   >

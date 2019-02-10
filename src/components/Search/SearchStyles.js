@@ -15,6 +15,7 @@ export const SearchWrapper = styled.div`
   border-radius: ${misc.mediumBorderRadius};
   box-shadow: 0 ${rem(gap.tiny)} ${rem(gap.medium)} 0
     ${transparentize(0.7, colors.lightGray)};
+  transition: opacity 0.2s ease-in;
 `;
 
 export const SearchForm = styled.input.attrs({

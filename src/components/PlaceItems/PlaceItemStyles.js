@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { rem } from 'polished';
 import RatingIcon from '../SvgAssets/RatingIcon';
 import {
@@ -11,28 +10,35 @@ import {
   sizes,
 } from '../../helpers/vars';
 
-export const PlaceItemLink = styled(Link)`
+export const PlaceItemLink = styled.div`
   display: flex;
   align-items: center;
   margin: 0 0 ${rem(gap.medium)};
   color: ${colors.primaryBlack};
-  text-decoration: none;
+`;
+
+export const PhotoWrapper = styled.div`
+  flex: 0 0 ${rem(sizes.placePhoto)};
+  height: ${rem(sizes.placePhoto)};
+  margin: 0 ${rem(gap.regular)} 0 0;
 `;
 
 export const PlacePhoto = styled.img.attrs({
   'data-object-fit': 'cover',
 })`
+  position: absolute;
   display: block;
   width: ${rem(sizes.placePhoto)};
   height: ${rem(sizes.placePhoto)};
-  margin: 0 ${rem(gap.regular)} 0 0;
   overflow: hidden;
   border-radius: ${rem(misc.regularBorderRadius)};
   object-fit: cover;
+  transition: all 0.3s ease-in;
 `;
 
 export const PlaceMeta = styled.div`
   flex: 1 1 auto;
+  transition: opacity 0.2s ease-in;
 `;
 
 export const PlaceName = styled.h3`

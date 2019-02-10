@@ -25,7 +25,7 @@ export function getReviewsRating(placeId, fixedValue = 0) {
   ).toFixed(fixedValue);
 
   if (isNaN(fixedReviewsSummary)) {
-    return 'N/A'
+    return 'N/A';
   } else {
     return fixedReviewsSummary;
   }

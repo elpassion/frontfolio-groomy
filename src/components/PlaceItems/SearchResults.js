@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import { getPlaces } from '../../helpers/functions';
 import PlaceItem from './PlaceItem';
 import EmptyState from './EmptyState';
@@ -38,4 +37,4 @@ class SearchResults extends React.Component {
   }
 }
 
-export default withRouter(SearchResults);
+export default SearchResults;
