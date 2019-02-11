@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { ButtonBase } from '../Common/CommonStyles';
 
-const Button = props => {
-  const { children, href, onClick } = props;
-
+const Button = ({ children, href, onClick }) => {
   return (
     <React.Fragment>
       {href ? (
@@ -16,8 +15,13 @@ const Button = props => {
   );
 };
 
-const PrimaryButtonLink = styled(Link)``;
+const PrimaryButtonLink = styled(Link)`
+  ${ButtonBase};
+`;
 
-const PrimaryButton = styled.button``;
+const PrimaryButton = styled.button`
+  ${ButtonBase};
+  appearance: none;
+`;
 
 export default Button;

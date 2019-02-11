@@ -12,7 +12,6 @@ const App = () => {
     <Router>
       <React.Fragment>
         <GlobalStyles />
-
         <Route
           render={({ location }) => {
             return (

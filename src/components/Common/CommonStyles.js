@@ -31,3 +31,12 @@ export const StyledLocationIcon = styled(LocationIcon)`
 export const StyledPriceIcon = styled(PriceIcon)`
   ${IconsSpacing};
 `;
+
+export const ButtonBase = css`
+  text-decoration: none;
+`;
+
+export const FlexValignCenter = css`
+  display: flex;
+  align-items: center;
+`;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
+import { FlexValignCenter } from '../Common/CommonStyles';
 import RatingIcon from '../SvgAssets/RatingIcon';
 import {
   gap,
@@ -11,8 +12,7 @@ import {
 } from '../../helpers/vars';
 
 export const PlaceItemLink = styled.div`
-  display: flex;
-  align-items: center;
+  ${FlexValignCenter};
   margin: 0 0 ${rem(gap.medium)};
   color: ${colors.primaryBlack};
 `;
@@ -48,8 +48,7 @@ export const PlaceName = styled.h3`
 `;
 
 export const PlaceDetailsWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  ${FlexValignCenter};
   margin: ${rem(gap.tiny)} 0 0 0;
   color: ${colors.lightGray};
   font-size: ${rem(fontSize.xxsmall)};

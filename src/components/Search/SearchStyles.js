@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { rem, transparentize, placeholder } from 'polished';
+import { FlexValignCenter } from '../Common/CommonStyles';
 import { gap, colors, misc, fontSize, sizes } from '../../helpers/vars';
 
 export const SearchWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  ${FlexValignCenter};
   width: 100%;
   height: ${rem(sizes.inputHeight)};
   margin: 0 0 ${rem(gap.medium)};

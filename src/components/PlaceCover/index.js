@@ -25,7 +25,6 @@ import RatingStars from './RatingStars';
 class PlaceCover extends React.Component {
   constructor(props) {
     super(props);
-
     this.contentBox = React.createRef();
 
     this.state = {
@@ -38,17 +37,10 @@ class PlaceCover extends React.Component {
     this.props.history.push('/places/' + this.props.displayId);
   };
 
-  renderLocation = () => {
-    return (
-      <React.Fragment>
-        <StyledLocationIcon /> {this.state.currentPlaceDetails.distance}
-      </React.Fragment>
-    );
-  };
-
   render() {
     const { currentPlaceDetails, reviewsCount } = this.state;
     const { isHero, displayId } = this.props;
+    const showRating = reviewsCount > 0 && !isHero;
 
     return (
       <CoverWrapper onClick={isHero ? null : this.goToPlace}>
@@ -62,44 +54,44 @@ class PlaceCover extends React.Component {
           }
           alt={currentPlaceDetails.name}
         />
-
         <PlaceDetails ref={this.contentBox}>
           <FlexWrapper>
             <LeftColumn>
               <PlaceName>{currentPlaceDetails.name}</PlaceName>
               <PlaceAddress>{currentPlaceDetails.address}</PlaceAddress>
             </LeftColumn>
-
-            {reviewsCount > 0 && !isHero && (
+            {showRating && (
               <RightColumn>
                 <RatingBadge placeId={displayId} />
               </RightColumn>
             )}
           </FlexWrapper>
-
           <MetaFlexWrapper>
             <MetaLeftColumn>
+              {isHero
+                ? [
+                    <RatingStars key='rating' placeId={displayId} isPlaceReview />,
+                    <span key='reviews-count'>
+                      {reviewsCount} Review{reviewsCount !== 1 && 's'}
+                    </span>,
+                  ]
+                : [
+                    <MetaItem key='distance'>
+                      <StyledLocationIcon /> {currentPlaceDetails.distance}
+                    </MetaItem>,
+                    <MetaItem key='price'>
+                      <StyledPriceIcon /> {currentPlaceDetails.price}
+                    </MetaItem>,
+                  ]}
+            </MetaLeftColumn>
+            <RightColumn>
               {isHero ? (
                 <React.Fragment>
-                  <RatingStars placeId={displayId} />
-                  <span>
-                    {reviewsCount} Review{reviewsCount !== 1 && 's'}
-                  </span>
+                  <StyledLocationIcon /> {currentPlaceDetails.distance}
                 </React.Fragment>
               ) : (
-                <React.Fragment>
-                  <MetaItem>{this.renderLocation()}</MetaItem>
-                  <MetaItem>
-                    <StyledPriceIcon /> {currentPlaceDetails.price}
-                  </MetaItem>
-                </React.Fragment>
+                `${reviewsCount} Review${reviewsCount !== 1 && 's'}`
               )}
-            </MetaLeftColumn>
-
-            <RightColumn>
-              {isHero
-                ? this.renderLocation()
-                : `${reviewsCount} Review${reviewsCount !== 1 && 's'}`}
             </RightColumn>
           </MetaFlexWrapper>
         </PlaceDetails>

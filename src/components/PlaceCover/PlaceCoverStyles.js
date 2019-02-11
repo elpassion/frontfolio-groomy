@@ -8,6 +8,7 @@ import {
   fontSize,
   sizes,
 } from '../../helpers/vars';
+import { FlexValignCenter } from '../Common/CommonStyles';
 import { negativeValue } from '../../helpers/functions';
 import PawIcon from '../SvgAssets/PawIcon';
 
@@ -76,8 +77,7 @@ export const MetaFlexWrapper = styled(FlexWrapper)`
 `;
 
 export const MetaLeftColumn = styled(LeftColumn)`
-  display: flex;
-  align-items: center;
+  ${FlexValignCenter};
 `;
 
 export const RatingBadgeWrapper = styled.div`

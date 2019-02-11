@@ -1,5 +1,5 @@
 import React from 'react';
-import { number } from 'prop-types';
+import { number, object, bool } from 'prop-types';
 import { getReviewsRating } from '../../helpers/functions';
 import RatingIcon from '../SvgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
@@ -9,7 +9,7 @@ class RatingStars extends React.Component {
     super(props);
 
     this.state = {
-      reviewsRating: getReviewsRating(this.props.placeId),
+      reviewsRating: getReviewsRating(this.props.placeId), // @todo: refactor to reuse on single review
     };
   }
 
@@ -34,7 +34,9 @@ class RatingStars extends React.Component {
 }
 
 RatingStars.propTypes = {
-  placeId: number.isRequired,
+  isPlaceReview: bool,
+  placeId: number,
+  singleReview: object,
 };
 
 export default RatingStars;
