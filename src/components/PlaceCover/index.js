@@ -70,7 +70,11 @@ class PlaceCover extends React.Component {
             <MetaLeftColumn>
               {isHero
                 ? [
-                    <RatingStars key='rating' placeId={displayId} isPlaceReview />,
+                    <RatingStars
+                      key='rating'
+                      placeId={displayId}
+                      isPlaceReview
+                    />,
                     <span key='reviews-count'>
                       {reviewsCount} Review{reviewsCount !== 1 && 's'}
                     </span>,

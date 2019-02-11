@@ -6,7 +6,6 @@ const Place = ({
   match: {
     params: { id },
   },
-  ...props
 }) => {
   return (
     <Layout className='place'>

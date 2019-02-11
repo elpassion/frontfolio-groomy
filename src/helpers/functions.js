@@ -40,7 +40,6 @@ export function getPlaces(term) {
     return places.filter(place =>
       place.name.toLowerCase().includes(term.toLowerCase())
     );
-  } else {
-    return places;
   }
+  return places;
 }

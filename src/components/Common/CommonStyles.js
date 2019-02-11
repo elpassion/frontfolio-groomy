@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { gap, colors, fontWeight, fontSize } from '../../helpers/vars';
 import { rem } from 'polished';
 import LocationIcon from '../SvgAssets/LocationIcon';
@@ -39,4 +39,28 @@ export const ButtonBase = css`
 export const FlexValignCenter = css`
   display: flex;
   align-items: center;
+`;
+
+export const slideIn = keyframes`
+  0% {
+    transform: translateX(-100%);
+    opacity: .2;
+  }
+  
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+export const slideOut = keyframes`
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateX(100%);
+    opacity: .2;
+  }
 `;

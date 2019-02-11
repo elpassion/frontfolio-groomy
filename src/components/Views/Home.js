@@ -8,9 +8,7 @@ const Home = () => {
   return (
     <Layout className='home' pushContent>
       <PrimaryHeading>Featured salons</PrimaryHeading>
-
       <PlaceCover displayId={4} />
-
       <PlaceList />
     </Layout>
   );
