@@ -1,11 +1,38 @@
 import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'polished';
-import { colors } from '../helpers/colors';
-import { fontWeight } from '../helpers/variables';
+import { normalize, fontFace, rem, transparentize } from 'polished';
+import { colors, fontWeight, sizes, gap } from '../helpers/vars';
 
 export default createGlobalStyle`
   /* Normalize */
   ${normalize()}
+  
+  /* Init Fonts */
+  ${fontFace({
+    fontFamily: 'Gilroy',
+    fileFormats: ['woff'],
+    fontWeight: 500,
+    fontStyle: 'normal',
+    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Medium',
+    fontDisplay: 'swap',
+  })}
+  
+  ${fontFace({
+    fontFamily: 'Gilroy',
+    fileFormats: ['woff'],
+    fontWeight: 700,
+    fontStyle: 'normal',
+    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Bold',
+    fontDisplay: 'swap',
+  })}
+  
+  ${fontFace({
+    fontFamily: 'Gilroy',
+    fileFormats: ['woff'],
+    fontWeight: 800,
+    fontStyle: 'normal',
+    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-ExtraBold',
+    fontDisplay: 'swap',
+  })}
 
   /* Reset Defaults */
   *,
@@ -17,7 +44,7 @@ export default createGlobalStyle`
   }
   
   html {
-    background-color: ${colors.lightBackground};
+    background-color: ${colors.white};
   }
   
   body {
@@ -27,8 +54,9 @@ export default createGlobalStyle`
   html,
   body {
     height: 100%;
-    line-height: 1.4;
-    font-family: 'Khula, sans';
+    font-weight: ${fontWeight.regular};
+    font-family: 'Gilroy', sans-serif;
+    line-height: 1.2;
   }
   
   p,
@@ -46,8 +74,17 @@ export default createGlobalStyle`
   
   .root {
     width: 100%;
-    max-width: 100vw;
+    max-width: ${sizes.deviceWidth};
+    height: ${sizes.deviceHeight};
+    position: relative;
     overflow: hidden;
+    margin: 0 auto;
+    
+    
+    @media (min-width: 376px) {
+      margin: ${rem(gap.medium)} auto;
+      box-shadow: 0 ${rem(gap.pico)} ${rem(gap.regular)} ${rem(gap.pico)} ${transparentize(0.7, colors.lightGray)};
+    }
   }
   
   b,

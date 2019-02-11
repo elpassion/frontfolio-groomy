@@ -1,22 +1,43 @@
 import React from 'react';
-import { Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-import { routes } from '../data/routes';
+import Navigation from './Navigation/Navigation';
 import Home from '../components/views/Home';
-import Login from '../components/views/Login';
+import Place from '../components/views/Place';
 import GlobalStyles from '../theme/globalStyle';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <React.Fragment>
         <GlobalStyles />
 
-        <Route exact path={routes.login} component={Login} />
-        <Route path={routes.dashboard} component={Home} />
+        <Route
+          render={({ location }) => {
+            return (
+              <React.Fragment>
+                <Navigation route={location} />
+
+                <TransitionGroup component={null}>
+                  <CSSTransition
+                    timeout={400}
+                    classNames='page'
+                    key={location.key}
+                  >
+                    <Switch location={location}>
+                      <Route exact path='/' component={Home} />
+                      <Route exact path='/places/:id' component={Place} />
+                      <Route component={Home} />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+              </React.Fragment>
+            );
+          }}
+        />
       </React.Fragment>
-    </BrowserRouter>
+    </Router>
   );
 };
 

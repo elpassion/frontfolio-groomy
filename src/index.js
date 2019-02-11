@@ -1,16 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WebFont from 'webfontloader';
+import 'object-fit-polyfill';
 
 import App from './components/App';
 
-WebFont.load({
-  google: {
-    families: ['Khula:n4,n7']
-  }
-});
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
