@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
-import { colors, gap } from '../../styles/vars';
+
+import { colors, gap } from 'styles/vars';
 
 const RatingIcon = ({ isActive, ...props }) => (
   <BlockIcon viewBox='0 0 11 10' width={11} height={10} {...props}>

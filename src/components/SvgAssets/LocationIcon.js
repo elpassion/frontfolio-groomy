@@ -1,5 +1,6 @@
 import React from 'react';
-import { colors } from '../../styles/vars';
+
+import { colors } from 'styles/vars';
 
 const LocationIcon = props => (
   <svg viewBox='0 0 7 10' width={7} height={10} {...props}>

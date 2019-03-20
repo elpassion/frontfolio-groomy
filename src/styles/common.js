@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
-import { gap, colors, fontWeight, fontSize } from './vars';
 import { rem } from 'polished';
+
+import { gap, colors, fontWeight, fontSize } from './vars';
 import LocationIcon from '../components/SvgAssets/LocationIcon';
 import PriceIcon from '../components/SvgAssets/PriceIcon';
 

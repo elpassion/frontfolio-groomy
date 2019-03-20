@@ -1,8 +1,9 @@
 import React from 'react';
-import { getPlaces } from '../../helpers/functions';
+
 import PlaceItem from './PlaceItem';
 import EmptyState from './EmptyState';
 import { ResultsWrapper } from './SearchResultsStyles';
+import { getPlaces } from '../../helpers/functions';
 
 class SearchResults extends React.Component {
   constructor(props) {

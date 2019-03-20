@@ -1,5 +1,6 @@
 import React from 'react';
 import { number, object, bool } from 'prop-types';
+
 import { getReviewsRating } from '../../helpers/functions';
 import RatingIcon from '../SvgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';

@@ -1,5 +1,5 @@
-import { reviews } from '../data/reviews';
 import { places } from '../data/places';
+import { reviews } from '../data/reviews';
 
 export function negativeValue(value) {
   if (value.includes('px')) {

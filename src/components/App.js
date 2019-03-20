@@ -1,11 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 import Navigation from './Navigation/Navigation';
 import Home from '../components/Views/Home';
 import Place from '../components/Views/Place';
-import GlobalStyles from '../styles/global';
-import { Helmet } from 'react-helmet';
+import GlobalStyles from 'styles/global';
 
 const App = () => {
   return (

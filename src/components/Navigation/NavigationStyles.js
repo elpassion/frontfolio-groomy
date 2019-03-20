@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 import { Link } from 'react-router-dom';
-import { gap, colors, sizes } from '../../styles/vars';
+
+import { gap, colors, sizes } from 'styles/vars';
 
 export const Wrapper = styled.nav`
   position: absolute;

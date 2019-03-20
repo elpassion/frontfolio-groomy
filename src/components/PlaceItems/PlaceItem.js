@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+
+import { getReviewsRating } from '../../helpers/functions';
 import {
   PlaceItemLink,
   PlacePhoto,
@@ -14,9 +16,8 @@ import {
   PlaceAddress,
   StyledPriceIcon,
   StyledLocationIcon,
-} from '../../styles/common';
-import { getReviewsRating } from '../../helpers/functions';
-import { sizes } from '../../styles/vars';
+} from 'styles/common';
+import { sizes } from 'styles/vars';
 
 class PlaceItem extends React.Component {
   constructor(props) {

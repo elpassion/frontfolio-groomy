@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Layout from './Layout';
 import PrimaryHeading from '../Typography/PrimaryHeading';
 import PlaceCover from '../PlaceCover';

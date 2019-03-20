@@ -1,5 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+
+import Logotype from '../SvgAssets/Logotype';
+import BackArrow from '../SvgAssets/BackArrow';
 import {
   Wrapper,
   MenuLine,
@@ -8,8 +11,6 @@ import {
   StyledLink,
   ArrowWrapper,
 } from './NavigationStyles';
-import Logotype from '../SvgAssets/Logotype';
-import BackArrow from '../SvgAssets/BackArrow';
 
 class Navigation extends React.Component {
   goBack = () => {

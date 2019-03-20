@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { SearchWrapper, SearchForm } from './SearchStyles';
 import SearchIcon from '../SvgAssets/SearchIcon';
 

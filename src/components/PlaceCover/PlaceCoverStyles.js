@@ -1,16 +1,10 @@
 import styled from 'styled-components';
 import { rem, transparentize } from 'polished';
-import {
-  gap,
-  colors,
-  misc,
-  fontWeight,
-  fontSize,
-  sizes,
-} from '../../styles/vars';
-import { FlexValignCenter } from '../../styles/common';
+
 import { negativeValue } from '../../helpers/functions';
 import PawIcon from '../SvgAssets/PawIcon';
+import { gap, colors, misc, fontWeight, fontSize, sizes } from 'styles/vars';
+import { FlexValignCenter } from 'styles/common';
 
 export const CoverWrapper = styled.div`
   position: relative;

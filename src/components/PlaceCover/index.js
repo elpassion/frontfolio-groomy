@@ -1,6 +1,9 @@
 import React from 'react';
 import { number, bool } from 'prop-types';
 import { withRouter } from 'react-router-dom';
+
+import RatingBadge from './RatingBadge';
+import RatingStars from './RatingStars';
 import { getReviewsCount, getPlaceDetails } from '../../helpers/functions';
 import {
   PlaceImage,
@@ -18,9 +21,7 @@ import {
   StyledLocationIcon,
   StyledPriceIcon,
   MetaItem,
-} from '../../styles/common';
-import RatingBadge from './RatingBadge';
-import RatingStars from './RatingStars';
+} from 'styles/common';
 
 class PlaceCover extends React.Component {
   constructor(props) {

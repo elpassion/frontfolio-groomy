@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { rem } from 'polished';
+
 import { PlaceMeta, PlacePhoto } from '../PlaceItems/PlaceItemStyles';
 import { CoverWrapper, PlaceDetails } from '../PlaceCover/PlaceCoverStyles';
 import { HeadingH1 } from '../Typography/PrimaryHeading';
 import { SearchWrapper } from '../Search/SearchStyles';
-import { slideIn, slideOut } from '../../styles/common';
-import { rem } from 'polished';
-import { sizes, gap, colors } from '../../styles/vars';
+import { slideIn, slideOut } from 'styles/common';
+import { sizes, gap, colors } from 'styles/vars';
 
 export const LayoutWrapper = styled.div`
   position: relative;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { LayoutWrapper } from './LayoutStyles';
 
 const Layout = ({ children, pushContent, className }) => {

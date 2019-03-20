@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { rem, transparentize, placeholder } from 'polished';
-import { FlexValignCenter } from '../../styles/common';
-import { gap, colors, misc, fontSize, sizes } from '../../styles/vars';
+
+import { FlexValignCenter } from 'styles/common';
+import { gap, colors, misc, fontSize, sizes } from 'styles/vars';
 
 export const SearchWrapper = styled.div`
   ${FlexValignCenter};
