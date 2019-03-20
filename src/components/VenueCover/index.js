@@ -2,68 +2,68 @@ import React from 'react';
 import { number, bool } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
-import { getReviewsCount, getPlaceDetails } from 'data/api';
+import { getReviewsCount, getVenueDetails } from 'data/api';
 import RatingBadge from './RatingBadge';
 import RatingStars from './RatingStars';
 import {
-  PlaceImage,
   CoverWrapper,
-  PlaceDetails,
-  PlaceName,
   FlexWrapper,
-  MetaFlexWrapper,
   LeftColumn,
-  RightColumn,
+  MetaFlexWrapper,
   MetaLeftColumn,
-} from './PlaceCoverStyles';
+  RightColumn,
+  VenueDetails,
+  VenueImage,
+  VenueName,
+} from './VenueCoverStyles';
 import {
-  PlaceAddress,
+  VenueAddress,
   StyledLocationIcon,
   StyledPriceIcon,
   MetaItem,
 } from 'styles/common';
 
-class PlaceCover extends React.Component {
+class VenueCover extends React.Component {
   constructor(props) {
     super(props);
     this.contentBox = React.createRef();
 
     this.state = {
-      currentPlaceDetails: getPlaceDetails(this.props.displayId),
+      currentVenueDetails: getVenueDetails(this.props.displayId),
       reviewsCount: getReviewsCount(this.props.displayId),
     };
   }
 
   goToPlace = () => {
-    this.props.history.push('/places/' + this.props.displayId);
+    this.props.history.push('/venues/' + this.props.displayId);
   };
 
   render() {
-    const { currentPlaceDetails, reviewsCount } = this.state;
+    const { currentVenueDetails, reviewsCount } = this.state;
     const { isHero, displayId } = this.props;
     const showRating = reviewsCount > 0 && !isHero;
 
     return (
       <CoverWrapper onClick={isHero ? null : this.goToPlace}>
-        <PlaceImage
+        <VenueImage
           isHero={isHero}
           src={
             process.env.PUBLIC_URL +
-            '/images/places/salon-' +
-            currentPlaceDetails.id +
+            '/images/venues/salon-' +
+            currentVenueDetails.id +
             '.jpg'
           }
-          alt={currentPlaceDetails.name}
+          alt={currentVenueDetails.name}
         />
-        <PlaceDetails ref={this.contentBox}>
+        <VenueDetails ref={this.contentBox}>
           <FlexWrapper>
             <LeftColumn>
-              <PlaceName>{currentPlaceDetails.name}</PlaceName>
-              <PlaceAddress>{currentPlaceDetails.address}</PlaceAddress>
+              <VenueName>{currentVenueDetails.name}</VenueName>
+              <VenueAddress>{currentVenueDetails.address}</VenueAddress>
             </LeftColumn>
             {showRating && (
               <RightColumn>
-                <RatingBadge placeId={displayId} />
+                <RatingBadge venueId={displayId} />
               </RightColumn>
             )}
           </FlexWrapper>
@@ -73,7 +73,7 @@ class PlaceCover extends React.Component {
                 ? [
                     <RatingStars
                       key='rating'
-                      placeId={displayId}
+                      venueId={displayId}
                       isPlaceReview
                     />,
                     <span key='reviews-count'>
@@ -82,24 +82,24 @@ class PlaceCover extends React.Component {
                   ]
                 : [
                     <MetaItem key='distance'>
-                      <StyledLocationIcon /> {currentPlaceDetails.distance}
+                      <StyledLocationIcon /> {currentVenueDetails.distance}
                     </MetaItem>,
                     <MetaItem key='price'>
-                      <StyledPriceIcon /> {currentPlaceDetails.price}
+                      <StyledPriceIcon /> {currentVenueDetails.price}
                     </MetaItem>,
                   ]}
             </MetaLeftColumn>
             <RightColumn>
               {isHero ? (
                 <React.Fragment>
-                  <StyledLocationIcon /> {currentPlaceDetails.distance}
+                  <StyledLocationIcon /> {currentVenueDetails.distance}
                 </React.Fragment>
               ) : (
                 `${reviewsCount} Review${reviewsCount !== 1 && 's'}`
               )}
             </RightColumn>
           </MetaFlexWrapper>
-        </PlaceDetails>
+        </VenueDetails>
       </CoverWrapper>
     );
   }
@@ -109,9 +109,9 @@ class PlaceCover extends React.Component {
   };
 }
 
-PlaceCover.propTypes = {
+VenueCover.propTypes = {
   displayId: number.isRequired,
   isHero: bool,
 };
 
-export default withRouter(PlaceCover);
+export default withRouter(VenueCover);

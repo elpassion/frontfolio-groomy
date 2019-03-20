@@ -12,7 +12,7 @@ export const CoverWrapper = styled.div`
   transition: opacity 0.2s ease-in;
 `;
 
-export const PlaceImage = styled.img.attrs({
+export const VenueImage = styled.img.attrs({
   'data-object-fit': 'cover',
 })`
   display: block;
@@ -23,7 +23,7 @@ export const PlaceImage = styled.img.attrs({
   overflow: hidden;
 `;
 
-export const PlaceDetails = styled.div`
+export const VenueDetails = styled.div`
   width: calc(100% - ${rem(gap.xbig)});
   margin: 0 auto;
   padding: ${rem(gap.xsmall)};
@@ -35,7 +35,7 @@ export const PlaceDetails = styled.div`
   transition: opacity 0.2s ease-in, transform 0.2s ease-in;
 `;
 
-export const PlaceName = styled.h2`
+export const VenueName = styled.h2`
   margin: 0;
   overflow: hidden;
   color: ${colors.primaryBlack};

@@ -3,13 +3,14 @@ import { rem } from 'polished';
 
 import { gap, colors, fontWeight, fontSize } from './vars';
 import LocationIcon from '../components/SvgAssets/LocationIcon';
+
 import PriceIcon from '../components/SvgAssets/PriceIcon';
 
 export const IconsSpacing = css`
   margin: 0 ${rem(gap.pico)} 0 0;
 `;
 
-export const PlaceAddress = styled.p`
+export const VenueAddress = styled.p`
   color: ${colors.darkerGray};
   font-weight: ${fontWeight.regular};
   font-size: ${rem(fontSize.xsmall)};

@@ -5,7 +5,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Navigation from './Navigation/Navigation';
 import Home from '../components/Views/Home';
-import Place from '../components/Views/Place';
+import Venue from '../components/Views/Venue';
 import GlobalStyles from 'styles/global';
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
                     >
                       <Switch location={location}>
                         <Route exact path='/' component={Home} />
-                        <Route exact path='/places/:id' component={Place} />
+                        <Route exact path='/venues/:id' component={Venue} />
                         <Route component={Home} />
                       </Switch>
                     </CSSTransition>

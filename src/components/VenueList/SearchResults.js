@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { getPlaces } from 'data/api';
-import PlaceItem from './PlaceItem';
+import VenueItem from '../VenueItem';
 import EmptyState from './EmptyState';
 import { ResultsWrapper } from './SearchResultsStyles';
 
@@ -31,7 +31,7 @@ class SearchResults extends React.Component {
         {results.length === 0 ? (
           <EmptyState term={term} />
         ) : (
-          results.map(place => <PlaceItem key={place.id} details={place} />)
+          results.map(venue => <VenueItem key={venue.id} details={venue} />)
         )}
       </ResultsWrapper>
     );

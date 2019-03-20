@@ -1,16 +1,16 @@
-import { places } from './places';
+import { venues } from './venues';
 import { reviews } from './reviews';
 
-export function getReviews(placeId) {
-  return reviews.filter(review => review.place_id === placeId);
+export function getReviews(venueId) {
+  return reviews.filter(review => review.venue_id === venueId);
 }
 
-export function getReviewsCount(placeId) {
-  return reviews.filter(review => review.place_id === placeId).length;
+export function getReviewsCount(venueId) {
+  return reviews.filter(review => review.venue_id === venueId).length;
 }
 
-export function getReviewsRating(placeId, fixedValue = 0) {
-  const reviewsList = getReviews(placeId);
+export function getReviewsRating(venueId, fixedValue = 0) {
+  const reviewsList = getReviews(venueId);
   const reviewsCount = reviewsList.length;
   const fixedReviewsSummary = (
     reviewsList.reduce((prev, next) => +prev + +next.rating, 0) / reviewsCount
@@ -23,15 +23,15 @@ export function getReviewsRating(placeId, fixedValue = 0) {
   }
 }
 
-export function getPlaceDetails(placeId) {
-  return places.find(place => place.id === placeId);
+export function getVenueDetails(venueId) {
+  return venues.find(venue => venue.id === venueId);
 }
 
 export function getPlaces(term) {
   if (term) {
-    return places.filter(place =>
-      place.name.toLowerCase().includes(term.toLowerCase())
+    return venues.filter(venue =>
+      venue.name.toLowerCase().includes(term.toLowerCase())
     );
   }
-  return places;
+  return venues;
 }

@@ -3,31 +3,31 @@ import { withRouter } from 'react-router-dom';
 
 import { getReviewsRating } from 'data/api';
 import {
-  PlaceItemLink,
-  PlacePhoto,
-  PlaceName,
-  PlaceMeta,
-  PlaceDetailsWrapper,
+  VenueItemLink,
+  VenuePhoto,
+  VenueName,
+  VenueMeta,
+  VenueDetailsWrapper,
   StyledRatingIcon,
   PhotoWrapper,
-} from './PlaceItemStyles';
+} from './VenueItemStyles';
 import {
   MetaItem,
-  PlaceAddress,
+  VenueAddress,
   StyledPriceIcon,
   StyledLocationIcon,
 } from 'styles/common';
 import { sizes } from 'styles/vars';
 
-class PlaceItem extends React.Component {
+class VenueItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.placePhoto = React.createRef();
-    this.goToPlace = this.goToPlace.bind(this);
+    this.venuePhoto = React.createRef();
+    this.goToVenue = this.goToVenue.bind(this);
 
     this.state = {
-      placeRating: [],
+      venueRating: [],
       startTransition: false,
       elementStyles: {
         top: null,
@@ -40,10 +40,10 @@ class PlaceItem extends React.Component {
     };
   }
 
-  goToPlace = () => {
-    const photoPosition = this.placePhoto.current.getBoundingClientRect();
-    const leftPosition = this.placePhoto.current.offsetLeft;
-    const topPosition = this.placePhoto.current.offsetTop;
+  goToVenue = () => {
+    const photoPosition = this.venuePhoto.current.getBoundingClientRect();
+    const leftPosition = this.venuePhoto.current.offsetLeft;
+    const topPosition = this.venuePhoto.current.offsetTop;
 
     this.setState(
       {
@@ -85,30 +85,30 @@ class PlaceItem extends React.Component {
   };
 
   routerPush = () => {
-    this.props.history.push('/places/' + this.props.details.id);
+    this.props.history.push('/venues/' + this.props.details.id);
   };
 
   componentWillMount() {
     this.setState({
-      placeRating: getReviewsRating(this.props.details.id, 1),
+      venueRating: getReviewsRating(this.props.details.id, 1),
     });
   }
 
   render() {
     const { details } = this.props;
-    const { placeRating, elementStyles } = this.state;
+    const { venueRating, elementStyles } = this.state;
 
     return (
-      <PlaceItemLink onClick={this.goToPlace}>
+      <VenueItemLink onClick={this.goToVenue}>
         <PhotoWrapper>
-          <PlacePhoto
+          <VenuePhoto
             src={
               process.env.PUBLIC_URL +
-              '/images/places/salon-' +
+              '/images/venues/salon-' +
               details.id +
               '.jpg'
             }
-            ref={this.placePhoto}
+            ref={this.venuePhoto}
             style={{
               top: elementStyles.top,
               left: elementStyles.left,
@@ -119,14 +119,14 @@ class PlaceItem extends React.Component {
             }}
           />
         </PhotoWrapper>
-        <PlaceMeta>
-          <PlaceName>{details.name}</PlaceName>
-          <PlaceAddress>{details.address}</PlaceAddress>
+        <VenueMeta>
+          <VenueName>{details.name}</VenueName>
+          <VenueAddress>{details.address}</VenueAddress>
 
-          <PlaceDetailsWrapper>
-            {placeRating && (
+          <VenueDetailsWrapper>
+            {venueRating && (
               <MetaItem>
-                <StyledRatingIcon /> {placeRating}
+                <StyledRatingIcon /> {venueRating}
               </MetaItem>
             )}
             <MetaItem>
@@ -135,11 +135,11 @@ class PlaceItem extends React.Component {
             <MetaItem>
               <StyledPriceIcon /> {details.price}
             </MetaItem>
-          </PlaceDetailsWrapper>
-        </PlaceMeta>
-      </PlaceItemLink>
+          </VenueDetailsWrapper>
+        </VenueMeta>
+      </VenueItemLink>
     );
   }
 }
 
-export default withRouter(PlaceItem);
+export default withRouter(VenueItem);

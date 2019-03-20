@@ -10,7 +10,7 @@ class RatingStars extends React.Component {
     super(props);
 
     this.state = {
-      reviewsRating: getReviewsRating(this.props.placeId), // @todo: refactor to reuse on single review
+      reviewsRating: getReviewsRating(this.props.venueId), // @todo: refactor to reuse on single review
     };
   }
 
@@ -36,7 +36,7 @@ class RatingStars extends React.Component {
 
 RatingStars.propTypes = {
   isPlaceReview: bool,
-  placeId: number,
+  venueId: number,
   singleReview: object,
 };
 

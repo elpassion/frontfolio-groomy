@@ -55,7 +55,7 @@ export const sizes = {
   navHeight: '54px',
   navHeightPadding: '62px',
   ratingBadgeSize: '74px',
-  placePhoto: '84px',
+  venuePhoto: '84px',
   coverHeight: '204px',
   heroHeight: '348px',
   deviceWidth: '420px',

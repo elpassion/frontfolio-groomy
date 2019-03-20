@@ -21,11 +21,11 @@ class Navigation extends React.Component {
     const {
       route: { pathname },
     } = this.props;
-    const isPlaceView = pathname.includes('places');
+    const isVenuePage = pathname.includes('venues');
 
     return (
-      <Wrapper isPlaceView={isPlaceView}>
-        {isPlaceView ? (
+      <Wrapper isVenuePage={isVenuePage}>
+        {isVenuePage ? (
           <ArrowWrapper onClick={this.goBack}>
             <BackArrow />
           </ArrowWrapper>

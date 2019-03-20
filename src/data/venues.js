@@ -1,4 +1,4 @@
-export const places = [
+export const venues = [
   {
     id: 0,
     name: 'Chi Chi Dog SPA',

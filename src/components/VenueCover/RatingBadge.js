@@ -2,14 +2,14 @@ import React from 'react';
 import { number } from 'prop-types';
 
 import { getReviewsRating } from 'data/api';
-import { RatingBadgeWrapper, PawIconBackground } from './PlaceCoverStyles';
+import { RatingBadgeWrapper, PawIconBackground } from './VenueCoverStyles';
 
 class RatingBadge extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      reviewsRating: getReviewsRating(this.props.placeId, 1),
+      reviewsRating: getReviewsRating(this.props.venueId, 1),
     };
   }
 
@@ -28,7 +28,7 @@ class RatingBadge extends React.Component {
 }
 
 RatingBadge.propTypes = {
-  placeId: number.isRequired,
+  venueId: number.isRequired,
 };
 
 export default RatingBadge;

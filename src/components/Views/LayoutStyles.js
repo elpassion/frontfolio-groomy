@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-import { PlaceMeta, PlacePhoto } from '../PlaceItems/PlaceItemStyles';
-import { CoverWrapper, PlaceDetails } from '../PlaceCover/PlaceCoverStyles';
+import { VenueMeta, VenuePhoto } from '../VenueItem/VenueItemStyles';
+import { CoverWrapper, VenueDetails } from '../VenueCover/VenueCoverStyles';
 import { HeadingH1 } from '../Typography/PrimaryHeading';
 import { SearchWrapper } from '../Search/SearchStyles';
 import { slideIn, slideOut } from 'styles/common';
@@ -21,17 +21,17 @@ export const LayoutWrapper = styled.div`
     }
     
     &.page-exit {        
-      ${PlaceMeta},
+      ${VenueMeta},
       ${CoverWrapper},
       ${HeadingH1},
       ${SearchWrapper},
-      ${PlacePhoto} {
+      ${VenuePhoto} {
         opacity: 0;
       }
     }
   }
   
-  &.place {
+  &.venue {
     &.page-enter {
       position: absolute;
       top: 0;
@@ -39,7 +39,7 @@ export const LayoutWrapper = styled.div`
       visibility: hidden;
       opacity: 0;
       
-      ${PlaceDetails} {
+      ${VenueDetails} {
         transform: translateY(-75%);
         opacity: 0;
       }
@@ -50,7 +50,7 @@ export const LayoutWrapper = styled.div`
       visibility: visible;
       opacity: 1;
       
-      ${PlaceDetails} {
+      ${VenueDetails} {
         transform: translateY(-25%);
         opacity: 1;
       }
