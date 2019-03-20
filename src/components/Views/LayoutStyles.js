@@ -3,9 +3,9 @@ import { PlaceMeta, PlacePhoto } from '../PlaceItems/PlaceItemStyles';
 import { CoverWrapper, PlaceDetails } from '../PlaceCover/PlaceCoverStyles';
 import { HeadingH1 } from '../Typography/PrimaryHeading';
 import { SearchWrapper } from '../Search/SearchStyles';
-import { slideIn, slideOut } from '../Common/CommonStyles';
+import { slideIn, slideOut } from '../../styles/common';
 import { rem } from 'polished';
-import { sizes, gap, colors } from '../../helpers/vars';
+import { sizes, gap, colors } from '../../styles/vars';
 
 export const LayoutWrapper = styled.div`
   position: relative;

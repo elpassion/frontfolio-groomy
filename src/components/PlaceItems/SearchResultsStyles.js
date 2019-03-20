@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
-import { fontSize, fontWeight, gap } from '../../helpers/vars';
+import { fontSize, fontWeight, gap } from '../../styles/vars';
 
 export const ResultsWrapper = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
-import { gap, fontWeight, fontSize, colors } from '../../helpers/vars';
+import { gap, fontWeight, fontSize, colors } from '../../styles/vars';
 
 const PrimaryHeading = ({ children }) => {
   return <HeadingH1>{children}</HeadingH1>;

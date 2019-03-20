@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../helpers/vars';
+import { colors } from '../../styles/vars';
 
 const PriceIcon = props => (
   <svg viewBox='0 0 8 8' width={8} height={8} {...props}>

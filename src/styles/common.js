@@ -1,8 +1,8 @@
 import styled, { css, keyframes } from 'styled-components';
-import { gap, colors, fontWeight, fontSize } from '../../helpers/vars';
+import { gap, colors, fontWeight, fontSize } from './vars';
 import { rem } from 'polished';
-import LocationIcon from '../SvgAssets/LocationIcon';
-import PriceIcon from '../SvgAssets/PriceIcon';
+import LocationIcon from '../components/SvgAssets/LocationIcon';
+import PriceIcon from '../components/SvgAssets/PriceIcon';
 
 export const IconsSpacing = css`
   margin: 0 ${rem(gap.pico)} 0 0;

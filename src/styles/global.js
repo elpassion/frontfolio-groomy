@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 import { normalize, fontFace, rem, transparentize } from 'polished';
-import { colors, fontWeight, sizes, gap } from '../styles/vars';
+import { colors, fontWeight, sizes, gap } from './vars';
 
 const Normalize = css`
   ${normalize()}

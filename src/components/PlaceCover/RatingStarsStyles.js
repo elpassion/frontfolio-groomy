@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
-import { gap } from '../../helpers/vars';
+import { gap } from '../../styles/vars';
 
 export const StarsRatingWrapper = styled.div`
   display: flex;

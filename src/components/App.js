@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Navigation from './Navigation/Navigation';
 import Home from '../components/Views/Home';
 import Place from '../components/Views/Place';
-import GlobalStyles from '../theme/globalStyle';
+import GlobalStyles from '../styles/global';
 import { Helmet } from 'react-helmet';
 
 const App = () => {

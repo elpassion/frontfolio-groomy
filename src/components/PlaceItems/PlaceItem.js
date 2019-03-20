@@ -14,9 +14,9 @@ import {
   PlaceAddress,
   StyledPriceIcon,
   StyledLocationIcon,
-} from '../Common/CommonStyles';
+} from '../../styles/common';
 import { getReviewsRating } from '../../helpers/functions';
-import { sizes } from '../../helpers/vars';
+import { sizes } from '../../styles/vars';
 
 class PlaceItem extends React.Component {
   constructor(props) {

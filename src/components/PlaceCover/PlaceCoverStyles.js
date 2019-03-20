@@ -7,8 +7,8 @@ import {
   fontWeight,
   fontSize,
   sizes,
-} from '../../helpers/vars';
-import { FlexValignCenter } from '../Common/CommonStyles';
+} from '../../styles/vars';
+import { FlexValignCenter } from '../../styles/common';
 import { negativeValue } from '../../helpers/functions';
 import PawIcon from '../SvgAssets/PawIcon';
 

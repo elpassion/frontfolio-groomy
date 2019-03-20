@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
-import { FlexValignCenter } from '../Common/CommonStyles';
+import { FlexValignCenter } from '../../styles/common';
 import RatingIcon from '../SvgAssets/RatingIcon';
 import {
   gap,
@@ -9,7 +9,7 @@ import {
   fontSize,
   fontWeight,
   sizes,
-} from '../../helpers/vars';
+} from '../../styles/vars';
 
 export const PlaceItemLink = styled.div`
   ${FlexValignCenter};

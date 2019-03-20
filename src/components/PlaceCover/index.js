@@ -18,7 +18,7 @@ import {
   StyledLocationIcon,
   StyledPriceIcon,
   MetaItem,
-} from '../Common/CommonStyles';
+} from '../../styles/common';
 import RatingBadge from './RatingBadge';
 import RatingStars from './RatingStars';
 
