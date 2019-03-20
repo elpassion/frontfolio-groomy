@@ -27,8 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --config ./.prettierrc --write src/**/**/*.js",
-    "lint:css": "stylelint './src/**/*.js'; exit 0"
+    "format:js": "prettier --config ./.prettierrc --write src/**/**/*.js",
+    "format:css": "stylelint './src/**/*.js'; exit 0"
   },
   "eslintConfig": {
     "extends": "react-app"

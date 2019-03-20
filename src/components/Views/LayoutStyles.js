@@ -39,8 +39,8 @@ export const LayoutWrapper = styled.div`
       opacity: 0;
       
       ${PlaceDetails} {
-        opacity: 0;
         transform: translateY(-75%);
+        opacity: 0;
       }
     }
     
@@ -50,8 +50,8 @@ export const LayoutWrapper = styled.div`
       opacity: 1;
       
       ${PlaceDetails} {
-        opacity: 1;
         transform: translateY(-25%);
+        opacity: 1;
       }
     }
     
