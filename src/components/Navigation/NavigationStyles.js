@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import { Link } from 'react-router-dom';
 
-import { gap, colors, sizes } from 'styles/vars';
+import { gaps, colors, sizes } from 'styles/vars';
 
 export const Wrapper = styled.nav`
   position: absolute;
@@ -13,7 +13,7 @@ export const Wrapper = styled.nav`
   align-items: center;
   width: 100%;
   height: ${rem(sizes.navHeight)};
-  padding: 0 ${rem(gap.regular)};
+  padding: 0 ${rem(gaps.regular)};
 `;
 
 export const ArrowWrapper = styled.div`
@@ -36,7 +36,7 @@ export const MenuLine = styled.span`
   }
 
   &:not(:last-child) {
-    margin: 0 0 ${rem(gap.pico)};
+    margin: 0 0 ${rem(gaps.pico)};
   }
 `;
 
@@ -44,8 +44,8 @@ export const BurgerMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: ${rem(gap.regular)};
-  height: ${rem(gap.regular)};
+  width: ${rem(gaps.regular)};
+  height: ${rem(gaps.regular)};
 `;
 
 export const WhiteSpace = styled(BurgerMenu)`

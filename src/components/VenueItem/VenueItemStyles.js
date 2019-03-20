@@ -3,18 +3,18 @@ import { rem } from 'polished';
 
 import RatingIcon from '../SvgAssets/RatingIcon';
 import { FlexValignCenter } from 'styles/common';
-import { gap, colors, misc, fontSize, fontWeight, sizes } from 'styles/vars';
+import { gaps, colors, radii, fontSizes, fontWeights, sizes } from 'styles/vars';
 
 export const VenueItemLink = styled.div`
   ${FlexValignCenter};
-  margin: 0 0 ${rem(gap.medium)};
+  margin: 0 0 ${rem(gaps.medium)};
   color: ${colors.primaryBlack};
 `;
 
 export const PhotoWrapper = styled.div`
   flex: 0 0 ${rem(sizes.venuePhoto)};
   height: ${rem(sizes.venuePhoto)};
-  margin: 0 ${rem(gap.regular)} 0 0;
+  margin: 0 ${rem(gaps.regular)} 0 0;
 `;
 
 export const VenuePhoto = styled.img.attrs({
@@ -25,7 +25,7 @@ export const VenuePhoto = styled.img.attrs({
   width: ${rem(sizes.venuePhoto)};
   height: ${rem(sizes.venuePhoto)};
   overflow: hidden;
-  border-radius: ${rem(misc.regularBorderRadius)};
+  border-radius: ${rem(radii.regularBorderRadius)};
   object-fit: cover;
   transition: all 0.3s ease-in;
 `;
@@ -36,18 +36,18 @@ export const VenueMeta = styled.div`
 `;
 
 export const VenueName = styled.h3`
-  margin: 0 0 ${rem(gap.pico)} 0;
-  font-weight: ${fontWeight.bold};
-  font-size: ${rem(fontSize.medium)};
+  margin: 0 0 ${rem(gaps.pico)} 0;
+  font-weight: ${fontWeights.bold};
+  font-size: ${rem(fontSizes.medium)};
 `;
 
 export const VenueDetailsWrapper = styled.div`
   ${FlexValignCenter};
-  margin: ${rem(gap.tiny)} 0 0 0;
+  margin: ${rem(gaps.tiny)} 0 0 0;
   color: ${colors.lightGray};
-  font-size: ${rem(fontSize.xxsmall)};
+  font-size: ${rem(fontSizes.xxsmall)};
 `;
 
 export const StyledRatingIcon = styled(RatingIcon)`
-  margin: 0 ${rem(gap.pico)} 0 0;
+  margin: 0 ${rem(gaps.pico)} 0 0;
 `;

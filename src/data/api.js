@@ -9,12 +9,12 @@ export function getReviewsCount(venueId) {
   return reviews.filter(review => review.venue_id === venueId).length;
 }
 
-export function getReviewsRating(venueId, fixedValue = 0) {
+export function getReviewsRating(venueId, digits = 0) {
   const reviewsList = getReviews(venueId);
   const reviewsCount = reviewsList.length;
   const fixedReviewsSummary = (
     reviewsList.reduce((prev, next) => +prev + +next.rating, 0) / reviewsCount
-  ).toFixed(fixedValue);
+  ).toFixed(digits);
 
   if (isNaN(fixedReviewsSummary)) {
     return 'N/A';

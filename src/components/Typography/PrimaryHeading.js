@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-import { gap, fontWeight, fontSize, colors } from 'styles/vars';
+import { gaps, fontWeights, fontSizes, colors } from 'styles/vars';
 
 const PrimaryHeading = ({ children }) => {
   return <HeadingH1>{children}</HeadingH1>;
@@ -10,10 +10,10 @@ const PrimaryHeading = ({ children }) => {
 
 export const HeadingH1 = styled.h1`
   display: block;
-  margin: ${rem(gap.tiny)} 0 ${rem(gap.regular)};
+  margin: ${rem(gaps.tiny)} 0 ${rem(gaps.regular)};
   color: ${colors.primaryBlack};
-  font-weight: ${fontWeight.extraBold};
-  font-size: ${rem(fontSize.xlarge)};
+  font-weight: ${fontWeights.extraBold};
+  font-size: ${rem(fontSizes.xlarge)};
   transition: opacity 0.2s ease-in;
 `;
 

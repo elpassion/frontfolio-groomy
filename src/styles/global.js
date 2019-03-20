@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 import { normalize, fontFace, rem, transparentize } from 'polished';
 
-import { colors, fontWeight, sizes, gap } from './vars';
+import { colors, fontWeights, sizes, gaps } from './vars';
 
 const Normalize = css`
   ${normalize()}
@@ -56,14 +56,14 @@ export default createGlobalStyle`
     color: ${colors.darkGray};
     
     @media (min-width: ${sizes.deviceWidth}) {
-      padding:  ${rem(gap.medium)} 0;
+      padding:  ${rem(gaps.medium)} 0;
     }
   }
   
   html,
   body {
     height: 100%;
-    font-weight: ${fontWeight.regular};
+    font-weight: ${fontWeights.regular};
     font-family: 'Gilroy', sans-serif;
     line-height: 1.2;
   }
@@ -91,14 +91,14 @@ export default createGlobalStyle`
     overflow: auto;
     
     @media (min-width: ${sizes.deviceWidth}) {
-      box-shadow: 0 ${rem(gap.pico)} ${rem(gap.regular)} ${rem(
-  gap.pico
+      box-shadow: 0 ${rem(gaps.pico)} ${rem(gaps.regular)} ${rem(
+  gaps.pico
 )} ${transparentize(0.7, colors.lightGray)};
     }
   }
   
   b,
   strong {
-    font-weight: ${fontWeight.bold};
+    font-weight: ${fontWeights.bold};
   }
 `;

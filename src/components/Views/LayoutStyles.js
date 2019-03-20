@@ -6,13 +6,13 @@ import { CoverWrapper, VenueDetails } from '../VenueCover/VenueCoverStyles';
 import { HeadingH1 } from '../Typography/PrimaryHeading';
 import { SearchWrapper } from '../Search/SearchStyles';
 import { slideIn, slideOut } from 'styles/common';
-import { sizes, gap, colors } from 'styles/vars';
+import { sizes, gaps, colors } from 'styles/vars';
 
 export const LayoutWrapper = styled.div`
   position: relative;
   z-index: 1;
   padding: ${props => (props.pushContent ? rem(sizes.navHeightPadding) : 0)}
-    ${rem(gap.regular)} 0;
+    ${rem(gaps.regular)} 0;
   background: ${colors.white};
   
   &.home {

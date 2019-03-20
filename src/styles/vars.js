@@ -21,7 +21,7 @@ export const gradients = {
   },
 };
 
-export const fontSize = {
+export const fontSizes = {
   xxsmall: '12px',
   xsmall: '13px',
   small: '14px',
@@ -32,13 +32,13 @@ export const fontSize = {
   xxlarge: '36px',
 };
 
-export const fontWeight = {
+export const fontWeights = {
   regular: 500,
   bold: 700,
   extraBold: 800,
 };
 
-export const gap = {
+export const gaps = {
   pico: '3px',
   tiny: '6px',
   xsmall: '12px',
@@ -62,7 +62,7 @@ export const sizes = {
   deviceHeight: '820px',
 };
 
-export const misc = {
+export const radii = {
   regularBorderRadius: '10px',
   mediumBorderRadius: '15px',
 };
@@ -70,9 +70,9 @@ export const misc = {
 export default {
   colors,
   gradients,
-  fontSize,
-  fontWeight,
-  gap,
+  fontSizes,
+  fontWeights,
+  gaps,
   sizes,
-  misc,
+  radii,
 };
