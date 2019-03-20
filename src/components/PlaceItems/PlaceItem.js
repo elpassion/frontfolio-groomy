@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import { getReviewsRating } from '../../helpers/functions';
+import { getReviewsRating } from 'data/api';
 import {
   PlaceItemLink,
   PlacePhoto,

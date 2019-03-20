@@ -1,7 +1,7 @@
 import React from 'react';
 import { number, object, bool } from 'prop-types';
 
-import { getReviewsRating } from '../../helpers/functions';
+import { getReviewsRating } from 'data/api';
 import RatingIcon from '../SvgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
 

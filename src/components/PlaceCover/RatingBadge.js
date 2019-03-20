@@ -1,8 +1,8 @@
 import React from 'react';
 import { number } from 'prop-types';
 
+import { getReviewsRating } from 'data/api';
 import { RatingBadgeWrapper, PawIconBackground } from './PlaceCoverStyles';
-import { getReviewsRating } from 'helpers/functions';
 
 class RatingBadge extends React.Component {
   constructor(props) {

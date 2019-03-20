@@ -1,13 +1,5 @@
-import { places } from '../data/places';
-import { reviews } from '../data/reviews';
-
-export function negativeValue(value) {
-  if (value.includes('px')) {
-    return `-${value}`;
-  }
-
-  return null;
-}
+import { places } from './places';
+import { reviews } from './reviews';
 
 export function getReviews(placeId) {
   return reviews.filter(review => review.place_id === placeId);

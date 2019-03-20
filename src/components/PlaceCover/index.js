@@ -2,9 +2,9 @@ import React from 'react';
 import { number, bool } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
+import { getReviewsCount, getPlaceDetails } from 'data/api';
 import RatingBadge from './RatingBadge';
 import RatingStars from './RatingStars';
-import { getReviewsCount, getPlaceDetails } from '../../helpers/functions';
 import {
   PlaceImage,
   CoverWrapper,

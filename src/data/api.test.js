@@ -1,17 +1,11 @@
-import { places } from '../../data/places';
 import {
-  negativeValue,
   getReviews,
   getReviewsCount,
   getReviewsRating,
   getPlaceDetails,
   getPlaces,
-} from '../../helpers/functions';
-
-it('Converting values to negative values', () => {
-  expect(negativeValue('12px')).toBe('-12px');
-  expect(negativeValue('12rem')).toBe(null);
-});
+} from 'data/api';
+import { places } from 'data/places';
 
 it('Checking if function return object with reviews', () => {
   expect(typeof getReviews(1)).toBe('object');

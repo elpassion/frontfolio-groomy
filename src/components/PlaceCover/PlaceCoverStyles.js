@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { rem, transparentize } from 'polished';
 
-import { negativeValue } from '../../helpers/functions';
 import PawIcon from '../SvgAssets/PawIcon';
+import { invertPixelValue } from 'helpers';
 import { gap, colors, misc, fontWeight, fontSize, sizes } from 'styles/vars';
 import { FlexValignCenter } from 'styles/common';
 
 export const CoverWrapper = styled.div`
   position: relative;
-  margin: 0 ${rem(negativeValue(gap.regular))};
+  margin: 0 ${rem(invertPixelValue(gap.regular))};
   transition: opacity 0.2s ease-in;
 `;
 
