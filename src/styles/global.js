@@ -86,6 +86,7 @@ export default createGlobalStyle`
     width: 100%;
     max-width: ${sizes.deviceWidth};
     height: 100%;
+    max-height: ${sizes.deviceHeight};
     margin: 0 auto;
     overflow: auto;
     

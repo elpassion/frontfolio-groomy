@@ -59,6 +59,7 @@ export const sizes = {
   coverHeight: '204px',
   heroHeight: '348px',
   deviceWidth: '420px',
+  deviceHeight: '820px',
 };
 
 export const misc = {
