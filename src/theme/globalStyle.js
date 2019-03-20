@@ -1,40 +1,44 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import { normalize, fontFace, rem, transparentize } from 'polished';
-import { colors, fontWeight, sizes, gap } from '../helpers/vars';
+import { colors, fontWeight, sizes, gap } from '../styles/vars';
+
+const Normalize = css`
+  ${normalize()}
+`;
+
+const InitFonts = css`
+${fontFace({
+  fontFamily: 'Gilroy',
+  fileFormats: ['woff'],
+  fontWeight: 500,
+  fontStyle: 'normal',
+  fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Medium',
+  fontDisplay: 'swap',
+})}
+
+${fontFace({
+  fontFamily: 'Gilroy',
+  fileFormats: ['woff'],
+  fontWeight: 700,
+  fontStyle: 'normal',
+  fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Bold',
+  fontDisplay: 'swap',
+})}
+
+${fontFace({
+  fontFamily: 'Gilroy',
+  fileFormats: ['woff'],
+  fontWeight: 800,
+  fontStyle: 'normal',
+  fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-ExtraBold',
+  fontDisplay: 'swap',
+})}
+`;
 
 export default createGlobalStyle`
-  /* Normalize */
-  ${normalize()}
-  
-  /* Init Fonts */
-  ${fontFace({
-    fontFamily: 'Gilroy',
-    fileFormats: ['woff'],
-    fontWeight: 500,
-    fontStyle: 'normal',
-    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Medium',
-    fontDisplay: 'swap',
-  })}
-  
-  ${fontFace({
-    fontFamily: 'Gilroy',
-    fileFormats: ['woff'],
-    fontWeight: 700,
-    fontStyle: 'normal',
-    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Bold',
-    fontDisplay: 'swap',
-  })}
-  
-  ${fontFace({
-    fontFamily: 'Gilroy',
-    fileFormats: ['woff'],
-    fontWeight: 800,
-    fontStyle: 'normal',
-    fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-ExtraBold',
-    fontDisplay: 'swap',
-  })}
+  ${Normalize};
+  ${InitFonts};
 
-  /* Reset Defaults */
   *,
   *::before,
   *::after {
@@ -49,6 +53,10 @@ export default createGlobalStyle`
   
   body {
     color: ${colors.darkGray};
+    
+    @media (min-width: ${sizes.deviceWidth}) {
+      padding:  ${rem(gap.medium)} 0;
+    }
   }
   
   html,
@@ -76,11 +84,11 @@ export default createGlobalStyle`
     position: relative;
     width: 100%;
     max-width: ${sizes.deviceWidth};
+    height: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: auto;
     
-    @media (min-width: 376px) {
-      margin: ${rem(gap.medium)} auto;
+    @media (min-width: ${sizes.deviceWidth}) {
       box-shadow: 0 ${rem(gap.pico)} ${rem(gap.regular)} ${rem(
   gap.pico
 )} ${transparentize(0.7, colors.lightGray)};
