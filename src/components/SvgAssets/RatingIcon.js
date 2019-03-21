@@ -17,7 +17,7 @@ export const BlockIcon = styled.svg`
   display: block;
 
   &:not(:last-child) {
-    margin: 0 ${rem(gaps.pico)} 0 0;
+    margin: 0 ${rem(gaps.xsmall)} 0 0;
   }
 `;
 

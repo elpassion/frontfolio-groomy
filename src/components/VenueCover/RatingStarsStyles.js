@@ -6,5 +6,5 @@ import { gaps } from 'styles/vars';
 export const StarsRatingWrapper = styled.div`
   display: flex;
   width: auto;
-  padding: 0 ${rem(gaps.tiny)} ${rem(gaps.pico)} 0;
+  padding: 0 ${rem(gaps.small)} ${rem(gaps.xsmall)} 0;
 `;

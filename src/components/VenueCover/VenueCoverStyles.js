@@ -3,12 +3,19 @@ import { rem, transparentize } from 'polished';
 
 import PawIcon from '../SvgAssets/PawIcon';
 import { invertPixelValue } from 'helpers';
-import { gaps, colors, radii, fontWeights, fontSizes, sizes } from 'styles/vars';
+import {
+  gaps,
+  colors,
+  radii,
+  fontWeights,
+  fontSizes,
+  sizes,
+} from 'styles/vars';
 import { FlexValignCenter } from 'styles/common';
 
 export const CoverWrapper = styled.div`
   position: relative;
-  margin: 0 ${rem(invertPixelValue(gaps.regular))};
+  margin: 0 ${rem(invertPixelValue(gaps.medium))};
   transition: opacity 0.2s ease-in;
 `;
 
@@ -24,12 +31,12 @@ export const VenueImage = styled.img.attrs({
 `;
 
 export const VenueDetails = styled.div`
-  width: calc(100% - ${rem(gaps.xbig)});
+  width: calc(100% - ${rem(gaps.xlarge)});
   margin: 0 auto;
-  padding: ${rem(gaps.xsmall)};
+  padding: ${rem(gaps.regular)};
   background: ${colors.white};
   border-radius: ${radii.regularBorderRadius};
-  box-shadow: 0 ${rem(gaps.tiny)} ${rem(gaps.medium)} 0
+  box-shadow: 0 ${rem(gaps.small)} ${rem(gaps.large)} 0
     ${transparentize(0.7, colors.lightGray)};
   transform: translateY(-25%);
   transition: opacity 0.2s ease-in, transform 0.2s ease-in;
@@ -53,7 +60,7 @@ export const FlexWrapper = styled.div`
 export const LeftColumn = styled.div`
   flex: 1 1 auto;
   min-width: 0;
-  margin: 0 ${rem(gaps.xsmall)} 0 0;
+  margin: 0 ${rem(gaps.regular)} 0 0;
 `;
 
 export const RightColumn = styled.div`
@@ -67,7 +74,7 @@ export const RightColumn = styled.div`
 export const MetaFlexWrapper = styled(FlexWrapper)`
   margin: 0;
   color: ${colors.lightGray};
-  font-size: ${fontSizes.xxsmall};
+  font-size: ${fontSizes.xsmall};
 `;
 
 export const MetaLeftColumn = styled(LeftColumn)`
@@ -85,7 +92,7 @@ export const RatingBadgeWrapper = styled.div`
   height: ${rem(sizes.ratingBadgeSize)};
   color: ${colors.white};
   font-weight: ${fontWeights.extraBold};
-  font-size: ${rem(fontSizes.xxlarge)};
+  font-size: ${rem('36px')};
   line-height: ${rem('78px')};
   background: ${colors.primaryVioletAccent};
   border-radius: ${radii.regularBorderRadius};

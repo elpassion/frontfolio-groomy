@@ -56,7 +56,7 @@ export default createGlobalStyle`
     color: ${colors.darkGray};
     
     @media (min-width: ${sizes.deviceWidth}) {
-      padding:  ${rem(gaps.medium)} 0;
+      padding:  ${rem(gaps.large)} 0;
     }
   }
   
@@ -91,8 +91,8 @@ export default createGlobalStyle`
     overflow: auto;
     
     @media (min-width: ${sizes.deviceWidth}) {
-      box-shadow: 0 ${rem(gaps.pico)} ${rem(gaps.regular)} ${rem(
-  gaps.pico
+      box-shadow: 0 ${rem(gaps.xsmall)} ${rem(gaps.medium)} ${rem(
+  gaps.xsmall
 )} ${transparentize(0.7, colors.lightGray)};
     }
   }

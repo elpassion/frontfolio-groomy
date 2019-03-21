@@ -13,7 +13,7 @@ export const Wrapper = styled.nav`
   align-items: center;
   width: 100%;
   height: ${rem(sizes.navHeight)};
-  padding: 0 ${rem(gaps.regular)};
+  padding: 0 ${rem(gaps.medium)};
 `;
 
 export const ArrowWrapper = styled.div`
@@ -36,7 +36,7 @@ export const MenuLine = styled.span`
   }
 
   &:not(:last-child) {
-    margin: 0 0 ${rem(gaps.pico)};
+    margin: 0 0 ${rem(gaps.xsmall)};
   }
 `;
 
@@ -44,8 +44,8 @@ export const BurgerMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: ${rem(gaps.regular)};
-  height: ${rem(gaps.regular)};
+  width: ${rem(gaps.medium)};
+  height: ${rem(gaps.medium)};
 `;
 
 export const WhiteSpace = styled(BurgerMenu)`

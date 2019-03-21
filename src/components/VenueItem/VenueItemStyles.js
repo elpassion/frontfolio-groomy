@@ -3,18 +3,25 @@ import { rem } from 'polished';
 
 import RatingIcon from '../SvgAssets/RatingIcon';
 import { FlexValignCenter } from 'styles/common';
-import { gaps, colors, radii, fontSizes, fontWeights, sizes } from 'styles/vars';
+import {
+  gaps,
+  colors,
+  radii,
+  fontSizes,
+  fontWeights,
+  sizes,
+} from 'styles/vars';
 
 export const VenueItemLink = styled.div`
   ${FlexValignCenter};
-  margin: 0 0 ${rem(gaps.medium)};
+  margin: 0 0 ${rem(gaps.large)};
   color: ${colors.primaryBlack};
 `;
 
 export const PhotoWrapper = styled.div`
   flex: 0 0 ${rem(sizes.venuePhoto)};
   height: ${rem(sizes.venuePhoto)};
-  margin: 0 ${rem(gaps.regular)} 0 0;
+  margin: 0 ${rem(gaps.medium)} 0 0;
 `;
 
 export const VenuePhoto = styled.img.attrs({
@@ -36,18 +43,18 @@ export const VenueMeta = styled.div`
 `;
 
 export const VenueName = styled.h3`
-  margin: 0 0 ${rem(gaps.pico)} 0;
+  margin: 0 0 ${rem(gaps.xsmall)} 0;
   font-weight: ${fontWeights.bold};
   font-size: ${rem(fontSizes.medium)};
 `;
 
 export const VenueDetailsWrapper = styled.div`
   ${FlexValignCenter};
-  margin: ${rem(gaps.tiny)} 0 0 0;
+  margin: ${rem(gaps.small)} 0 0 0;
   color: ${colors.lightGray};
-  font-size: ${rem(fontSizes.xxsmall)};
+  font-size: ${rem(fontSizes.xsmall)};
 `;
 
 export const StyledRatingIcon = styled(RatingIcon)`
-  margin: 0 ${rem(gaps.pico)} 0 0;
+  margin: 0 ${rem(gaps.xsmall)} 0 0;
 `;

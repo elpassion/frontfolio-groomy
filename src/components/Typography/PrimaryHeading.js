@@ -10,7 +10,7 @@ const PrimaryHeading = ({ children }) => {
 
 export const HeadingH1 = styled.h1`
   display: block;
-  margin: ${rem(gaps.tiny)} 0 ${rem(gaps.regular)};
+  margin: ${rem(gaps.small)} 0 ${rem(gaps.medium)};
   color: ${colors.primaryBlack};
   font-weight: ${fontWeights.extraBold};
   font-size: ${rem(fontSizes.xlarge)};

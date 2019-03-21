@@ -12,7 +12,7 @@ export const LayoutWrapper = styled.div`
   position: relative;
   z-index: 1;
   padding: ${props => (props.pushContent ? rem(sizes.navHeightPadding) : 0)}
-    ${rem(gaps.regular)} 0;
+    ${rem(gaps.medium)} 0;
   background: ${colors.white};
   
   &.home {

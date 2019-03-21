@@ -7,13 +7,13 @@ import LocationIcon from '../components/SvgAssets/LocationIcon';
 import PriceIcon from '../components/SvgAssets/PriceIcon';
 
 export const IconsSpacing = css`
-  margin: 0 ${rem(gaps.pico)} 0 0;
+  margin: 0 ${rem(gaps.xsmall)} 0 0;
 `;
 
 export const VenueAddress = styled.p`
   color: ${colors.darkerGray};
   font-weight: ${fontWeights.regular};
-  font-size: ${rem(fontSizes.xsmall)};
+  font-size: ${rem(fontSizes.small)};
 `;
 
 export const MetaItem = styled.p`
@@ -21,7 +21,7 @@ export const MetaItem = styled.p`
   align-items: baseline;
 
   &:not(:last-child) {
-    margin: 0 ${rem(gaps.xsmall)} 0 0;
+    margin: 0 ${rem(gaps.regular)} 0 0;
   }
 `;
 

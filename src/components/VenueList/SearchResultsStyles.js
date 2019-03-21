@@ -9,7 +9,7 @@ export const ResultsWrapper = styled.div`
 `;
 
 export const EmptyStateMessage = styled.p`
-  padding: ${rem(gaps.medium)};
+  padding: ${rem(gaps.large)};
   font-weight: ${fontWeights.bold};
   font-size: ${rem(fontSizes.large)};
   text-align: center;

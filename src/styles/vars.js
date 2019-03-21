@@ -22,14 +22,12 @@ export const gradients = {
 };
 
 export const fontSizes = {
-  xxsmall: '12px',
-  xsmall: '13px',
+  xsmall: '12px',
   small: '14px',
   regular: '16px',
   medium: '18px',
   large: '20px',
   xlarge: '24px',
-  xxlarge: '36px',
 };
 
 export const fontWeights = {
@@ -39,14 +37,12 @@ export const fontWeights = {
 };
 
 export const gaps = {
-  pico: '3px',
-  tiny: '6px',
-  xsmall: '12px',
-  regular: '18px',
-  medium: '24px',
-  big: '32px',
-  xbig: '36px',
-  huge: '44px',
+  xsmall: '3px',
+  small: '6px',
+  regular: '12px',
+  medium: '18px',
+  large: '24px',
+  xlarge: '36px',
 };
 
 export const sizes = {
