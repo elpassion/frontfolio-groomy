@@ -5,34 +5,22 @@ import { getReviewsRating } from 'data/api';
 import RatingIcon from '../_svgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
 
-class RatingStars extends React.Component {
-  constructor(props) {
-    super(props);
+const RatingStars = ({ venueId }) => {
+  const reviewsRating = getReviewsRating(venueId); // @todo: refactor to reuse on single review
+  const maxRating = 5;
 
-    this.state = {
-      reviewsRating: getReviewsRating(this.props.venueId), // @todo: refactor to reuse on single review
-    };
-  }
-
-  render() {
-    const { reviewsRating } = this.state;
-    const maxRating = 5;
-
-    return (
-      reviewsRating > 0 && (
-        <StarsRatingWrapper>
-          {Array(maxRating)
-            .fill(0)
-            .map((element, index) => {
-              return (
-                <RatingIcon key={index} isActive={reviewsRating > index} />
-              );
-            })}
-        </StarsRatingWrapper>
-      )
-    );
-  }
-}
+  return (
+    reviewsRating > 0 && (
+      <StarsRatingWrapper>
+        {Array(maxRating)
+          .fill(0)
+          .map((_element, index) => (
+            <RatingIcon key={index} isActive={reviewsRating > index} />
+          ))}
+      </StarsRatingWrapper>
+    )
+  );
+};
 
 RatingStars.propTypes = {
   isPlaceReview: bool,

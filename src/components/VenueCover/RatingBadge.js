@@ -4,28 +4,18 @@ import { number } from 'prop-types';
 import { getReviewsRating } from 'data/api';
 import { RatingBadgeWrapper, PawIconBackground } from './VenueCoverStyles';
 
-class RatingBadge extends React.Component {
-  constructor(props) {
-    super(props);
+const RatingBadge = ({ venueId }) => {
+  const reviewsRating = getReviewsRating(venueId, 1);
 
-    this.state = {
-      reviewsRating: getReviewsRating(this.props.venueId, 1),
-    };
-  }
-
-  render() {
-    const { reviewsRating } = this.state;
-
-    return (
-      reviewsRating > 0 && (
-        <RatingBadgeWrapper>
-          <PawIconBackground />
-          {reviewsRating}
-        </RatingBadgeWrapper>
-      )
-    );
-  }
-}
+  return (
+    reviewsRating > 0 && (
+      <RatingBadgeWrapper>
+        <PawIconBackground />
+        {reviewsRating}
+      </RatingBadgeWrapper>
+    )
+  );
+};
 
 RatingBadge.propTypes = {
   venueId: number.isRequired,
