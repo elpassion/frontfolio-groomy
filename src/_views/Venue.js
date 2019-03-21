@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from './Layout';
-import VenueCover from '../VenueCover';
+import VenueCover from '../components/VenueCover';
 
 const Venue = ({
   match: {

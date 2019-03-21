@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-import RatingIcon from '../SvgAssets/RatingIcon';
+import RatingIcon from '../_svgAssets/RatingIcon';
 import { FlexValignCenter } from 'styles/common';
 import {
   gaps,

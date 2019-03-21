@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SearchWrapper, SearchForm } from './SearchStyles';
-import SearchIcon from '../SvgAssets/SearchIcon';
+import SearchIcon from '../_svgAssets/SearchIcon';
 
 class Search extends React.Component {
   onChange(event) {

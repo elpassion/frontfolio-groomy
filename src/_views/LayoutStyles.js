@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-import { VenueMeta, VenuePhoto } from '../VenueItem/VenueItemStyles';
-import { CoverWrapper, VenueDetails } from '../VenueCover/VenueCoverStyles';
-import { HeadingH1 } from '../Typography/PrimaryHeading';
-import { SearchWrapper } from '../Search/SearchStyles';
+import { VenueMeta, VenuePhoto } from '../components/VenueItem/VenueItemStyles';
+import {
+  CoverWrapper,
+  VenueDetails,
+} from '../components/VenueCover/VenueCoverStyles';
+import { HeadingH1 } from '../components/_typography/PrimaryHeading';
+import { SearchWrapper } from '../components/Search/SearchStyles';
 import { slideIn, slideOut } from 'styles/common';
 import { sizes, gaps, colors } from 'styles/vars';
 

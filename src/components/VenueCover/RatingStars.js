@@ -2,7 +2,7 @@ import React from 'react';
 import { number, object, bool } from 'prop-types';
 
 import { getReviewsRating } from 'data/api';
-import RatingIcon from '../SvgAssets/RatingIcon';
+import RatingIcon from '../_svgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
 
 class RatingStars extends React.Component {

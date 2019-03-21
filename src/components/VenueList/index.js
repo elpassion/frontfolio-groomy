@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Search from '../Search/Search';
+import Search from '../Search';
 import SearchResults from './SearchResults';
 
 class PlaceList extends React.Component {

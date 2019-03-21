@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-import Navigation from './Navigation/Navigation';
-import Home from '../components/Views/Home';
-import Venue from '../components/Views/Venue';
+import Navigation from './Navigation';
+import Home from '../_views/Home';
+import Venue from '../_views/Venue';
 import GlobalStyles from 'styles/global';
 
 const App = () => {

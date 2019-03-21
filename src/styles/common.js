@@ -2,9 +2,9 @@ import styled, { css, keyframes } from 'styled-components';
 import { rem } from 'polished';
 
 import { gaps, colors, fontWeights, fontSizes } from './vars';
-import LocationIcon from '../components/SvgAssets/LocationIcon';
+import LocationIcon from '../components/_svgAssets/LocationIcon';
 
-import PriceIcon from '../components/SvgAssets/PriceIcon';
+import PriceIcon from '../components/_svgAssets/PriceIcon';
 
 export const IconsSpacing = css`
   margin: 0 ${rem(gaps.xsmall)} 0 0;
