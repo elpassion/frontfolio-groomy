@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { rem } from 'polished';
 
 import { gaps, fontWeights, fontSizes, colors } from 'styles/vars';
 
@@ -10,10 +9,10 @@ const PrimaryHeading = ({ children }) => {
 
 export const HeadingH1 = styled.h1`
   display: block;
-  margin: ${rem(gaps.small)} 0 ${rem(gaps.medium)};
+  margin: ${gaps.small} 0 ${gaps.medium};
   color: ${colors.primaryBlack};
   font-weight: ${fontWeights.extraBold};
-  font-size: ${rem(fontSizes.xlarge)};
+  font-size: ${fontSizes.xlarge};
   transition: opacity 0.2s ease-in;
 `;
 

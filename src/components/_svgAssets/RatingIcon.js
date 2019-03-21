@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { rem } from 'polished';
 
 import { colors, gaps } from 'styles/vars';
 
@@ -17,7 +16,7 @@ export const BlockIcon = styled.svg`
   display: block;
 
   &:not(:last-child) {
-    margin: 0 ${rem(gaps.xsmall)} 0 0;
+    margin: 0 ${gaps.xsmall} 0 0;
   }
 `;
 

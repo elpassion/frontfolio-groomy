@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { rem } from 'polished';
 
 import { VenueMeta, VenuePhoto } from '../components/VenueItem/VenueItemStyles';
 import {
@@ -14,8 +13,8 @@ import { sizes, gaps, colors } from 'styles/vars';
 export const LayoutWrapper = styled.div`
   position: relative;
   z-index: 1;
-  padding: ${props => (props.pushContent ? rem(sizes.navHeightPadding) : 0)}
-    ${rem(gaps.medium)} 0;
+  padding: ${props => (props.pushContent ? sizes.navHeightPadding : 0)}
+    ${gaps.medium} 0;
   background: ${colors.white};
   
   &.home {

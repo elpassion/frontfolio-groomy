@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components';
-import { normalize, fontFace, rem } from 'polished';
+import { normalize, fontFace } from 'polished';
 
 import { colors, fontWeights, sizes, gaps } from './vars';
 
@@ -56,7 +56,7 @@ export default createGlobalStyle`
     color: ${colors.darkGray};
     
     @media (min-width: ${sizes.deviceWidth}) {
-      padding:  ${rem(gaps.large)} 0;
+      padding:  ${gaps.large} 0;
     }
   }
   
@@ -91,9 +91,9 @@ export default createGlobalStyle`
     overflow: auto;
     
     @media (min-width: ${sizes.deviceWidth}) {
-      box-shadow: 0 ${rem(gaps.xsmall)} ${rem(gaps.medium)} ${rem(
-  gaps.xsmall
-)} ${colors.lightGrayTransparent};
+      box-shadow: 0 ${gaps.xsmall} ${gaps.medium} ${gaps.xsmall} ${
+  colors.lightGrayTransparent
+};
     }
   }
   

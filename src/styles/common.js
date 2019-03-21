@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-import { rem } from 'polished';
 
 import { gaps, colors, fontWeights, fontSizes } from './vars';
 import LocationIcon from '../components/_svgAssets/LocationIcon';
@@ -7,13 +6,13 @@ import LocationIcon from '../components/_svgAssets/LocationIcon';
 import PriceIcon from '../components/_svgAssets/PriceIcon';
 
 export const IconsSpacing = css`
-  margin: 0 ${rem(gaps.xsmall)} 0 0;
+  margin: 0 ${gaps.xsmall} 0 0;
 `;
 
 export const VenueAddress = styled.p`
   color: ${colors.darkerGray};
   font-weight: ${fontWeights.regular};
-  font-size: ${rem(fontSizes.small)};
+  font-size: ${fontSizes.small};
 `;
 
 export const MetaItem = styled.p`
@@ -21,7 +20,7 @@ export const MetaItem = styled.p`
   align-items: baseline;
 
   &:not(:last-child) {
-    margin: 0 ${rem(gaps.regular)} 0 0;
+    margin: 0 ${gaps.regular} 0 0;
   }
 `;
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { rem } from 'polished';
 
 import { fontSizes, fontWeights, gaps } from 'styles/vars';
 
@@ -9,9 +8,9 @@ export const ResultsWrapper = styled.div`
 `;
 
 export const EmptyStateMessage = styled.p`
-  padding: ${rem(gaps.large)};
+  padding: ${gaps.large};
   font-weight: ${fontWeights.bold};
-  font-size: ${rem(fontSizes.large)};
+  font-size: ${fontSizes.large};
   text-align: center;
 `;
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { rem } from 'polished';
 
 import RatingIcon from '../_svgAssets/RatingIcon';
 import { FlexAlignCenter } from 'styles/common';
@@ -14,14 +13,14 @@ import {
 
 export const VenueItemLink = styled.div`
   ${FlexAlignCenter};
-  margin: 0 0 ${rem(gaps.large)};
+  margin: 0 0 ${gaps.large};
   color: ${colors.primaryBlack};
 `;
 
 export const PhotoWrapper = styled.div`
-  flex: 0 0 ${rem(sizes.venuePhoto)};
-  height: ${rem(sizes.venuePhoto)};
-  margin: 0 ${rem(gaps.medium)} 0 0;
+  flex: 0 0 ${sizes.venuePhoto};
+  height: ${sizes.venuePhoto};
+  margin: 0 ${gaps.medium} 0 0;
 `;
 
 export const VenuePhoto = styled.img.attrs({
@@ -29,10 +28,10 @@ export const VenuePhoto = styled.img.attrs({
 })`
   position: absolute;
   display: block;
-  width: ${rem(sizes.venuePhoto)};
-  height: ${rem(sizes.venuePhoto)};
+  width: ${sizes.venuePhoto};
+  height: ${sizes.venuePhoto};
   overflow: hidden;
-  border-radius: ${rem(radii.regularBorderRadius)};
+  border-radius: ${radii.regularBorderRadius};
   object-fit: cover;
   transition: all 0.3s ease-in;
 `;
@@ -43,20 +42,20 @@ export const VenueMeta = styled.div`
 `;
 
 export const VenueName = styled.h3`
-  margin: 0 0 ${rem(gaps.xsmall)} 0;
+  margin: 0 0 ${gaps.xsmall} 0;
   font-weight: ${fontWeights.bold};
-  font-size: ${rem(fontSizes.medium)};
+  font-size: ${fontSizes.medium};
 `;
 
 export const VenueDetailsWrapper = styled.div`
   ${FlexAlignCenter};
-  margin: ${rem(gaps.small)} 0 0 0;
+  margin: ${gaps.small} 0 0 0;
   color: ${colors.lightGray};
-  font-size: ${rem(fontSizes.xsmall)};
+  font-size: ${fontSizes.xsmall};
 `;
 
 export const StyledRatingIcon = styled(RatingIcon)`
-  margin: 0 ${rem(gaps.xsmall)} 0 0;
+  margin: 0 ${gaps.xsmall} 0 0;
 `;
 
 VenueItemLink.displayName = 'VenueItemLink';

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { rem } from 'polished';
 
 import PawIcon from '../_svgAssets/PawIcon';
 import { invertPixelValue } from 'helpers';
@@ -15,7 +14,7 @@ import { FlexAlignCenter } from 'styles/common';
 
 export const CoverWrapper = styled.div`
   position: relative;
-  margin: 0 ${rem(invertPixelValue(gaps.medium))};
+  margin: 0 ${invertPixelValue(gaps.medium)};
   transition: opacity 0.2s ease-in;
 `;
 
@@ -24,20 +23,18 @@ export const VenueImage = styled.img.attrs({
 })`
   display: block;
   width: 100%;
-  height: ${props =>
-    props.isHero ? rem(sizes.heroHeight) : rem(sizes.coverHeight)};
+  height: ${props => (props.isHero ? sizes.heroHeight : sizes.coverHeight)};
   object-fit: cover;
   overflow: hidden;
 `;
 
 export const VenueDetails = styled.div`
-  width: calc(100% - ${rem(gaps.xlarge)});
+  width: calc(100% - ${gaps.xlarge});
   margin: 0 auto;
-  padding: ${rem(gaps.regular)};
+  padding: ${gaps.regular};
   background: ${colors.white};
   border-radius: ${radii.regularBorderRadius};
-  box-shadow: 0 ${rem(gaps.small)} ${rem(gaps.large)} 0
-    ${colors.lightGrayTransparent};
+  box-shadow: 0 ${gaps.small} ${gaps.large} 0 ${colors.lightGrayTransparent};
   transform: translateY(-25%);
   transition: opacity 0.2s ease-in, transform 0.2s ease-in;
 `;
@@ -47,26 +44,26 @@ export const VenueName = styled.h2`
   overflow: hidden;
   color: ${colors.primaryBlack};
   font-weight: ${fontWeights.extraBold};
-  font-size: ${rem(fontSizes.large)};
+  font-size: ${fontSizes.large};
   white-space: nowrap;
   text-overflow: ellipsis;
 `;
 
 export const FlexWrapper = styled.div`
   display: flex;
-  margin: 0 0 ${rem('8px')};
+  margin: 0 0 ${'8px'};
 `;
 
 export const LeftColumn = styled.div`
   flex: 1 1 auto;
   min-width: 0;
-  margin: 0 ${rem(gaps.regular)} 0 0;
+  margin: 0 ${gaps.regular} 0 0;
 `;
 
 export const RightColumn = styled.div`
   position: relative;
   display: flex;
-  flex: 0 0 ${rem(sizes.ratingBadgeSize)};
+  flex: 0 0 ${sizes.ratingBadgeSize};
   justify-content: center;
   margin: 0 0 0 auto;
 `;
@@ -88,12 +85,12 @@ export const RatingBadgeWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: ${rem(sizes.ratingBadgeSize)};
-  height: ${rem(sizes.ratingBadgeSize)};
+  max-width: ${sizes.ratingBadgeSize};
+  height: ${sizes.ratingBadgeSize};
   color: ${colors.white};
   font-weight: ${fontWeights.extraBold};
-  font-size: ${rem('36px')};
-  line-height: ${rem('78px')};
+  font-size: ${'36px'};
+  line-height: ${'78px'};
   background: ${colors.primaryVioletAccent};
   border-radius: ${radii.regularBorderRadius};
   pointer-events: none;
