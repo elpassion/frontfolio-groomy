@@ -3,8 +3,8 @@ import { number, bool } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { getReviewsCount, getVenueDetails } from 'data/api';
-import RatingBadge from './RatingBadge';
-import RatingStars from './RatingStars';
+import RatingBadge from '../RatingBadge';
+import RatingStars from '../RatingStars';
 import {
   CoverWrapper,
   FlexWrapper,

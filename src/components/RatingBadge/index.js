@@ -2,7 +2,10 @@ import React from 'react';
 import { number } from 'prop-types';
 
 import { getReviewsRating } from 'data/api';
-import { RatingBadgeWrapper, PawIconBackground } from './VenueCoverStyles';
+import {
+  RatingBadgeWrapper,
+  PawIconBackground,
+} from '../VenueCover/VenueCoverStyles';
 
 const RatingBadge = ({ venueId }) => {
   const reviewsRating = getReviewsRating(venueId, 1);
