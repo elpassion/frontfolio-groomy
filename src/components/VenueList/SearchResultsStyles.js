@@ -14,3 +14,6 @@ export const EmptyStateMessage = styled.p`
   font-size: ${rem(fontSizes.large)};
   text-align: center;
 `;
+
+ResultsWrapper.displayName = 'ResultsWrapper';
+EmptyStateMessage.displayName = 'EmptyStateMessage';

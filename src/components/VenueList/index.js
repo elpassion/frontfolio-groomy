@@ -30,4 +30,5 @@ class PlaceList extends React.Component {
   }
 }
 
+PlaceList.displayName = 'PlaceList';
 export default PlaceList;

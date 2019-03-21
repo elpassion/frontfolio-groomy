@@ -31,4 +31,5 @@ RatingBadge.propTypes = {
   venueId: number.isRequired,
 };
 
+RatingBadge.displayName = 'RatingBadge';
 export default RatingBadge;

@@ -47,4 +47,5 @@ class Navigation extends React.Component {
   }
 }
 
+Navigation.displayName = 'Navigation';
 export default withRouter(Navigation);

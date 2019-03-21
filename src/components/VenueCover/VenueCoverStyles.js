@@ -11,7 +11,7 @@ import {
   fontSizes,
   sizes,
 } from 'styles/vars';
-import { FlexValignCenter } from 'styles/common';
+import { FlexAlignCenter } from 'styles/common';
 
 export const CoverWrapper = styled.div`
   position: relative;
@@ -78,7 +78,7 @@ export const MetaFlexWrapper = styled(FlexWrapper)`
 `;
 
 export const MetaLeftColumn = styled(LeftColumn)`
-  ${FlexValignCenter};
+  ${FlexAlignCenter};
 `;
 
 export const RatingBadgeWrapper = styled.div`
@@ -108,3 +108,14 @@ export const PawIconBackground = styled(PawIcon)`
   height: 80%;
   transform: translate(-50%, -50%);
 `;
+
+CoverWrapper.displayName = 'CoverWrapper';
+VenueImage.displayName = 'VenueImage';
+VenueDetails.displayName = 'VenueDetails';
+VenueName.displayName = 'VenueName';
+LeftColumn.displayName = 'LeftColumn';
+RightColumn.displayName = 'RightColumn';
+MetaFlexWrapper.displayName = 'MetaFlexWrapper';
+MetaLeftColumn.displayName = 'MetaLeftColumn';
+RatingBadgeWrapper.displayName = 'RatingBadgeWrapper';
+PawIconBackground.displayName = 'PawIconBackground';

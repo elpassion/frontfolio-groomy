@@ -38,7 +38,7 @@ export const ButtonBase = css`
   text-decoration: none;
 `;
 
-export const FlexValignCenter = css`
+export const FlexAlignCenter = css`
   display: flex;
   align-items: center;
 `;
@@ -66,3 +66,11 @@ export const slideOut = keyframes`
     opacity: .2;
   }
 `;
+
+IconsSpacing.displayName = 'App';
+VenueAddress.displayName = 'VenueAddress';
+MetaItem.displayName = 'MetaItem';
+StyledLocationIcon.displayName = 'StyledLocationIcon';
+StyledPriceIcon.displayName = 'StyledPriceIcon';
+ButtonBase.displayName = 'ButtonBase';
+FlexAlignCenter.displayName = 'FlexAlignCenter';

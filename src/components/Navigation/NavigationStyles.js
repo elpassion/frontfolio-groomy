@@ -56,3 +56,10 @@ export const WhiteSpace = styled(BurgerMenu)`
 export const StyledLink = styled(Link)`
   display: block;
 `;
+
+Wrapper.displayName = 'Wrapper';
+ArrowWrapper.displayName = 'ArrowWrapper';
+MenuLine.displayName = 'MenuLine';
+BurgerMenu.displayName = 'BurgerMenu';
+WhiteSpace.displayName = 'WhiteSpace';
+StyledLink.displayName = 'StyledLink';

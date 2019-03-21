@@ -15,4 +15,5 @@ const Venue = ({
   );
 };
 
+Venue.displayName = 'Venue';
 export default Venue;

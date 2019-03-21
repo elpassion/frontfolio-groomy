@@ -22,4 +22,5 @@ class Search extends React.Component {
   }
 }
 
+Search.displayName = 'Search';
 export default Search;

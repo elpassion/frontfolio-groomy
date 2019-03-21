@@ -112,4 +112,5 @@ VenueCover.propTypes = {
   isHero: bool,
 };
 
+VenueCover.displayName = 'VenueCover';
 export default withRouter(VenueCover);

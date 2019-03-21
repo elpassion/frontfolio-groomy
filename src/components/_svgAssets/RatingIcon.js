@@ -21,4 +21,5 @@ export const BlockIcon = styled.svg`
   }
 `;
 
+RatingIcon.displayName = 'RatingIcon';
 export default RatingIcon;

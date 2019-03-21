@@ -68,3 +68,5 @@ export const LayoutWrapper = styled.div`
     }
   }
 `;
+
+LayoutWrapper.displayName = 'LayoutWrapper';

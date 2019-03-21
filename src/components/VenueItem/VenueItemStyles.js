@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 
 import RatingIcon from '../_svgAssets/RatingIcon';
-import { FlexValignCenter } from 'styles/common';
+import { FlexAlignCenter } from 'styles/common';
 import {
   gaps,
   colors,
@@ -13,7 +13,7 @@ import {
 } from 'styles/vars';
 
 export const VenueItemLink = styled.div`
-  ${FlexValignCenter};
+  ${FlexAlignCenter};
   margin: 0 0 ${rem(gaps.large)};
   color: ${colors.primaryBlack};
 `;
@@ -49,7 +49,7 @@ export const VenueName = styled.h3`
 `;
 
 export const VenueDetailsWrapper = styled.div`
-  ${FlexValignCenter};
+  ${FlexAlignCenter};
   margin: ${rem(gaps.small)} 0 0 0;
   color: ${colors.lightGray};
   font-size: ${rem(fontSizes.xsmall)};
@@ -58,3 +58,11 @@ export const VenueDetailsWrapper = styled.div`
 export const StyledRatingIcon = styled(RatingIcon)`
   margin: 0 ${rem(gaps.xsmall)} 0 0;
 `;
+
+VenueItemLink.displayName = 'VenueItemLink';
+PhotoWrapper.displayName = 'PhotoWrapper';
+VenuePhoto.displayName = 'VenuePhoto';
+VenueMeta.displayName = 'VenueMeta';
+VenueName.displayName = 'VenueName';
+VenueDetailsWrapper.displayName = 'VenueDetailsWrapper';
+StyledRatingIcon.displayName = 'StyledRatingIcon';

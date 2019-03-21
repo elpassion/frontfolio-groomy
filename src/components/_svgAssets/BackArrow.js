@@ -24,4 +24,5 @@ const BackArrow = props => (
   </svg>
 );
 
+BackArrow.displayName = 'BackArrow';
 export default BackArrow;

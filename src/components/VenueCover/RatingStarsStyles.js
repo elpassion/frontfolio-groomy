@@ -8,3 +8,5 @@ export const StarsRatingWrapper = styled.div`
   width: auto;
   padding: 0 ${rem(gaps.small)} ${rem(gaps.xsmall)} 0;
 `;
+
+StarsRatingWrapper.displayName = 'StarsRatingWrapper';

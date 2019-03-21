@@ -10,4 +10,5 @@ const Layout = ({ children, pushContent, className }) => {
   );
 };
 
+Layout.displayName = 'Layout';
 export default Layout;

@@ -11,4 +11,5 @@ const LocationIcon = props => (
   </svg>
 );
 
+LocationIcon.displayName = 'LocationIcon';
 export default LocationIcon;

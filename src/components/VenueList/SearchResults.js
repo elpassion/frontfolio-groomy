@@ -38,4 +38,5 @@ class SearchResults extends React.Component {
   }
 }
 
+SearchResults.displayName = 'SearchResults';
 export default SearchResults;

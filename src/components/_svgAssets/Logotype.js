@@ -294,4 +294,5 @@ const Logotype = ({ isSimple, ...props }) => (
   </>
 );
 
+Logotype.displayName = 'Logotype';
 export default Logotype;

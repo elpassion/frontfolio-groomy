@@ -15,4 +15,5 @@ const SearchIcon = props => (
   </svg>
 );
 
+SearchIcon.displayName = 'SearchIcon';
 export default SearchIcon;

@@ -40,4 +40,5 @@ RatingStars.propTypes = {
   singleReview: object,
 };
 
+RatingStars.displayName = 'RatingStars';
 export default RatingStars;

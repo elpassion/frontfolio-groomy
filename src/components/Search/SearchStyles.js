@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { rem, placeholder } from 'polished';
 
-import { FlexValignCenter } from 'styles/common';
+import { FlexAlignCenter } from 'styles/common';
 import { gaps, colors, radii, fontSizes, sizes } from 'styles/vars';
 
 export const SearchWrapper = styled.div`
-  ${FlexValignCenter};
+  ${FlexAlignCenter};
   width: 100%;
   height: ${rem(sizes.inputHeight)};
   margin: 0 0 ${rem(gaps.large)};
@@ -38,3 +38,6 @@ export const SearchForm = styled.input.attrs({
     box-shadow: none;
   }
 `;
+
+SearchWrapper.displayName = 'SearchWrapper';
+SearchForm.displayName = 'SearchForm';

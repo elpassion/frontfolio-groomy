@@ -10,4 +10,5 @@ const PawIcon = props => (
   </svg>
 );
 
+PawIcon.displayName = 'PawIcon';
 export default PawIcon;

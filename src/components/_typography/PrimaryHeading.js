@@ -17,4 +17,5 @@ export const HeadingH1 = styled.h1`
   transition: opacity 0.2s ease-in;
 `;
 
+PrimaryHeading.displayName = 'PrimaryHeading';
 export default PrimaryHeading;

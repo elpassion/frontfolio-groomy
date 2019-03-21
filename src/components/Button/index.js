@@ -25,4 +25,8 @@ const PrimaryButton = styled.button`
   appearance: none;
 `;
 
+Button.displayName = 'Button';
+PrimaryButtonLink.displayName = 'PrimaryButtonLink';
+PrimaryButton.displayName = 'PrimaryButton';
+
 export default Button;

@@ -142,4 +142,5 @@ class VenueItem extends React.Component {
   }
 }
 
+VenueItem.displayName = 'VenueItem';
 export default withRouter(VenueItem);

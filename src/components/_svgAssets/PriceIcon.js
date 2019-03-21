@@ -11,4 +11,5 @@ const PriceIcon = props => (
   </svg>
 );
 
+PriceIcon.displayName = 'PriceIcon';
 export default PriceIcon;
