@@ -1,3 +1,5 @@
+import { transparentize } from 'polished';
+
 export const colors = {
   white: '#fff',
   almostWhite: '#f2f2f2',
@@ -5,6 +7,7 @@ export const colors = {
   lightGray: '#bababa',
   mediumGray: '#9b9b9b',
   darkGray: '#5a5a5a',
+  lightGrayTransparent: transparentize(0.7, '#bababa'),
   darkerGray: '#504d5d',
   primaryViolet: '#9963ff',
   primaryVioletAccent: '#8955ec',

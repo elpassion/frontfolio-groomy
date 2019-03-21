@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components';
-import { normalize, fontFace, rem, transparentize } from 'polished';
+import { normalize, fontFace, rem } from 'polished';
 
 import { colors, fontWeights, sizes, gaps } from './vars';
 
@@ -93,7 +93,7 @@ export default createGlobalStyle`
     @media (min-width: ${sizes.deviceWidth}) {
       box-shadow: 0 ${rem(gaps.xsmall)} ${rem(gaps.medium)} ${rem(
   gaps.xsmall
-)} ${transparentize(0.7, colors.lightGray)};
+)} ${colors.lightGrayTransparent};
     }
   }
   

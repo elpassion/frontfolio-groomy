@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { rem, transparentize } from 'polished';
+import { rem } from 'polished';
 
 import PawIcon from '../SvgAssets/PawIcon';
 import { invertPixelValue } from 'helpers';
@@ -37,7 +37,7 @@ export const VenueDetails = styled.div`
   background: ${colors.white};
   border-radius: ${radii.regularBorderRadius};
   box-shadow: 0 ${rem(gaps.small)} ${rem(gaps.large)} 0
-    ${transparentize(0.7, colors.lightGray)};
+    ${colors.lightGrayTransparent};
   transform: translateY(-25%);
   transition: opacity 0.2s ease-in, transform 0.2s ease-in;
 `;

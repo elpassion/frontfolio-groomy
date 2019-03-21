@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { rem, transparentize, placeholder } from 'polished';
+import { rem, placeholder } from 'polished';
 
 import { FlexValignCenter } from 'styles/common';
 import { gaps, colors, radii, fontSizes, sizes } from 'styles/vars';
@@ -15,7 +15,7 @@ export const SearchWrapper = styled.div`
   background: ${colors.white};
   border-radius: ${radii.mediumBorderRadius};
   box-shadow: 0 ${rem(gaps.small)} ${rem(gaps.large)} 0
-    ${transparentize(0.7, colors.lightGray)};
+    ${colors.lightGrayTransparent};
   transition: opacity 0.2s ease-in;
 `;
 
