@@ -23,12 +23,12 @@ const App = () => {
         />
       </Helmet>
       <Router>
-        <React.Fragment>
+        <>
           <GlobalStyles />
           <Route
             render={({ location }) => {
               return (
-                <React.Fragment>
+                <>
                   <Navigation route={location} />
 
                   <TransitionGroup component={null}>
@@ -44,11 +44,11 @@ const App = () => {
                       </Switch>
                     </CSSTransition>
                   </TransitionGroup>
-                </React.Fragment>
+                </>
               );
             }}
           />
-        </React.Fragment>
+        </>
       </Router>
     </>
   );

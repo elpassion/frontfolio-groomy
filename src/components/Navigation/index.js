@@ -30,16 +30,16 @@ class Navigation extends React.Component {
             <BackArrow />
           </ArrowWrapper>
         ) : (
-          [
-            <BurgerMenu key='burger-menu'>
+          <>
+            <BurgerMenu>
               <MenuLine />
               <MenuLine />
               <MenuLine />
-            </BurgerMenu>,
-            <StyledLink to='/' key='logotype'>
+            </BurgerMenu>
+            <StyledLink to='/'>
               <Logotype isSimple />
-            </StyledLink>,
-          ]
+            </StyledLink>
+          </>
         )}
         <WhiteSpace />
       </Wrapper>

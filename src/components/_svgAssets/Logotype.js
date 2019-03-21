@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Logotype = ({ isSimple, ...props }) => (
-  <React.Fragment>
+  <>
     {isSimple ? (
       <svg
         width={95}
@@ -291,7 +291,7 @@ const Logotype = ({ isSimple, ...props }) => (
         />
       </svg>
     )}
-  </React.Fragment>
+  </>
 );
 
 export default Logotype;

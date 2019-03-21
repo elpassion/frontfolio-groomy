@@ -22,10 +22,10 @@ class PlaceList extends React.Component {
     const { searchInputValue } = this.state;
 
     return (
-      <React.Fragment>
+      <>
         <Search onChange={this.updateSearchTerm.bind(this)} />
         <SearchResults term={searchInputValue} />
-      </React.Fragment>
+      </>
     );
   }
 }

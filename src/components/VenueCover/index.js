@@ -69,31 +69,29 @@ class VenueCover extends React.Component {
           </FlexWrapper>
           <MetaFlexWrapper>
             <MetaLeftColumn>
-              {isHero
-                ? [
-                    <RatingStars
-                      key='rating'
-                      venueId={displayId}
-                      isPlaceReview
-                    />,
-                    <span key='reviews-count'>
-                      {reviewsCount} Review{reviewsCount !== 1 && 's'}
-                    </span>,
-                  ]
-                : [
-                    <MetaItem key='distance'>
-                      <StyledLocationIcon /> {currentVenueDetails.distance}
-                    </MetaItem>,
-                    <MetaItem key='price'>
-                      <StyledPriceIcon /> {currentVenueDetails.price}
-                    </MetaItem>,
-                  ]}
+              {isHero ? (
+                <>
+                  <RatingStars venueId={displayId} isPlaceReview />
+                  <span>
+                    {reviewsCount} Review{reviewsCount !== 1 && 's'}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <MetaItem>
+                    <StyledLocationIcon /> {currentVenueDetails.distance}
+                  </MetaItem>
+                  <MetaItem>
+                    <StyledPriceIcon /> {currentVenueDetails.price}
+                  </MetaItem>
+                </>
+              )}
             </MetaLeftColumn>
             <RightColumn>
               {isHero ? (
-                <React.Fragment>
+                <>
                   <StyledLocationIcon /> {currentVenueDetails.distance}
-                </React.Fragment>
+                </>
               ) : (
                 `${reviewsCount} Review${reviewsCount !== 1 && 's'}`
               )}
