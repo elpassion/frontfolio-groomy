@@ -22,12 +22,8 @@ import { sizes } from 'styles/vars';
 class VenueItem extends React.Component {
   constructor(props) {
     super(props);
-
     this.venuePhoto = React.createRef();
-    this.goToVenue = this.goToVenue.bind(this);
-
     this.state = {
-      venueRating: [],
       startTransition: false,
       elementStyles: {
         top: null,
@@ -56,12 +52,9 @@ class VenueItem extends React.Component {
         },
       },
       () => {
-        setTimeout(
-          function() {
-            this.startTransitioning();
-          }.bind(this),
-          100
-        );
+        setTimeout(() => {
+          this.startTransitioning();
+        }, 100);
       }
     );
   };
@@ -88,26 +81,16 @@ class VenueItem extends React.Component {
     this.props.history.push('/venues/' + this.props.details.id);
   };
 
-  componentWillMount() {
-    this.setState({
-      venueRating: getReviewsRating(this.props.details.id, 1),
-    });
-  }
-
   render() {
-    const { details } = this.props;
-    const { venueRating, elementStyles } = this.state;
+    const { id, name, address, distance, price } = this.props.details;
+    const { elementStyles } = this.state;
+    const venueRating = getReviewsRating(id, 1);
 
     return (
       <VenueItemLink onClick={this.goToVenue}>
         <PhotoWrapper>
           <VenuePhoto
-            src={
-              process.env.PUBLIC_URL +
-              '/images/venues/salon-' +
-              details.id +
-              '.jpg'
-            }
+            src={`${process.env.PUBLIC_URL}/images/venues/salon-${id}.jpg`}
             ref={this.venuePhoto}
             style={{
               top: elementStyles.top,
@@ -120,8 +103,8 @@ class VenueItem extends React.Component {
           />
         </PhotoWrapper>
         <VenueMeta>
-          <VenueName>{details.name}</VenueName>
-          <VenueAddress>{details.address}</VenueAddress>
+          <VenueName>{name}</VenueName>
+          <VenueAddress>{address}</VenueAddress>
 
           <VenueDetailsWrapper>
             {venueRating && (
@@ -130,10 +113,10 @@ class VenueItem extends React.Component {
               </MetaItem>
             )}
             <MetaItem>
-              <StyledLocationIcon /> {details.distance}
+              <StyledLocationIcon /> {distance}
             </MetaItem>
             <MetaItem>
-              <StyledPriceIcon /> {details.price}
+              <StyledPriceIcon /> {price}
             </MetaItem>
           </VenueDetailsWrapper>
         </VenueMeta>
