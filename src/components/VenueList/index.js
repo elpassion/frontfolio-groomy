@@ -23,7 +23,7 @@ class PlaceList extends React.Component {
 
     return (
       <>
-        <Search onChange={this.updateSearchTerm.bind(this)} />
+        <Search onChange={this.updateSearchTerm} />
         <SearchResults term={searchInputValue} />
       </>
     );

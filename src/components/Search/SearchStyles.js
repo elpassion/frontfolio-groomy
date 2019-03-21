@@ -19,7 +19,7 @@ export const SearchWrapper = styled.div`
   transition: opacity 0.2s ease-in;
 `;
 
-export const SearchForm = styled.input.attrs({
+export const SearchInput = styled.input.attrs({
   type: 'text',
 })`
   ${placeholder({ color: colors.lightGray })};
@@ -40,4 +40,4 @@ export const SearchForm = styled.input.attrs({
 `;
 
 SearchWrapper.displayName = 'SearchWrapper';
-SearchForm.displayName = 'SearchForm';
+SearchInput.displayName = 'SearchInput';

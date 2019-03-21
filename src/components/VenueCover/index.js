@@ -26,7 +26,6 @@ import {
 class VenueCover extends React.Component {
   constructor(props) {
     super(props);
-    this.contentBox = React.createRef();
 
     this.state = {
       currentVenueDetails: getVenueDetails(this.props.displayId),
@@ -34,7 +33,7 @@ class VenueCover extends React.Component {
     };
   }
 
-  goToPlace = () => {
+  goToVenue = () => {
     this.props.history.push('/venues/' + this.props.displayId);
   };
 
@@ -44,7 +43,7 @@ class VenueCover extends React.Component {
     const showRating = reviewsCount > 0 && !isHero;
 
     return (
-      <CoverWrapper onClick={isHero ? null : this.goToPlace}>
+      <CoverWrapper onClick={isHero ? null : this.goToVenue}>
         <VenueImage
           isHero={isHero}
           src={
@@ -55,7 +54,7 @@ class VenueCover extends React.Component {
           }
           alt={currentVenueDetails.name}
         />
-        <VenueDetails ref={this.contentBox}>
+        <VenueDetails>
           <FlexWrapper>
             <LeftColumn>
               <VenueName>{currentVenueDetails.name}</VenueName>
