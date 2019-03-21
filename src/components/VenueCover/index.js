@@ -24,41 +24,29 @@ import {
 } from 'styles/common';
 
 class VenueCover extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentVenueDetails: getVenueDetails(this.props.displayId),
-      reviewsCount: getReviewsCount(this.props.displayId),
-    };
-  }
-
   goToVenue = () => {
     this.props.history.push('/venues/' + this.props.displayId);
   };
 
   render() {
-    const { currentVenueDetails, reviewsCount } = this.state;
     const { isHero, displayId } = this.props;
+    const venueDetails = getVenueDetails(displayId);
+    const { id, name, address, distance, price } = venueDetails;
+    const reviewsCount = getReviewsCount(displayId);
     const showRating = reviewsCount > 0 && !isHero;
 
     return (
       <CoverWrapper onClick={isHero ? null : this.goToVenue}>
         <VenueImage
           isHero={isHero}
-          src={
-            process.env.PUBLIC_URL +
-            '/images/venues/salon-' +
-            currentVenueDetails.id +
-            '.jpg'
-          }
-          alt={currentVenueDetails.name}
+          src={`${process.env.PUBLIC_URL}/images/venues/salon-${id}.jpg`}
+          alt={name}
         />
         <VenueDetails>
           <FlexWrapper>
             <LeftColumn>
-              <VenueName>{currentVenueDetails.name}</VenueName>
-              <VenueAddress>{currentVenueDetails.address}</VenueAddress>
+              <VenueName>{name}</VenueName>
+              <VenueAddress>{address}</VenueAddress>
             </LeftColumn>
             {showRating && (
               <RightColumn>
@@ -78,10 +66,10 @@ class VenueCover extends React.Component {
               ) : (
                 <>
                   <MetaItem>
-                    <StyledLocationIcon /> {currentVenueDetails.distance}
+                    <StyledLocationIcon /> {distance}
                   </MetaItem>
                   <MetaItem>
-                    <StyledPriceIcon /> {currentVenueDetails.price}
+                    <StyledPriceIcon /> {price}
                   </MetaItem>
                 </>
               )}
@@ -89,7 +77,7 @@ class VenueCover extends React.Component {
             <RightColumn>
               {isHero ? (
                 <>
-                  <StyledLocationIcon /> {currentVenueDetails.distance}
+                  <StyledLocationIcon /> {distance}
                 </>
               ) : (
                 `${reviewsCount} Review${reviewsCount !== 1 && 's'}`

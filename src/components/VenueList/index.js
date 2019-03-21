@@ -1,34 +1,43 @@
 import React from 'react';
 
+import { getPlaces } from 'data/api';
 import Search from '../Search';
 import SearchResults from './SearchResults';
 
-class PlaceList extends React.Component {
+class VenueList extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      searchInputValue: [],
+      searchInputValue: '',
+      results: [],
     };
   }
 
+  componentDidMount() {
+    this.setState({ results: getPlaces() });
+  }
+
   updateSearchTerm = term => {
-    this.setState({
-      searchInputValue: term,
-    });
+    this.setState({ searchInputValue: term });
+    this.updateResults(term);
+  };
+
+  updateResults = term => {
+    this.setState({ results: getPlaces(term) });
   };
 
   render() {
-    const { searchInputValue } = this.state;
+    const { searchInputValue, results } = this.state;
 
     return (
       <>
         <Search onChange={this.updateSearchTerm} />
-        <SearchResults term={searchInputValue} />
+        <SearchResults term={searchInputValue} results={results} />
       </>
     );
   }
 }
 
-PlaceList.displayName = 'PlaceList';
-export default PlaceList;
+VenueList.displayName = 'VenueList';
+export default VenueList;
