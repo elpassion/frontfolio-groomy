@@ -27,35 +27,33 @@ const App = () => {
         <>
           <GlobalStyles />
           <Route
-            render={({ location }) => {
-              return (
-                <>
-                  <Navigation route={location} />
+            render={({ location }) => (
+              <>
+                <Navigation route={location} />
 
-                  <TransitionGroup component={null}>
-                    <CSSTransition
-                      timeout={300}
-                      classNames='page'
-                      key={location.key}
-                    >
-                      <Switch location={location}>
-                        <Route
-                          exact
-                          path={getRoutePath('HOME')}
-                          component={Home}
-                        />
-                        <Route
-                          exact
-                          path={getRoutePath('VENUE', ':id')}
-                          component={Venue}
-                        />
-                        <Route component={Home} />
-                      </Switch>
-                    </CSSTransition>
-                  </TransitionGroup>
-                </>
-              );
-            }}
+                <TransitionGroup component={null}>
+                  <CSSTransition
+                    timeout={300}
+                    classNames='page'
+                    key={location.key}
+                  >
+                    <Switch location={location}>
+                      <Route
+                        exact
+                        path={getRoutePath('HOME')}
+                        component={Home}
+                      />
+                      <Route
+                        exact
+                        path={getRoutePath('VENUE', ':id')}
+                        component={Venue}
+                      />
+                      <Route component={Home} />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+              </>
+            )}
           />
         </>
       </Router>

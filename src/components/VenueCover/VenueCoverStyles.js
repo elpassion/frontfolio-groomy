@@ -62,7 +62,7 @@ export const VenueName = styled.h2`
 
 export const FlexWrapper = styled.div`
   display: flex;
-  margin: 0 0 ${'8px'};
+  margin: 0 0 8px;
 `;
 
 export const LeftColumn = styled.div`
@@ -100,8 +100,8 @@ export const RatingBadgeWrapper = styled.div`
   height: ${sizes.ratingBadgeSize};
   color: ${colors.white};
   font-weight: ${fontWeights.extraBold};
-  font-size: ${'36px'};
-  line-height: ${'78px'};
+  font-size: 36px;
+  line-height: 78px;
   background: ${colors.primaryVioletAccent};
   border-radius: ${radii.regularBorderRadius};
   pointer-events: none;

@@ -24,7 +24,7 @@ export const ArrowWrapper = styled.div`
 export const MenuLine = styled.span`
   display: block;
   width: 85%;
-  height: ${'1px'};
+  height: 1px;
   background: ${colors.primaryViolet};
 
   &:nth-child(2) {
