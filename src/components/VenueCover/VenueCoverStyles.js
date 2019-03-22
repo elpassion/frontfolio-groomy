@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import PawIcon from '../_svgAssets/PawIcon';
+import { PawIcon } from '../_svgAssets/PawIcon';
 import { invertPixelValue } from 'helpers/invertPixelValue';
 import {
   colors,

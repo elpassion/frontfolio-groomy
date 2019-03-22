@@ -11,7 +11,7 @@ const propTypes = {
   venueId: number.isRequired,
 };
 
-const RatingBadge = ({ venueId }) => {
+export const RatingBadge = ({ venueId }) => {
   const reviewsRating = getReviewsRating(venueId, 1);
 
   return (
@@ -27,4 +27,3 @@ const RatingBadge = ({ venueId }) => {
 RatingBadge.propTypes = propTypes;
 
 RatingBadge.displayName = 'RatingBadge';
-export default RatingBadge;

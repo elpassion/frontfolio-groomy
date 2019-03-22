@@ -1,8 +1,8 @@
 import styled, { css, keyframes } from 'styled-components';
 
 import { gaps, colors, fontWeights, fontSizes } from './vars';
-import LocationIcon from '../components/_svgAssets/LocationIcon';
-import PriceIcon from '../components/_svgAssets/PriceIcon';
+import { LocationIcon } from '../components/_svgAssets/LocationIcon';
+import { PriceIcon } from '../components/_svgAssets/PriceIcon';
 
 export const IconsSpacing = css`
   margin: 0 ${gaps.xsmall} 0 0;

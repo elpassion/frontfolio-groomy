@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import RatingIcon from '../_svgAssets/RatingIcon';
+import { RatingIcon } from '../_svgAssets/RatingIcon';
 import { FlexAlignCenter } from 'styles/common';
 import {
   gaps,

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { colors, gaps } from 'styles/vars';
 
-const RatingIcon = ({ isActive, ...props }) => (
+export const RatingIcon = ({ isActive, ...props }) => (
   <BlockIcon viewBox='0 0 11 10' width={11} height={10} {...props}>
     <path
       fill={isActive ? colors.primaryViolet : 'currentColor'}
@@ -21,4 +21,3 @@ export const BlockIcon = styled.svg`
 `;
 
 RatingIcon.displayName = 'RatingIcon';
-export default RatingIcon;

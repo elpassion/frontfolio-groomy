@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchIcon = props => (
+export const SearchIcon = props => (
   <svg viewBox='0 0 13 14' width={13} height={14} {...props}>
     <g fill='none' fillRule='evenodd'>
       <g transform='translate(1 1)'>
@@ -16,4 +16,3 @@ const SearchIcon = props => (
 );
 
 SearchIcon.displayName = 'SearchIcon';
-export default SearchIcon;

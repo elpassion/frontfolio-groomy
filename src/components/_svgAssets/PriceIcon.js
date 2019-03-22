@@ -2,7 +2,7 @@ import React from 'react';
 
 import { colors } from 'styles/vars';
 
-const PriceIcon = props => (
+export const PriceIcon = props => (
   <svg viewBox='0 0 8 8' width={8} height={8} {...props}>
     <path
       fill={colors.lightGray}
@@ -12,4 +12,3 @@ const PriceIcon = props => (
 );
 
 PriceIcon.displayName = 'PriceIcon';
-export default PriceIcon;

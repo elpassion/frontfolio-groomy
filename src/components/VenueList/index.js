@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { getPlaces } from 'data/api';
-import Search from '../Search';
-import SearchResults from './SearchResults';
+import { Search } from '../Search';
+import { SearchResults } from './SearchResults';
 
-class VenueList extends React.Component {
+export class VenueList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -40,4 +40,3 @@ class VenueList extends React.Component {
 }
 
 VenueList.displayName = 'VenueList';
-export default VenueList;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import Logotype from '../_svgAssets/Logotype';
-import BackArrow from '../_svgAssets/BackArrow';
+import { Logotype } from '../_svgAssets/Logotype';
+import { BackArrow } from '../_svgAssets/BackArrow';
 import {
   Wrapper,
   MenuLine,

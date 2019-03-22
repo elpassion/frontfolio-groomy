@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BackArrow = props => (
+export const BackArrow = props => (
   <svg viewBox='0 0 18 10' width={18} height={10} {...props}>
     <g fill='none' fillRule='evenodd'>
       <g transform='translate(2 1)'>
@@ -25,4 +25,3 @@ const BackArrow = props => (
 );
 
 BackArrow.displayName = 'BackArrow';
-export default BackArrow;

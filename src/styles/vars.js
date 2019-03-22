@@ -65,13 +65,3 @@ export const radii = {
   regularBorderRadius: '10px',
   mediumBorderRadius: '15px',
 };
-
-export default {
-  colors,
-  gradients,
-  fontSizes,
-  fontWeights,
-  gaps,
-  sizes,
-  radii,
-};

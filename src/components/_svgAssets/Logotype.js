@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Logotype = ({ isSimple, ...props }) => (
+export const Logotype = ({ isSimple, ...props }) => (
   <>
     {isSimple ? (
       <svg
@@ -295,4 +295,3 @@ const Logotype = ({ isSimple, ...props }) => (
 );
 
 Logotype.displayName = 'Logotype';
-export default Logotype;

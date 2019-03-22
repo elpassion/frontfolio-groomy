@@ -3,8 +3,8 @@ import { number, bool } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { getReviewsCount, getVenueDetails } from 'data/api';
-import RatingBadge from '../RatingBadge';
-import RatingStars from '../RatingStars';
+import { RatingBadge } from '../RatingBadge';
+import { RatingStars } from '../RatingStars';
 import {
   CoverWrapper,
   FlexWrapper,
@@ -33,7 +33,7 @@ const defaultProps = {
   isHero: false,
 };
 
-class VenueCover extends React.Component {
+export class VenueCover extends React.Component {
   goToVenue = () => {
     const { displayId, history } = this.props;
     history.push(getRoutePath('VENUE', displayId));

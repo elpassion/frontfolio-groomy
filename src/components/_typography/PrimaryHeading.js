@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import { gaps, fontWeights, fontSizes, colors } from 'styles/vars';
 
-const PrimaryHeading = ({ children }) => {
-  return <HeadingH1>{children}</HeadingH1>;
-};
+export const PrimaryHeading = ({ children }) => (
+  <HeadingH1>{children}</HeadingH1>
+);
 
 export const HeadingH1 = styled.h1`
   display: block;
@@ -17,4 +17,3 @@ export const HeadingH1 = styled.h1`
 `;
 
 PrimaryHeading.displayName = 'PrimaryHeading';
-export default PrimaryHeading;

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { SearchWrapper, SearchInput } from './SearchStyles';
-import SearchIcon from '../_svgAssets/SearchIcon';
+import { SearchIcon } from '../_svgAssets/SearchIcon';
 
-class Search extends React.Component {
+export class Search extends React.Component {
   updateValue = event => {
     this.props.onChange(event.target.value);
   };
@@ -23,4 +23,3 @@ class Search extends React.Component {
 }
 
 Search.displayName = 'Search';
-export default Search;
