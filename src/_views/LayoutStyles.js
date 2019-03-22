@@ -17,7 +17,7 @@ export const LayoutWrapper = styled.div`
     ${gaps.medium} 0;
   background: ${colors.white};
   
-  &.home {
+  &.Home {
     &.page-enter {
       animation: .3s ${slideIn} ease-in-out;
     }

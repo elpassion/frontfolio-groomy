@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 import Home from '../_views/Home';
 import Venue from '../_views/Venue';
 import GlobalStyles from 'styles/global';
+import { getRoutePath } from 'helpers/getRoutePath';
 
 const App = () => {
   return (
@@ -38,8 +39,16 @@ const App = () => {
                       key={location.key}
                     >
                       <Switch location={location}>
-                        <Route exact path='/' component={Home} />
-                        <Route exact path='/venues/:id' component={Venue} />
+                        <Route
+                          exact
+                          path={getRoutePath('HOME')}
+                          component={Home}
+                        />
+                        <Route
+                          exact
+                          path={getRoutePath('VENUE', ':id')}
+                          component={Venue}
+                        />
                         <Route component={Home} />
                       </Switch>
                     </CSSTransition>

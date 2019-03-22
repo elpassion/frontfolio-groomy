@@ -7,7 +7,7 @@ import VenueList from '../components/VenueList';
 
 const Home = () => {
   return (
-    <Layout className='home' pushContent>
+    <Layout className='Home' pushContent>
       <PrimaryHeading>Featured salons</PrimaryHeading>
       <VenueCover displayId={4} />
       <VenueList />

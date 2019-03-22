@@ -22,10 +22,12 @@ import {
   StyledPriceIcon,
   MetaItem,
 } from 'styles/common';
+import { getRoutePath } from 'helpers/getRoutePath';
 
 class VenueCover extends React.Component {
   goToVenue = () => {
-    this.props.history.push('/venues/' + this.props.displayId);
+    const { displayId, history } = this.props;
+    history.push(getRoutePath('VENUE', displayId));
   };
 
   render() {

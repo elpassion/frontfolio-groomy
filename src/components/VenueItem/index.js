@@ -18,6 +18,7 @@ import {
   StyledLocationIcon,
 } from 'styles/common';
 import { sizes } from 'styles/vars';
+import { getRoutePath } from 'helpers/getRoutePath';
 
 class VenueItem extends React.Component {
   constructor(props) {
@@ -78,7 +79,8 @@ class VenueItem extends React.Component {
   };
 
   routerPush = () => {
-    this.props.history.push('/venues/' + this.props.details.id);
+    const { details, history } = this.props;
+    history.push(getRoutePath('VENUE', details.id));
   };
 
   render() {

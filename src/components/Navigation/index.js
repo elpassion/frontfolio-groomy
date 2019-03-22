@@ -11,10 +11,11 @@ import {
   StyledLink,
   ArrowWrapper,
 } from './NavigationStyles';
+import { getRoutePath } from 'helpers/getRoutePath';
 
 class Navigation extends React.Component {
   goBack = () => {
-    this.props.history.push('/');
+    this.props.history.push(getRoutePath('HOME'));
   };
 
   render() {
@@ -36,7 +37,7 @@ class Navigation extends React.Component {
               <MenuLine />
               <MenuLine />
             </BurgerMenu>
-            <StyledLink to='/'>
+            <StyledLink to={getRoutePath('HOME')}>
               <Logotype isSimple />
             </StyledLink>
           </>
