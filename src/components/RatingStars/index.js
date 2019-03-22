@@ -1,9 +1,13 @@
 import React from 'react';
-import { number, object, bool } from 'prop-types';
+import { number } from 'prop-types';
 
 import { getReviewsRating } from 'data/api';
 import RatingIcon from '../_svgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
+
+const propTypes = {
+  venueId: number.isRequired,
+};
 
 const RatingStars = ({ venueId }) => {
   const reviewsRating = getReviewsRating(venueId); // @todo: refactor to reuse on single review
@@ -22,11 +26,7 @@ const RatingStars = ({ venueId }) => {
   );
 };
 
-RatingStars.propTypes = {
-  isPlaceReview: bool,
-  venueId: number,
-  singleReview: object,
-};
+RatingStars.propTypes = propTypes;
 
 RatingStars.displayName = 'RatingStars';
 export default RatingStars;

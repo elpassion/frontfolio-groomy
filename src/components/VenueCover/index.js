@@ -24,6 +24,15 @@ import {
 } from 'styles/common';
 import { getRoutePath } from 'helpers/getRoutePath';
 
+const propTypes = {
+  displayId: number.isRequired,
+  isHero: bool,
+};
+
+const defaultProps = {
+  isHero: false,
+};
+
 class VenueCover extends React.Component {
   goToVenue = () => {
     const { displayId, history } = this.props;
@@ -35,7 +44,7 @@ class VenueCover extends React.Component {
     const venueDetails = getVenueDetails(displayId);
     const { id, name, address, distance, price } = venueDetails;
     const reviewsCount = getReviewsCount(displayId);
-    const showRating = reviewsCount > 0 && !isHero;
+    const isRatingVisible = reviewsCount > 0 && !isHero;
 
     return (
       <CoverWrapper onClick={isHero ? null : this.goToVenue} isHero={isHero}>
@@ -50,7 +59,7 @@ class VenueCover extends React.Component {
               <VenueName>{name}</VenueName>
               <VenueAddress>{address}</VenueAddress>
             </LeftColumn>
-            {showRating && (
+            {isRatingVisible && (
               <RightColumn>
                 <RatingBadge venueId={displayId} />
               </RightColumn>
@@ -90,16 +99,10 @@ class VenueCover extends React.Component {
       </CoverWrapper>
     );
   }
-
-  static defaultProps = {
-    isHero: false,
-  };
 }
 
-VenueCover.propTypes = {
-  displayId: number.isRequired,
-  isHero: bool,
-};
+VenueCover.propTypes = propTypes;
+VenueCover.defaultProps = defaultProps;
 
 VenueCover.displayName = 'VenueCover';
 export default withRouter(VenueCover);

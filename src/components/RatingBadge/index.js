@@ -7,6 +7,10 @@ import {
   PawIconBackground,
 } from '../VenueCover/VenueCoverStyles';
 
+const propTypes = {
+  venueId: number.isRequired,
+};
+
 const RatingBadge = ({ venueId }) => {
   const reviewsRating = getReviewsRating(venueId, 1);
 
@@ -20,9 +24,7 @@ const RatingBadge = ({ venueId }) => {
   );
 };
 
-RatingBadge.propTypes = {
-  venueId: number.isRequired,
-};
+RatingBadge.propTypes = propTypes;
 
 RatingBadge.displayName = 'RatingBadge';
 export default RatingBadge;
