@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import PawIcon from '../_svgAssets/PawIcon';
 import { invertPixelValue } from 'helpers';
 import {
-  gaps,
   colors,
-  radii,
-  fontWeights,
   fontSizes,
+  fontWeights,
+  gaps,
+  gradients,
+  radii,
   sizes,
 } from 'styles/vars';
 import { FlexAlignCenter } from 'styles/common';
@@ -16,6 +17,16 @@ export const CoverWrapper = styled.div`
   position: relative;
   margin: 0 ${invertPixelValue(gaps.medium)};
   transition: opacity 0.2s ease-in;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${props => (props.isHero ? gradients.gray : 'none')};
+  }
 `;
 
 export const VenueImage = styled.img.attrs({

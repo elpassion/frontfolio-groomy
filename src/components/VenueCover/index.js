@@ -36,7 +36,7 @@ class VenueCover extends React.Component {
     const showRating = reviewsCount > 0 && !isHero;
 
     return (
-      <CoverWrapper onClick={isHero ? null : this.goToVenue}>
+      <CoverWrapper onClick={isHero ? null : this.goToVenue} isHero={isHero}>
         <VenueImage
           isHero={isHero}
           src={`${process.env.PUBLIC_URL}/images/venues/salon-${id}.jpg`}

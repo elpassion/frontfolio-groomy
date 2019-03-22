@@ -7,6 +7,7 @@ export const colors = {
   lightGray: '#bababa',
   mediumGray: '#9b9b9b',
   darkGray: '#5a5a5a',
+  grayTransparent: transparentize(0.8, '#202020'),
   lightGrayTransparent: transparentize(0.7, '#bababa'),
   darkerGray: '#504d5d',
   primaryViolet: '#9963ff',
@@ -18,10 +19,9 @@ export const colors = {
 };
 
 export const gradients = {
-  violet: {
-    start: colors.primaryVioletAccent,
-    end: colors.primaryViolet,
-  },
+  gray: `linear-gradient(to right bottom, ${
+    colors.grayTransparent
+  }, transparent 25%)`,
 };
 
 export const fontSizes = {

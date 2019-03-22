@@ -18,6 +18,7 @@ export const Wrapper = styled.nav`
 export const ArrowWrapper = styled.div`
   position: relative;
   z-index: 5;
+  cursor: pointer;
 `;
 
 export const MenuLine = styled.span`
