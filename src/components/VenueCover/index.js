@@ -60,7 +60,7 @@ class VenueCover extends React.Component {
             <MetaLeftColumn>
               {isHero ? (
                 <>
-                  <RatingStars venueId={displayId} isPlaceReview />
+                  <RatingStars venueId={displayId} />
                   <span>
                     {reviewsCount} Review{reviewsCount !== 1 && 's'}
                   </span>

@@ -1,13 +1,12 @@
 import React from 'react';
-import { number, object, bool } from 'prop-types';
+import { number } from 'prop-types';
 
 import { getReviewsRating } from 'data/api';
 import RatingIcon from '../_svgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
 
-const RatingStars = ({ venueId }) => {
+const RatingStars = ({ venueId, maxRating }) => {
   const reviewsRating = getReviewsRating(venueId); // @todo: refactor to reuse on single review
-  const maxRating = 5;
 
   return (
     reviewsRating > 0 && (
@@ -23,9 +22,11 @@ const RatingStars = ({ venueId }) => {
 };
 
 RatingStars.propTypes = {
-  isPlaceReview: bool,
   venueId: number,
-  singleReview: object,
+};
+
+RatingStars.defaultProps = {
+  maxRating: 5,
 };
 
 RatingStars.displayName = 'RatingStars';
