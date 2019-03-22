@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { gaps, fontWeights, fontSizes, colors } from 'styles/vars';
+import { gaps, fontWeights, fontSizes, colors, durations } from 'styles/vars';
 
 export const PrimaryHeading = ({ children }) => (
   <HeadingH1>{children}</HeadingH1>
@@ -13,7 +13,7 @@ export const HeadingH1 = styled.h1`
   color: ${colors.primaryBlack};
   font-weight: ${fontWeights.extraBold};
   font-size: ${fontSizes.xlarge};
-  transition: opacity 0.2s ease-in;
+  transition: opacity ${durations.regular} ease-in;
 `;
 
 PrimaryHeading.displayName = 'PrimaryHeading';

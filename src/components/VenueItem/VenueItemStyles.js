@@ -9,6 +9,7 @@ import {
   fontSizes,
   fontWeights,
   sizes,
+  durations,
 } from 'styles/vars';
 
 export const VenueItemLink = styled.div`
@@ -33,12 +34,12 @@ export const VenuePhoto = styled.img.attrs({
   overflow: hidden;
   border-radius: ${radii.regularBorderRadius};
   object-fit: cover;
-  transition: all 0.3s ease-in;
+  transition: all ${durations.extended} ease-in;
 `;
 
 export const VenueMeta = styled.div`
   flex: 1 1 auto;
-  transition: opacity 0.2s ease-in;
+  transition: opacity ${durations.regular} ease-in;
 `;
 
 export const VenueName = styled.h3`

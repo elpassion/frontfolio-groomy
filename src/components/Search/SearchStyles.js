@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { placeholder } from 'polished';
 
 import { FlexAlignCenter } from 'styles/common';
-import { gaps, colors, radii, fontSizes, sizes } from 'styles/vars';
+import { gaps, colors, radii, fontSizes, sizes, durations } from 'styles/vars';
 
 export const SearchWrapper = styled.div`
   ${FlexAlignCenter};
@@ -15,7 +15,7 @@ export const SearchWrapper = styled.div`
   background: ${colors.white};
   border-radius: ${radii.mediumBorderRadius};
   box-shadow: 0 ${gaps.small} ${gaps.large} 0 ${colors.lightGrayTransparent};
-  transition: opacity 0.2s ease-in;
+  transition: opacity ${durations.regular} ease-in;
 `;
 
 export const SearchInput = styled.input.attrs({

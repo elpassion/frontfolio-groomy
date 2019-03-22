@@ -65,3 +65,8 @@ export const radii = {
   regularBorderRadius: '10px',
   mediumBorderRadius: '15px',
 };
+
+export const durations = {
+  regular: '0.2s',
+  extended: '0.3s',
+};

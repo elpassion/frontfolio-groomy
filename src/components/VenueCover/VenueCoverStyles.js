@@ -10,13 +10,14 @@ import {
   gradients,
   radii,
   sizes,
+  durations,
 } from 'styles/vars';
 import { FlexAlignCenter } from 'styles/common';
 
 export const CoverWrapper = styled.div`
   position: relative;
   margin: 0 ${invertPixelValue(gaps.medium)};
-  transition: opacity 0.2s ease-in;
+  transition: opacity ${durations.regular} ease-in;
 
   &:after {
     content: '';
@@ -47,7 +48,8 @@ export const VenueDetails = styled.div`
   border-radius: ${radii.regularBorderRadius};
   box-shadow: 0 ${gaps.small} ${gaps.large} 0 ${colors.lightGrayTransparent};
   transform: translateY(-25%);
-  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+  transition: opacity ${durations.regular} ease-in,
+    transform ${durations.regular} ease-in;
 `;
 
 export const VenueName = styled.h2`
