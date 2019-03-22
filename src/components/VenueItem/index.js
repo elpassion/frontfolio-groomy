@@ -107,7 +107,6 @@ export class VenueItem extends React.Component {
         <VenueMeta>
           <VenueName>{name}</VenueName>
           <VenueAddress>{address}</VenueAddress>
-
           <VenueDetailsWrapper>
             {venueRating && (
               <MetaItem>

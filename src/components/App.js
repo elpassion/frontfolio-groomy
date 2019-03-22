@@ -29,7 +29,6 @@ export const App = () => (
           render={({ location }) => (
             <>
               <Navigation route={location} />
-
               <TransitionGroup component={null}>
                 <CSSTransition
                   timeout={300}
