@@ -20,7 +20,7 @@ import {
 import { sizes } from 'styles/vars';
 import { getRoutePath } from 'helpers/getRoutePath';
 
-class VenueItem extends React.Component {
+export class VenueItem extends React.Component {
   constructor(props) {
     super(props);
     this.venuePhoto = React.createRef();
