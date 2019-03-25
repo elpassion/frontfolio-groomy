@@ -81,7 +81,7 @@ export default createGlobalStyle`
     list-style: none;
   }
   
-  .root {
+  #root {
     position: relative;
     width: 100%;
     max-width: ${sizes.deviceWidth};
