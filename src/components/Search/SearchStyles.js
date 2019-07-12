@@ -1,29 +1,29 @@
 import styled from 'styled-components';
-import { rem, transparentize, placeholder } from 'polished';
-import { FlexValignCenter } from '../Common/CommonStyles';
-import { gap, colors, misc, fontSize, sizes } from '../../helpers/vars';
+import { placeholder } from 'polished';
+
+import { FlexAlignCenter } from 'styles/common';
+import { gaps, colors, radii, fontSizes, sizes, durations } from 'styles/vars';
 
 export const SearchWrapper = styled.div`
-  ${FlexValignCenter};
+  ${FlexAlignCenter};
   width: 100%;
-  height: ${rem(sizes.inputHeight)};
-  margin: 0 0 ${rem(gap.medium)};
-  padding: 0 ${rem(gap.xsmall)};
+  height: ${sizes.inputHeight};
+  margin: 0 0 ${gaps.large};
+  padding: 0 ${gaps.regular};
   color: ${colors.lightGray};
-  font-size: ${rem(fontSize.small)};
+  font-size: ${fontSizes.small};
   background: ${colors.white};
-  border-radius: ${misc.mediumBorderRadius};
-  box-shadow: 0 ${rem(gap.tiny)} ${rem(gap.medium)} 0
-    ${transparentize(0.7, colors.lightGray)};
-  transition: opacity 0.2s ease-in;
+  border-radius: ${radii.mediumBorderRadius};
+  box-shadow: 0 ${gaps.small} ${gaps.large} 0 ${colors.lightGrayTransparent};
+  transition: opacity ${durations.regular} ease-in;
 `;
 
-export const SearchForm = styled.input.attrs({
+export const SearchInput = styled.input.attrs({
   type: 'text',
 })`
   ${placeholder({ color: colors.lightGray })};
   width: 100%;
-  margin: 0 0 0 ${rem(gap.xsmall)};
+  margin: 0 0 0 ${gaps.regular};
   color: inherit;
   font-weight: inherit;
   font-size: inherit;
@@ -37,3 +37,6 @@ export const SearchForm = styled.input.attrs({
     box-shadow: none;
   }
 `;
+
+SearchWrapper.displayName = 'SearchWrapper';
+SearchInput.displayName = 'SearchInput';

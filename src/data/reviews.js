@@ -1,6 +1,6 @@
 export const reviews = [
   {
-    place_id: 4,
+    venue_id: 4,
     reviewer: 'Jenny & Tobi',
     rating: 4,
     review:
@@ -9,7 +9,7 @@ export const reviews = [
     date: '2018-11-24T12:00:00+00:00',
   },
   {
-    place_id: 4,
+    venue_id: 4,
     reviewer: 'Anna & Joe',
     rating: 3,
     review:
@@ -18,7 +18,7 @@ export const reviews = [
     date: '2018-11-24T11:00:00+00:00',
   },
   {
-    place_id: 2,
+    venue_id: 2,
     reviewer: 'Jenny & Tobi',
     rating: 3,
     review:
@@ -27,7 +27,7 @@ export const reviews = [
     date: '2018-11-24T12:00:00+00:00',
   },
   {
-    place_id: 1,
+    venue_id: 1,
     reviewer: 'Anna & Joe',
     rating: 5,
     review:
@@ -36,7 +36,7 @@ export const reviews = [
     date: '2018-11-24T11:00:00+00:00',
   },
   {
-    place_id: 0,
+    venue_id: 0,
     reviewer: 'Jenny & Tobi',
     rating: 1,
     review:
@@ -45,7 +45,7 @@ export const reviews = [
     date: '2018-11-24T12:00:00+00:00',
   },
   {
-    place_id: 2,
+    venue_id: 2,
     reviewer: 'Anna & Joe',
     rating: 5,
     review:
