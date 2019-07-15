@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<VenueItemLink
+  onClick={[Function]}
+>
+  <PhotoWrapper>
+    <VenuePhoto
+      src="/images/venues/salon-1.jpg"
+      style={
+        Object {
+          "borderRadius": null,
+          "height": null,
+          "left": null,
+          "opacity": null,
+          "top": null,
+          "width": null,
+        }
+      }
+    />
+  </PhotoWrapper>
+  <VenueMeta>
+    <VenueName>
+      The Bark Club
+    </VenueName>
+    <VenueAddress>
+      8 Brondesbury Park
+    </VenueAddress>
+    <VenueDetailsWrapper>
+      <MetaItem>
+        <StyledRatingIcon />
+         
+        5.0
+      </MetaItem>
+      <MetaItem>
+        <StyledLocationIcon />
+         
+        1.2km
+      </MetaItem>
+      <MetaItem>
+        <StyledPriceIcon />
+         
+        $120
+      </MetaItem>
+    </VenueDetailsWrapper>
+  </VenueMeta>
+</VenueItemLink>
+`;

@@ -5,13 +5,8 @@ import { getReviewsRating } from 'data/api';
 import { RatingIcon } from '../_svgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
 
-const propTypes = {
-  venueId: number.isRequired,
-};
-
-export const RatingStars = ({ venueId }) => {
+const RatingStars = ({ venueId, maxRating }) => {
   const reviewsRating = getReviewsRating(venueId); // @todo: refactor to reuse on single review
-  const maxRating = 5;
 
   return (
     reviewsRating > 0 && (
@@ -26,6 +21,12 @@ export const RatingStars = ({ venueId }) => {
   );
 };
 
-RatingStars.propTypes = propTypes;
+RatingStars.propTypes = {
+  venueId: number,
+};
+
+RatingStars.defaultProps = {
+  maxRating: 5,
+};
 
 RatingStars.displayName = 'RatingStars';

@@ -13,7 +13,7 @@ import {
 } from './NavigationStyles';
 import { getRoutePath } from 'helpers/getRoutePath';
 
-class Navigation extends React.Component {
+export class Navigation extends React.Component {
   goBack = () => {
     this.props.history.push(getRoutePath('HOME'));
   };

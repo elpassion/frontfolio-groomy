@@ -32,7 +32,8 @@
       "**/*.{js,jsx}",
       "!**/node_modules/**",
       "!**/vendor/**",
-      "!**/components/_svgAssets/**"
+      "!**/components/_svgAssets/**",
+      "!src/index.js"
     ]
   },
   "browserslist": [
@@ -42,7 +43,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "react-test-renderer": "^16.7.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "jest-enzyme": "^7.0.2",
+    "jest-styled-components": "^6.3.1",
+    "react-test-renderer": "^16.8.4",
     "stylelint": "^9.10.1",
     "stylelint-config-rational-order": "^0.0.4",
     "stylelint-config-recommended": "^2.1.0",
