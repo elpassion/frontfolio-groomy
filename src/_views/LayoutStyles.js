@@ -22,7 +22,7 @@ export const LayoutWrapper = styled.div`
       animation: .3s ${slideIn} ease-in-out;
     }
     
-    &.page-exit {        
+    &.page-exit {
       ${VenueMeta},
       ${CoverWrapper},
       ${HeadingH1},
@@ -58,7 +58,7 @@ export const LayoutWrapper = styled.div`
       }
     }
     
-    &.page-exit {        
+    &.page-exit {
       position: absolute;
       top: 0;
       left: 0;
