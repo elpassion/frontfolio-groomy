@@ -24,6 +24,7 @@ export class VenueItem extends React.Component {
   constructor(props) {
     super(props);
     this.venuePhoto = React.createRef();
+    this.rootNode = document.querySelector('#root');
     this.state = {
       startTransition: false,
       elementStyles: {
@@ -64,7 +65,7 @@ export class VenueItem extends React.Component {
     this.setState(
       {
         elementStyles: {
-          top: 0,
+          top: this.rootNode.scrollTop,
           left: 0,
           width: '100%',
           height: sizes.heroHeight,
