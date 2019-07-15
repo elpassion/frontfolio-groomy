@@ -14,7 +14,7 @@ ${fontFace({
   fontWeight: 500,
   fontStyle: 'normal',
   fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Medium',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 })}
 
 ${fontFace({
@@ -23,7 +23,7 @@ ${fontFace({
   fontWeight: 700,
   fontStyle: 'normal',
   fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-Bold',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 })}
 
 ${fontFace({
@@ -32,7 +32,7 @@ ${fontFace({
   fontWeight: 800,
   fontStyle: 'normal',
   fontFilePath: process.env.PUBLIC_URL + '/fonts/Gilroy-ExtraBold',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 })}
 `;
 
