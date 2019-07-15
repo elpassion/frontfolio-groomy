@@ -13,6 +13,11 @@ export const Wrapper = styled.nav`
   width: 100%;
   height: ${sizes.navHeight};
   padding: 0 ${gaps.medium};
+
+  &:after {
+    content: '';
+    display: block;
+  }
 `;
 
 export const ArrowWrapper = styled.div`
@@ -48,11 +53,6 @@ export const BurgerMenu = styled.div`
   height: ${gaps.medium};
 `;
 
-export const WhiteSpace = styled(BurgerMenu)`
-  opacity: 0;
-  pointer-events: none;
-`;
-
 export const StyledLink = styled(Link)`
   display: block;
 `;
@@ -61,5 +61,4 @@ Wrapper.displayName = 'Wrapper';
 ArrowWrapper.displayName = 'ArrowWrapper';
 MenuLine.displayName = 'MenuLine';
 BurgerMenu.displayName = 'BurgerMenu';
-WhiteSpace.displayName = 'WhiteSpace';
 StyledLink.displayName = 'StyledLink';

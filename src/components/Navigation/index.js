@@ -7,7 +7,6 @@ import {
   Wrapper,
   MenuLine,
   BurgerMenu,
-  WhiteSpace,
   StyledLink,
   ArrowWrapper,
 } from './NavigationStyles';
@@ -42,7 +41,6 @@ export class Navigation extends React.Component {
             </StyledLink>
           </>
         )}
-        <WhiteSpace />
       </Wrapper>
     );
   }
