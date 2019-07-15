@@ -5,7 +5,7 @@ import { getReviewsRating } from 'data/api';
 import { RatingIcon } from '../_svgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
 
-const RatingStars = ({ venueId, maxRating }) => {
+export const RatingStars = ({ venueId, maxRating }) => {
   const reviewsRating = getReviewsRating(venueId); // @todo: refactor to reuse on single review
 
   return (
