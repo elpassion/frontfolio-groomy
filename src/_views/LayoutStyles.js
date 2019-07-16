@@ -36,6 +36,7 @@ export const LayoutWrapper = styled.div`
   &.venue {
     &.page-enter {
       position: absolute;
+      width: 100%;
       top: 0;
       left: 0;
       visibility: hidden;
@@ -60,10 +61,16 @@ export const LayoutWrapper = styled.div`
     
     &.page-exit {
       position: absolute;
+      width: 100%;
       top: 0;
       left: 0;
       z-index: 2;
       animation: .3s ${slideOut} ease-in-out;
+    }
+
+    &.page-exit-done {
+      display: none;
+      opacity: 0;
     }
   }
 `;

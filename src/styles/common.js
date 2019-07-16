@@ -61,7 +61,7 @@ export const slideOut = keyframes`
   
   100% {
     transform: translateX(100%);
-    opacity: .2;
+    opacity: .0;
   }
 `;
 
