@@ -12,8 +12,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Setup
 
 ```
-git clone git@github.com:elpassion/frontend-portfolio-showcase-1.git
-cd frontend-portfolio-showcase-1
+git clone git@github.com:elpassion/groomy.git
+cd groomy
 yarn install
 ```
 
