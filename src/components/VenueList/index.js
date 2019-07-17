@@ -4,7 +4,7 @@ import { getPlaces } from 'data/api';
 import { Search } from '../Search';
 import { SearchResults } from './SearchResults';
 
-export class VenueList extends React.Component {
+export class VenueList extends React.PureComponent {
   constructor(props) {
     super(props);
 

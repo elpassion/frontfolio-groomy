@@ -38,7 +38,7 @@ const defaultProps = {
   isHero: false,
 };
 
-export class VenueCover extends React.Component {
+export class VenueCover extends React.PureComponent {
   goToVenue = () => {
     const { displayId, history } = this.props;
     history.push(getRoutePath('VENUE', displayId));

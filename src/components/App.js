@@ -31,7 +31,7 @@ export const App = () => (
               <Navigation route={location} />
               <TransitionGroup component={null}>
                 <CSSTransition
-                  timeout={300}
+                  timeout={290}
                   classNames='page'
                   key={location.key}
                 >
