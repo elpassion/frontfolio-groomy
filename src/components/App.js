@@ -22,9 +22,11 @@ export const App = () => (
           pay online - all in one mobile application'
       />
     </Helmet>
+
+    <GlobalStyles />
+
     <Router>
       <>
-        <GlobalStyles />
         <Route
           render={({ location }) => (
             <>
