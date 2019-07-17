@@ -16,6 +16,7 @@ export const VenueItemLink = styled.div`
   ${FlexAlignCenter};
   margin: 0 0 ${gaps.large};
   color: ${colors.primaryBlack};
+  cursor: pointer;
 `;
 
 export const PhotoWrapper = styled.div`

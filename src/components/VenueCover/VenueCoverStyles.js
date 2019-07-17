@@ -17,6 +17,7 @@ import {
 import { FlexAlignCenter } from 'styles/common';
 
 export const CoverWrapper = styled.div`
+  cursor: ${props => (props.isHero ? 'initial' : 'pointer')};
   position: relative;
   margin: 0 ${invertPixelValue(gaps.medium)};
   transition: opacity ${durations.regular} ease-in;
