@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import { gaps, colors, fontWeights, fontSizes } from './vars';
+import { lighten, linearGradient } from 'polished';
+import { radii, gaps, colors, fontWeights, fontSizes } from './vars';
 import { LocationIcon } from '../components/_svgAssets/LocationIcon';
 import { PriceIcon } from '../components/_svgAssets/PriceIcon';
 
@@ -32,8 +33,30 @@ export const StyledPriceIcon = styled(PriceIcon)`
   ${IconsSpacing};
 `;
 
-export const ButtonBase = css`
+export const PrimaryButton = styled.button`
   text-decoration: none;
+  border: none;
+  color: ${colors.white};
+  background-color: ${colors.primaryViolet};
+  border-radius: ${radii.regularBorderRadius};
+  padding: ${gaps.regular} ${gaps.large};
+  font-weight: ${fontWeights.bold};
+
+  ${props =>
+    props.block &&
+    css`
+      display: block;
+      width: 100%;
+    `}
+
+  ${linearGradient({
+    colorStops: [
+      `${lighten(0.1, colors.primaryViolet)} 0%`,
+      `${colors.primaryViolet} 100%`,
+    ],
+    toDirection: '180deg',
+    fallback: colors.primaryViolet,
+  })};
 `;
 
 export const FlexAlignCenter = css`
@@ -70,5 +93,5 @@ VenueAddress.displayName = 'VenueAddress';
 MetaItem.displayName = 'MetaItem';
 StyledLocationIcon.displayName = 'StyledLocationIcon';
 StyledPriceIcon.displayName = 'StyledPriceIcon';
-ButtonBase.displayName = 'ButtonBase';
+PrimaryButton.displayName = 'ButtonBase';
 FlexAlignCenter.displayName = 'FlexAlignCenter';

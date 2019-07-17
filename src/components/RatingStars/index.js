@@ -5,17 +5,15 @@ import { getReviewsRating } from 'data/api';
 import { RatingIcon } from '../_svgAssets/RatingIcon';
 import { StarsRatingWrapper } from './RatingStarsStyles';
 
-export const RatingStars = ({ venueId, maxRating }) => {
-  const reviewsRating = getReviewsRating(venueId); // @todo: refactor to reuse on single review
+export const RatingStars = ({ venueId, fixedRating, maxRating }) => {
+  const reviewsRating = venueId ? getReviewsRating(venueId) : fixedRating; // @todo: refactor to reuse on single review
 
   return (
     reviewsRating > 0 && (
       <StarsRatingWrapper>
-        {Array(maxRating)
-          .fill(0)
-          .map((_element, index) => (
-            <RatingIcon key={index} isActive={reviewsRating > index} />
-          ))}
+        {Array.from({ length: maxRating }, (_, index) => (
+          <RatingIcon key={index} isActive={reviewsRating > index} />
+        ))}
       </StarsRatingWrapper>
     )
   );
@@ -23,6 +21,7 @@ export const RatingStars = ({ venueId, maxRating }) => {
 
 RatingStars.propTypes = {
   venueId: number,
+  fixedRating: number,
 };
 
 RatingStars.defaultProps = {

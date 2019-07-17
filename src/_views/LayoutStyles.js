@@ -4,6 +4,8 @@ import { VenueMeta, VenuePhoto } from '../components/VenueItem/VenueItemStyles';
 import {
   CoverWrapper,
   VenueDetails,
+  ReservationButton,
+  VenueTestimonial,
 } from '../components/VenueCover/VenueCoverStyles';
 import { HeadingH1 } from '../components/_typography/PrimaryHeading';
 import { SearchWrapper } from '../components/Search/SearchStyles';
@@ -46,6 +48,16 @@ export const LayoutWrapper = styled.div`
         transform: translateY(-75%);
         opacity: 0;
       }
+
+      ${ReservationButton} {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+
+      ${VenueTestimonial} {
+        transform: translateY(-25px);
+        opacity: 0;
+      }
     }
     
     &.page-enter-done {
@@ -56,6 +68,16 @@ export const LayoutWrapper = styled.div`
       ${VenueDetails} {
         transform: translateY(-25%);
         opacity: 1;
+      }
+
+      ${ReservationButton}, ${VenueTestimonial} {
+        transition-delay: .1s;
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      ${VenueTestimonial} {
+        transition-delay: .2s;
       }
     }
     

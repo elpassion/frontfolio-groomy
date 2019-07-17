@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "object-fit-polyfill": "^0.1.0",
-    "polished": "^2.3.3",
+    "polished": "^3.4.1",
     "prettier": "^1.16.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",

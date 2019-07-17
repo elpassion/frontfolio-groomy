@@ -15,6 +15,11 @@ import {
   VenueDetails,
   VenueImage,
   VenueName,
+  ReservationButton,
+  VenueInformation,
+  VenueTestimonial,
+  VenueTestimonialHeading,
+  VenueTestimonialName,
 } from './VenueCoverStyles';
 import {
   VenueAddress,
@@ -96,6 +101,22 @@ export class VenueCover extends React.Component {
             </RightColumn>
           </MetaFlexWrapper>
         </VenueDetails>
+
+        {isHero && (
+          <VenueInformation>
+            <ReservationButton block>Book a visit</ReservationButton>
+            <VenueTestimonial>
+              <VenueTestimonialHeading>
+                <VenueTestimonialName>Jenny & Tobi</VenueTestimonialName>
+                <RatingStars fixedRating={3} />
+              </VenueTestimonialHeading>
+              Pala is such a fantastic groomer! My Tobi literally gets stopped
+              on the street all the time by people because of how cute he looks
+              when he comes out! Most important is to have a great goomer that
+              can take care of everything.
+            </VenueTestimonial>
+          </VenueInformation>
+        )}
       </CoverWrapper>
     );
   }

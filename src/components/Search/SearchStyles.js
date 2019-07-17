@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { placeholder } from 'polished';
 
 import { FlexAlignCenter } from 'styles/common';
 import { gaps, colors, radii, fontSizes, sizes, durations } from 'styles/vars';
@@ -21,7 +20,10 @@ export const SearchWrapper = styled.div`
 export const SearchInput = styled.input.attrs({
   type: 'text',
 })`
-  ${placeholder({ color: colors.lightGray })};
+  &::placeholder {
+    color: ${colors.lightGray};
+  }
+
   width: 100%;
   margin: 0 0 0 ${gaps.regular};
   color: inherit;

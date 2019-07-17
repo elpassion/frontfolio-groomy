@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import { PawIcon } from '../_svgAssets/PawIcon';
 import { invertPixelValue } from 'helpers/invertPixelValue';
+import { Button } from '../Button';
+import { RatingStars } from '../RatingStars';
 import {
   colors,
   fontSizes,
@@ -50,6 +52,13 @@ export const VenueDetails = styled.div`
   transform: translateY(-25%);
   transition: opacity ${durations.regular} ease-in,
     transform ${durations.regular} ease-in;
+`;
+
+export const VenueInformation = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 ${gaps.medium} ${gaps.large};
+  background: ${colors.white};
 `;
 
 export const VenueName = styled.h2`
@@ -119,6 +128,35 @@ export const PawIconBackground = styled(PawIcon)`
   transform: translate(-50%, -50%);
 `;
 
+export const ReservationButton = styled(Button)`
+  transition: all ${durations.regular} ease;
+  margin-bottom: ${gaps.medium};
+`;
+
+export const VenueTestimonial = styled.div`
+  transition: all ${durations.extended} ease;
+  padding: ${gaps.medium};
+  background: ${colors.white};
+  border-radius: ${radii.regularBorderRadius};
+  box-shadow: 0 ${gaps.small} ${gaps.large} 0 ${colors.lightGrayTransparent};
+  font-size: ${fontSizes.small};
+`;
+
+export const VenueTestimonialHeading = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: ${gaps.regular};
+
+  ${RatingStars} {
+    color: ${colors.lightGray};
+  }
+`;
+
+export const VenueTestimonialName = styled(VenueName)`
+  font-size: ${fontSizes.medium};
+`;
+
 CoverWrapper.displayName = 'CoverWrapper';
 VenueImage.displayName = 'VenueImage';
 VenueDetails.displayName = 'VenueDetails';
@@ -129,3 +167,7 @@ MetaFlexWrapper.displayName = 'MetaFlexWrapper';
 MetaLeftColumn.displayName = 'MetaLeftColumn';
 RatingBadgeWrapper.displayName = 'RatingBadgeWrapper';
 PawIconBackground.displayName = 'PawIconBackground';
+ReservationButton.displayName = 'ReservationButton';
+VenueTestimonial.displayName = 'VenueTestimonial';
+VenueTestimonialHeading.displayName = 'VenueTestimonialHeading';
+VenueTestimonialName.displayName = 'VenueTestimonialName';
