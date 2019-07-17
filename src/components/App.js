@@ -32,6 +32,7 @@ export const App = () => (
               <TransitionGroup component={null}>
                 <CSSTransition
                   timeout={290}
+                  appear
                   classNames='page'
                   key={location.key}
                 >
