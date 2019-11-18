@@ -1,19 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontfolio: Groomy
 
 ## Tech stack & Tools
 
-- Rendering: React 16.7.0
+- Rendering: React 16.7.0 ([Create React App](https://github.com/facebook/create-react-app))
 - Styles: Styled Components
 - Linting: Eslint, Stylelint
 - Code formatting: Prettier
 - Unit tests: Jest, Enzyme
-- Deployment: Netlify
+- Deployment: Netlify ([groomy.netlify.com](https://groomy.netlify.com/))
 
 ## Setup
 
 ```
-git clone git@github.com:elpassion/groomy.git
-cd groomy
+git clone git@github.com:elpassion/frontfolio-groomy.git
+cd frontfolio-groomy
 yarn install
 ```
 
