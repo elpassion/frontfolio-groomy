@@ -2,7 +2,7 @@
 
 ## Tech stack & Tools
 
-- Rendering: React 16.7.0 ([Create React App](https://github.com/facebook/create-react-app))
+- Rendering: React 16.8 ([Create React App](https://github.com/facebook/create-react-app))
 - Styles: Styled Components
 - Linting: Eslint, Stylelint
 - Code formatting: Prettier
