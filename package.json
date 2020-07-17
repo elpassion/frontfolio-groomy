@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "object-fit-polyfill": "^0.1.0",
     "polished": "^3.4.1",
     "prettier": "^1.16.4",
